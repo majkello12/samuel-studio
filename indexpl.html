@@ -270,6 +270,8 @@ img {
     }
     .video-overlay .btn:hover {
       background: #f7c403;
+              transform: scale(1.1);
+          transition: transform 0.3s ease;
     }
 
     @media (max-width: 768px) {
@@ -734,7 +736,7 @@ footer a:hover {
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
     <a href="indexen.html" title="English version" class="lang-switch">
-  <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
+  <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </div>
 
     <div class="hamburger" onclick="toggleMenu()">
@@ -750,7 +752,7 @@ footer a:hover {
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
     <a href="index.html" title="English version" class="lang-switch">
-  <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
+  <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </nav>
   </header>
 
@@ -888,21 +890,20 @@ footer a:hover {
 
 
  <!-- OSTATNIE REALIZACJE -->
-  <section class="yellow-section" id="offer">
-    <h2>Recent Work</h2>
-    <div class="grid-2x2">
-      <div class="grid-item">
-        <video src="Trileas-Animated-Cover.mp4" autoplay muted loop></video>
-        <div class="desc">Trileas - wizualizacja logo</div>
-      </div>
-      <div class="grid-item">
-        <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
-        <div class="desc">Animacja o św. Tomaszu</div>
-      </div>
+<section class="yellow-section" id="offer">
+  <h2>Recent Work</h2>
+  <div class="grid-2x2">
+    <div class="grid-item">
+      <video src="Trileas-Animated-Cover.mp4"></video>
+      <div class="desc">Trileas - wizualizacja logo</div>
     </div>
-    <button class="see-more-btn">Zobacz więcej</button>
-
-  </section>
+    <div class="grid-item">
+      <video src="St-Thomas-Apostol-animated-cover-1.mp4"></video>
+      <div class="desc">Animacja o św. Tomaszu</div>
+    </div>
+  </div>
+  <button class="see-more-btn">Zobacz więcej</button>
+</section>
 
   <!-- WIDEO Z NAPISAMI -->
   <section class="video-section">
@@ -955,7 +956,7 @@ From concept to finished video</p>
     <a href="https://samuelstudio.pl/contact" style="margin: 0 15px;">Kontakt</a>
     <a href="https://samuelstudio.pl/blog" style="margin: 0 15px;">Blog</a>
         <a href="index.html" title="English version" class="lang-switch">
-  <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
+  <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
   </div>
 
 </footer>
@@ -974,6 +975,20 @@ From concept to finished video</p>
     });
 
   </script>
+
+  <script>
+  document.querySelectorAll('.grid-item video').forEach(video => {
+    video.muted = true; // Wymagane do automatycznego odtwarzania bez dźwięku
+
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+</script>
       <script>
   document.addEventListener('contextmenu', event => event.preventDefault());
 </script>
