@@ -117,24 +117,6 @@
   transition: letter-spacing 0.3s ease;
 }
 
-nav.menu a:nth-child(1) {
-  letter-spacing: 2px;
-}
-nav.menu a:nth-child(2) {
-  letter-spacing: 4px;
-}
-nav.menu a:nth-child(3) {
-  letter-spacing: 10px;
-}
-nav.menu a:nth-child(4) {
-  letter-spacing: 10px;
-}
-nav.menu a:nth-child(5) {
-  letter-spacing: 40px;
-}
-nav.menu a:nth-child(6) {
-  letter-spacing: 4px;
-}
 nav.menu a:hover {
   color: white;
   letter-spacing: calc(1.2 * var(--base-spacing, 5px));
@@ -263,11 +245,11 @@ img {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding-top: 150px;
+      padding-top: 350px;
     }
     .video-overlay h1 {
       font-size: 2rem;
-           margin-bottom: 20px;
+           margin-bottom: 100px;
            margin-top: -90px;
       color: #ffffff;
    
@@ -745,7 +727,7 @@ footer a:hover {
 
     <div class="center-links">
     <a href="https://samuelstudio.pl">Strona Główna</a>
-    <a href="https://samuelstudio.pl/work">PRACE</a>
+    <a href="https://samuelstudio.pl/work">Prace</a>
     <a href="https://samuelstudio.pl/about">O mnie</a>
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
@@ -761,7 +743,7 @@ footer a:hover {
 
     <nav id="menu" class="menu">
  <a href="https://samuelstudio.pl">Strona główna</a>
-    <a href="https://samuelstudio.pl/work">PRACE</a>
+    <a href="https://samuelstudio.pl/work">Prace</a>
     <a href="https://samuelstudio.pl/about">O mnie</a>
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
@@ -772,7 +754,7 @@ footer a:hover {
 
   <!-- SEKCJA WIDEO -->
   <section class="video-section" id="video">
-    <video src="Samuel-Studio-Reel-2024.mp4" autoplay muted loop></video>
+    <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
       <h1>Trafiaj skuteczniej do swojej publiczności</h1>
       <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">Zobacz moje animacje <br>w akcji</button>
@@ -901,34 +883,24 @@ footer a:hover {
       
 </section>
 
-  <!-- OSTATNIE REALIZACJE -->
-<section class="yellow-section" id="offer">
-  <h2 style="margin-bottom: 120px;">Ostatnie prace</h2>
-  <div class="grid-2x2">
-    <div class="grid-item">
-      <video
-       class="hover-video"
-        src="Trileas-Animated-Cover.mp4"
-        muted
-        playsinline
-        preload="auto"
-      </video>
-      <div class="desc">Trileas - wizualizacja logo</div>
+
+
+ <!-- OSTATNIE REALIZACJE -->
+  <section class="yellow-section" id="offer">
+    <h2>Recent Work</h2>
+    <div class="grid-2x2">
+      <div class="grid-item">
+        <video src="Trileas-Animated-Cover.mp4" autoplay muted loop></video>
+        <div class="desc">Trileas - wizualizacja logo</div>
+      </div>
+      <div class="grid-item">
+        <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
+        <div class="desc">Animacja o św. Tomaszu</div>
+      </div>
     </div>
-    <div class="grid-item">
-      <video
-       class="hover-video"
-         id="video-stop-at-end"
-        src="St-Thomas-Apostol-animated-cover-1.mp4"
-        muted
-        playsinline
-        preload="auto"
-      </video>
-      <div class="desc">Animacja o św. Tomaszu</div>
-    </div>
-  </div>
-  <button class="see-more-btn">Zobacz więcej</button>
-</section>
+    <button class="see-more-btn">Zobacz więcej</button>
+
+  </section>
 
   <!-- WIDEO Z NAPISAMI -->
   <section class="video-section">
@@ -945,7 +917,7 @@ From concept to finished video</p>
   <section id="kontakt">
     <div style="margin-bottom: -30px;">
     <h2 style="margin-bottom: 30px;">Kontakt</h2>
-    <p>Napisz: <a href="mailto:kontakt@animacja.pl">kontakt@animacja.pl</a></p>
+    <p>Napisz: <a href="mailto:kontakt@animacja.pl">pawel@samuelstudio.pl</a></p>
     <p>Zadzwoń: <a href="tel:+48693733366">+48 693 733 366</a></p>
         <h3 style="margin-top: 40px;">Połącz się przez:</h3>
     
@@ -976,7 +948,7 @@ From concept to finished video</p>
   <footer class="footer">
   <div class="footer-links">
     <a href="https://samuelstudio.pl" style="margin: 0 15px;">STRONA GŁÓWNA</a>
-    <a href="https://samuelstudio.pl/work" style="margin: 0 15px;">PRACE</a>
+    <a href="https://samuelstudio.pl/work" style="margin: 0 15px;">Prace</a>
     <a href="https://samuelstudio.pl/about" style="margin: 0 15px;">O Mnie</a>
     <a href="https://samuelstudio.pl/contact" style="margin: 0 15px;">Kontakt</a>
     <a href="https://samuelstudio.pl/blog" style="margin: 0 15px;">Blog</a>
