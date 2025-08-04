@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animacja w Kielcach</title>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
@@ -19,6 +21,11 @@
         margin: 0;
   padding: 0;
   height: 100%;
+    }
+    
+     lottie-player {
+      width: 100px;
+      height: 100px;
     }
 
     /* HEADER */
@@ -727,7 +734,13 @@ footer a:hover {
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="logogif.webp" alt="Logo" />
+  <lottie-player
+      src="samuel-studio-logo-animated-lottie.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay>
+    </lottie-player>
     </div>
 
     <div class="center-links">
@@ -736,7 +749,6 @@ footer a:hover {
     <a href="https://samuelstudio.pl/about">O mnie</a>
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation">Animacja Chrześcijańska</a>
     <a href="indexen.html" title="English version" class="lang-switch">
   <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </div>
@@ -753,7 +765,6 @@ footer a:hover {
     <a href="https://samuelstudio.pl/about">O mnie</a>
     <a href="https://samuelstudio.pl/contact">Kontakt</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation">Animacja Chrześcijańska</a>
     <a href="index.html" title="English version" class="lang-switch">
   <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </nav>
@@ -846,53 +857,7 @@ footer a:hover {
     </p>
   </section>
 
-     <!-- DODATKOWE WIDEO -->
-  <section class="video-section">
-    <video src="stars.mp4" autoplay muted loop></video>
-    <div class="video-overlay">
-      <h1>Zobacz moje animacje <br>w akcji </h1>
-       <h4><br><br><br><br><br><br>Oferuję kreatywne rozwiązania dopasowane do potrzeb Twojej firmy. </h4>
-       <div class="h7">
-<br>- Spraw, by Twoja marka zapadła w pamięć i się wyróżniała <br>- Animowane logotypy
-<br>- Upraszczaj złożone tematy i angażuj odbiorców <br>- Filmy wyjaśniające (explainery)
-<br>- Opowiadaj historię za pomocą ruchu <br>- Animowane opowieści
-<br>- Wzbogacaj swoje projekty wideo <br>- Animowane elementy do większych produkcji
-<br>Idealne do brandingu cyfrowego i mediów społecznościowych <br>- Animowane GIF-y przyciągają uwagę i budują świadomość marki
-<br>- Animacje promocyjne
-<br>- Przyciągające wzrok opowieści wizualne do Twoich kampanii <br>- Animowane plakaty z subtelnym ruchem, który dodaje głębi 
-<br>- Animacje tła</div>
-    </div>
-  </section>
-  
-<section class="video-hero">
-  <div class="video-wrapper">
-  <video src="question-mark.mp4" autoplay muted loop playsinline></video>
-  </div>
-  <div class="content">
-    <div class="h8">Question Mark</div>
-  </div>
-</section>
-
-
-
-  <!-- LOGA FIRM -->
-  <section style="padding: 60px 20px; text-align: center; background: #fff;">
-    <h2 style="margin-bottom: 100px;">Firmy, które Mi zaufały:</h2>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-    <a href="https://firma1.pl" target="_blank"><img src="LOGO-UwCM-a-300x164.png" alt="Firma 1" style="height: 100px;"></a>
-    <a href="https://dwaprzymierza.pl/" target="_blank"><img src="logo_dwaprzymierza2019-01-300x214.jpg.webp" alt="Firma 2"  draggable="false" style="height: 120px;"></a>
-    <a href="https://muzeum.torun.pl/" target="_blank"><img src="logo-muzeum-okregowe-w-toruniu-300x72.png.webp" alt="Firma 3" style="height: 50px;"></a>
-    <a href="https://firma4.pl" target="_blank"><img src="logo-e1649182133913-300x76.jpg.webp" alt="Firma 3" style="height: 70px;"></a>
-    <a href="https://firma5.pl" target="_blank"><img src="fundacja_chg_logo-560x280-1-300x150.jpg.webp" alt="Firma 3" style="height: 70px;"></a>
-    <a href="https://firma6.pl" target="_blank"><img src="CM.-Stories-logo-300x170.jpg.webp" alt="Firma 3" style="height: 90px;"></a>
-    <a href="https://firma7.pl" target="_blank"><img src="Logo-Style-3-300x300.png.webp" alt="Firma 3" style="height: 100px;"></a>
-    <a href="https://www.trileas.com/" target="_blank"><img src="TRILEAS-logo-300x246.png.webp" alt="Firma 3" style="height: 100px;"></a>
-    </div>
-  </section>
-
-
-
-    <!-- DODATKOWE WIDEO -->
+ <!-- DODATKOWE WIDEO -->
   <section class="video-section video-section--checiny">
     <video src="View-of-Checiny.mp4" autoplay muted loop></video>
     <div class="video-overlay">
@@ -902,40 +867,78 @@ footer a:hover {
 
 
 
-  <!-- OPINIE -->
-  <section style="background: #fff; padding: 80px 20px; text-align: center;">
-    <h5 style="font-size: 2rem; margin-bottom: 30px;">Opinie klientów</h5>
-    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 30px;">
-      <blockquote>"Świetna współpraca i efekt końcowy!" - Jan Kowalski ⭐⭐⭐⭐⭐</blockquote>
-      <blockquote>"Profesjonalnie, szybko i z pomysłem." - Anna Nowak ⭐⭐⭐⭐⭐</blockquote>
-      <blockquote>"Zdecydowanie polecam!" - Piotr Zieliński ⭐⭐⭐⭐⭐</blockquote>
+  
+
+    <section>
+       <section style="background: #fff; padding: 80px 20px; text-align: center;">
+    <h5 style="font-size: 2rem; margin-bottom: 30px;">What Clients Say</h5>
+
+  <div class="opinie-container">
+  <div class="lewa-opinia">
+    <h2>Samuel Studio</h2>
+    <div class="stars">★★★★★</div>
+    <p>Średnia ocen: 4.9 / 5</p>
+    <p>Na podstawie 57 opinii Google</p>
+  </div>
+
+
+  
+
+    <div class="opinie-wrapper" id="opinieSlider">
+      <div class="opinia">
+        „Professional and friendly. The cooperation with the studio <br>was very satisfactory and the result of work is stunning
+ ”<br>
+        <span class="autor">– Agnieszka Majcher</span>
+      </div>
+      <div class="opinia">
+        „Polecam współpracę z Samuel Studio! Mieliśmy przyjemność realizować kilka animacji i jesteśmy bardzo zadowoleni z efektów. Paweł to osoba terminowa, kreatywna i zaangażowana, co zdecydowanie przekłada się na wysoką jakość realizacji. Z pewnością wrócimy do współpracy w przyszłości!”<br>
+        <span class="autor">– Artur Baza</span>
+      </div>
+   
     </div>
-  </section>
+  </div>
+</div>
+<button class="see-more-btn" onclick="window.location.href='https://www.google.com/maps/place//data=!4m3!3m2!1s0xac688efcb209881f:0x50fac03e7d6b27cb!12e1'">Dodaj opinię</button>
+
+      
+</section>
 
   <!-- OSTATNIE REALIZACJE -->
-  <section class="yellow-section" id="offer">
-    <h2 style="margin-bottom: 120px;">Ostatnie projekty</h2>
-    <div class="grid-2x2">
-      <div class="grid-item">
-        <video src="Trileas-Animated-Cover.mp4" autoplay muted loop></video>
-        <div class="desc">Trileas <br>- wizualizacja logo</div>
-      </div>
-      <div class="grid-item">
-        <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
-        <div class="desc">Św.Tomasz <br>- animacja</div>
-      </div>
+<section class="yellow-section" id="offer">
+  <h2 style="margin-bottom: 120px;">Ostatnie prace</h2>
+  <div class="grid-2x2">
+    <div class="grid-item">
+      <video
+       class="hover-video"
+        src="Trileas-Animated-Cover.mp4"
+        muted
+        playsinline
+        preload="auto"
+      </video>
+      <div class="desc">Trileas - wizualizacja logo</div>
     </div>
-    <button class="see-more-btn">Zobacz więcej</button>
-
-  </section>
+    <div class="grid-item">
+      <video
+       class="hover-video"
+         id="video-stop-at-end"
+        src="St-Thomas-Apostol-animated-cover-1.mp4"
+        muted
+        playsinline
+        preload="auto"
+      </video>
+      <div class="desc">Animacja o św. Tomaszu</div>
+    </div>
+  </div>
+  <button class="see-more-btn">Zobacz więcej</button>
+</section>
 
   <!-- WIDEO Z NAPISAMI -->
   <section class="video-section">
     <video src="The-Gospel-in-five-minutes-Cover.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1>Animacje, które działają</h1>
-      <p style="font-size: 1.5rem;">Pomagamy firmom komunikować się skuteczniej.<br>
-Od pomysłu do gotowego wideo</p>
+      <h1>Animations that works</h1>
+      <p style="font-size: 1.5rem;">Pomagam i tworzę, żebyście działali bardziej efektywnie.<br>
+From concept to finished video</p>
     </div>
   </section>
 
@@ -945,7 +948,7 @@ Od pomysłu do gotowego wideo</p>
     <div style="margin-bottom: -30px;">
     <h2 style="margin-bottom: 30px;">Kontakt</h2>
     <p>Napisz: <a href="mailto:kontakt@animacja.pl">kontakt@animacja.pl</a></p>
-    <p>Zadzwoń: <a href="tel:+48726123456">+48 726 123 456</a></p>
+    <p>Zadzwoń: <a href="tel:+48693733366">+48 693 733 366</a></p>
         <h3 style="margin-top: 40px;">Połącz się przez:</h3>
     
     <div style="margin-top: 50px;">
@@ -979,7 +982,6 @@ Od pomysłu do gotowego wideo</p>
     <a href="https://samuelstudio.pl/about" style="margin: 0 15px;">O Mnie</a>
     <a href="https://samuelstudio.pl/contact" style="margin: 0 15px;">Kontakt</a>
     <a href="https://samuelstudio.pl/blog" style="margin: 0 15px;">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation" style="margin: 0 15px;">Animacja Chrześcijańska</a>
         <a href="index.html" title="English version" class="lang-switch">
   <img src="uk.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
   </div>

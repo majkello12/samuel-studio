@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Animacja w Kielcach</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
@@ -19,6 +21,11 @@
         margin: 0;
   padding: 0;
   height: 100%;
+    }
+
+     lottie-player {
+      width: 100px;
+      height: 100px;
     }
 
     /* HEADER */
@@ -256,11 +263,11 @@ img {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding-top: 150px;
+      padding-top: 260px;
     }
     .video-overlay h1 {
       font-size: 2rem;
-           margin-bottom: 20px;
+           margin-bottom: 90px;
            margin-top: -90px;
       color: #ffffff;
    
@@ -275,10 +282,10 @@ img {
       font-weight: 500;
       margin: 10px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.1s;
     }
     .video-overlay .btn:hover {
-      background: #f7c403;
+      background: #ffffff;
     }
 
     @media (max-width: 768px) {
@@ -295,7 +302,6 @@ img {
     line-height: 1.4;
   }
 }
-
 
 
      .video-hero {
@@ -419,6 +425,8 @@ background-color: rgb(255, 255, 255);
 
 .see-more-btn:hover {
   background: #000000;
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
 }
 
 .scroll-top-btn {
@@ -435,6 +443,11 @@ background-color: rgb(255, 255, 255);
   display: none;
   z-index: 1000;
   transition: opacity 0.7s ease;
+}
+.scroll-top-btn:hover {
+  background: #f8bf23;
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
 }
 
 .nav.menu {
@@ -537,9 +550,12 @@ padding: 20px 10px;
       margin: 10px;
       cursor: pointer;
       transition: background 0.3s;
+      
     }
     .video-overlay .btn:hover {
-      background: #f7c403;
+      background: #ffcd19;
+        transform: scale(1.1);
+          transition: transform 0.3s ease;
     }
     .ellipse-video {
       position: absolute;
@@ -551,7 +567,7 @@ padding: 20px 10px;
       overflow: hidden;
       border-radius: 90%/100%;
       z-index: 2;
-      box-shadow: 0 2px 9px rgba(0, 0, 0, 0.527);
+      box-shadow: 0 2px 9px rgb(0, 0, 0);
     }
     .ellipse-video video {
       width: 100%;
@@ -717,6 +733,58 @@ footer a:hover {
 .footer-links a:hover {
   color: #f7c403;
 }
+
+  .opinie-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    flex-wrap: wrap;
+  }
+
+  .lewa-opinia {
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .lewa-opinia h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .stars {
+    color: gold;
+    font-size: 24px;
+  }
+
+  .suwak-opinii {
+    flex: 2;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+  }
+
+  .opinie-wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    width: max-content;
+  }
+
+  .opinia {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+
+  .autor {
+    font-weight: bold;
+    margin-top: 10px;
+  }
   </style>
 </head>
 <body>
@@ -725,7 +793,13 @@ footer a:hover {
   <!-- HEADER -->
   <header>
     <div class="logo-container">
-      <img src="logogif.webp" alt="Logo" />
+  <lottie-player
+      src="samuel-studio-logo-animated-lottie.json"
+      background="transparent"
+      speed="1"
+      loop
+      autoplay>
+    </lottie-player>
     </div>
 
     <div class="center-links">
@@ -734,7 +808,6 @@ footer a:hover {
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation">Christian Animation
        <a href="indexpl.html" title="Polska wersja" class="lang-switch">
       <img src="pl.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </div>
@@ -751,7 +824,6 @@ footer a:hover {
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="https://samuelstudio.pl/blog">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation">Christian Animation</a>
      <a href="indexpl.html" title="English version" class="lang-switch">
   <img src="pl.svg" alt="Polski" style="width:35px; vertical-align:middle;"></a>
     </nav>
@@ -759,7 +831,7 @@ footer a:hover {
 
   <!-- SEKCJA WIDEO -->
   <section class="video-section" id="video">
-    <video src="Samuel-Studio-Reel-2024.mp4" autoplay muted loop></video>
+    <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
       <h1>Reach your audience more effectively</h1>
       <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">See How it Works</button>
@@ -836,7 +908,7 @@ footer a:hover {
 
   <!-- ŻÓŁTA Z TEKSTEM -->
   <section class="yellow-section">
-    <h4 style="font-size: 2rem;">Why us?
+    <h4 style="font-size: 2rem;">Why Samuel Studio?
 </h4>
     <p style="max-width: 700px; margin: 20px auto; font-size: 1.2rem;">
      We create animations that capture attention, explain complex ideas, and help build your brand.
@@ -899,32 +971,70 @@ Subtle motion that adds depth <br>- Background Animations</div>
 
 
 
-  <!-- OPINIE -->
-  <section style="background: #fff; padding: 80px 20px; text-align: center;">
+  
+
+    <section>
+       <section style="background: #fff; padding: 80px 20px; text-align: center;">
     <h5 style="font-size: 2rem; margin-bottom: 30px;">What Clients Say</h5>
-    <div style="max-width: 800px; margin: 0 auto; display: grid; gap: 30px;">
-      <blockquote>"Świetna współpraca i efekt końcowy!" - Jan Kowalski ⭐⭐⭐⭐⭐</blockquote>
-      <blockquote>"Profesjonalnie, szybko i z pomysłem." - Anna Nowak ⭐⭐⭐⭐⭐</blockquote>
-      <blockquote>"Zdecydowanie polecam!" - Piotr Zieliński ⭐⭐⭐⭐⭐</blockquote>
+
+  <div class="opinie-container">
+  <div class="lewa-opinia">
+    <h2>Samuel Studio</h2>
+    <div class="stars">★★★★★</div>
+    <p>Średnia ocen: 4.9 / 5</p>
+    <p>Na podstawie 57 opinii Google</p>
+  </div>
+
+
+  
+
+    <div class="opinie-wrapper" id="opinieSlider">
+      <div class="opinia">
+        „Professional and friendly. The cooperation with the studio <br>was very satisfactory and the result of work is stunning
+ ”<br>
+        <span class="autor">– Agnieszka Majcher</span>
+      </div>
+      <div class="opinia">
+        „Polecam współpracę z Samuel Studio! Mieliśmy przyjemność realizować kilka animacji i jesteśmy bardzo zadowoleni z efektów. Paweł to osoba terminowa, kreatywna i zaangażowana, co zdecydowanie przekłada się na wysoką jakość realizacji. Z pewnością wrócimy do współpracy w przyszłości!”<br>
+        <span class="autor">– Artur Baza</span>
+      </div>
+   
     </div>
-  </section>
+  </div>
+</div>
+<button class="see-more-btn" onclick="window.location.href='https://www.google.com/maps/place//data=!4m3!3m2!1s0xac688efcb209881f:0x50fac03e7d6b27cb!12e1'">Dodaj opinię</button>
+
+      
+</section>
 
   <!-- OSTATNIE REALIZACJE -->
-  <section class="yellow-section" id="offer">
-    <h2 style="margin-bottom: 120px;">Recent Work</h2>
-    <div class="grid-2x2">
-      <div class="grid-item">
-        <video src="Trileas-Animated-Cover.mp4" autoplay muted loop></video>
-        <div class="desc">Trileas logo visualisation</div>
-      </div>
-      <div class="grid-item">
-        <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
-        <div class="desc">St Thomas animation</div>
-      </div>
+<section class="yellow-section" id="offer">
+  <h2 style="margin-bottom: 120px;">Recent Work</h2>
+  <div class="grid-2x2">
+    <div class="grid-item">
+      <video
+       class="hover-video"
+        src="Trileas-Animated-Cover.mp4"
+        muted
+        playsinline
+        preload="auto"
+      </video>
+      <div class="desc">Trileas logo visualisation</div>
     </div>
-    <button class="see-more-btn">See More</button>
-
-  </section>
+    <div class="grid-item">
+      <video
+       class="hover-video"
+         id="video-stop-at-end"
+        src="St-Thomas-Apostol-animated-cover-1.mp4"
+        muted
+        playsinline
+        preload="auto"
+      </video>
+      <div class="desc">St Thomas animation</div>
+    </div>
+  </div>
+  <button class="see-more-btn">See More</button>
+</section>
 
   <!-- WIDEO Z NAPISAMI -->
   <section class="video-section">
@@ -941,8 +1051,8 @@ From concept to finished video</p>
   <section id="kontakt">
     <div style="margin-bottom: -30px;">
     <h2 style="margin-bottom: 30px;">Contact me</h2>
-    <p>Write: <a href="mailto:kontakt@animacja.pl">kontakt@animacja.pl</a></p>
-    <p>Call: <a href="tel:+48726123456">+48 726 123 456</a></p>
+    <p>Write: <a href="mailto:kontakt@animacja.pl"> pawel@samuelstudio.pl</a></p>
+    <p>Call: <a href="tel:+48693733366">+48 693 733 366</a></p>
         <h3 style="margin-top: 40px;">Connect with us via:</h3>
     
     <div style="margin-top: 50px;">
@@ -976,7 +1086,6 @@ From concept to finished video</p>
     <a href="about.html" style="margin: 0 15px;">About</a>
     <a href="contact.html" style="margin: 0 15px;">Contact</a>
     <a href="https://samuelstudio.pl/blog" style="margin: 0 15px;">Blog</a>
-    <a href="https://samuelstudio.pl/christian-animation" style="margin: 0 15px;">Christian Animation</a>
            <a href="indexpl.html" title="English version" class="lang-switch">
       <img src="pl.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
 
@@ -986,6 +1095,16 @@ From concept to finished video</p>
 <br>
   <div style="font-size: 0.9rem;">&copy; Copyright by me 2025</div>
 </footer>
+
+<script>
+  const slider = document.getElementById('opinieSlider');
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % slider.children.length;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+  }, 4000);
+</script>
 
   <script>
     function toggleMenu() {
@@ -1034,6 +1153,35 @@ From concept to finished video</p>
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 </script>
+<script>
+  const hoverVideos = document.querySelectorAll('video.hover-video');
+
+  hoverVideos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+
+  
+<script src="samuel-studio-logo-animated-lottie"></script>
+
+</script>
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById('logo-lottie'), // kontener
+    renderer: 'svg',
+    loop: true,        // lub false jeśli ma się odtworzyć raz
+    autoplay: true,    // automatyczne odtwarzanie
+    path: 'animacja.json' // ścieżka do pliku .json
+  });
+</script>
+
+
 
 </body>
 </html>
