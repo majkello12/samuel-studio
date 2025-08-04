@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith("pl")) {
+      window.location.href = "indexpl.html";
+    } else {
+      window.location.href = "indexen.html";
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
