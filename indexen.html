@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
-  <title>Animacja w Kielcach</title>
+  <title>Samuel Studio</title>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -16,9 +15,24 @@
       padding: 0;
       box-sizing: border-box;
     }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #fff;
+
+    @font-face {
+  font-family: 'Nohemi';
+  src: url(Nohemi-Regular-BF6438cc579d934.woff) format('woff2'),
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url(Satoshi-Regular.woff2) format('woff2'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Nohemi', sans-serif;      
+  background: #fff;
       overflow-x: hidden;
         margin: 0;
   padding: 0;
@@ -41,8 +55,22 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      border-bottom: 2px solid #ffffff;
     }
+
+      @media (max-width: 768px){
+        header {
+      background-color: #eeb702;
+      padding: 15px 30px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+di
+      z-index: 1000;
+    }}
+
+    
 
     .logo-container img {
       height: 60px;
@@ -57,7 +85,7 @@
     }
 
     .center-links a {
-      color: #333;
+      color: #000000;
       text-decoration: none;
       font-size: 22px;
       font-weight: 600;
@@ -81,7 +109,7 @@
     .hamburger span {
       width: 30px;
       height: 4px;
-      background: #333;
+      background: #000000;
       border-radius: 10px;
       transition: 0.3s;
     }
@@ -250,11 +278,11 @@ img {
       padding-top: 260px;
     }
     .video-overlay h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+       letter-spacing: 2px;
            margin-bottom: 90px;
            margin-top: -90px;
-      color: #ffffff;
-   
+      color: #eeb702;
     }
     .video-overlay .btn {
       padding: 12px 29px;
@@ -537,21 +565,20 @@ padding: 20px 10px;
       
     }
     .video-overlay .btn:hover {
-      background: #ffcd19;
+      background: #eeb702;
         transform: scale(1.1);
           transition: transform 0.3s ease;
     }
     .ellipse-video {
       position: absolute;
-      top: 1050px;
+      top: 740px;
       left: 50%;
       transform: translateX(-50%);
-      width: 350px;
+      width: 180px;
       height: 180px;
       overflow: hidden;
       border-radius: 90%/100%;
       z-index: 2;
-      box-shadow: 0 2px 9px rgb(0, 0, 0);
     }
     .ellipse-video video {
       width: 100%;
@@ -560,9 +587,9 @@ padding: 20px 10px;
     }
     @media (max-width: 768px) {
   .ellipse-video {
-    width: 60%;
-    height: auto;
-    top: 680px; 
+    width: 50%;
+    height: 50%
+    top: 790px; 
   }
 }
     .grid-2x2 {
@@ -609,7 +636,7 @@ padding: 0 40px;
       background: rgb(255, 255, 255);
       padding: 15px;
       border-radius: 39px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.062);
       transition: transform 0.3s;
       cursor: pointer;
        text-align: center;
@@ -788,10 +815,9 @@ footer a:hover {
 
     <div class="center-links">
     <a href="https://samuelstudio.pl">Home</a>
-    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="work.html">WORK</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="https://samuelstudio.pl/blog">Blog</a>
        <a href="indexpl.html" title="Polska wersja" class="lang-switch">
       <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
     </div>
@@ -804,10 +830,9 @@ footer a:hover {
 
     <nav id="menu" class="menu">
  <a href="index.html">Home</a>
-    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="work.html">WORK</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="https://samuelstudio.pl/blog">Blog</a>
      <a href="indexpl.html" title="English version" class="lang-switch">
   <img src="plflag.svg" alt="Polski" style="width:35px; vertical-align:middle;"></a>
     </nav>
@@ -884,7 +909,7 @@ footer a:hover {
   <section class="video-section">
     <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1>See My Work in Action </h1>
+      <h2>See My Work in Action </h2>
     </div>
   </section>
 
@@ -903,7 +928,7 @@ footer a:hover {
   <section class="video-section">
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1>See My Work in Action </h1>
+      <h2>See My Work in Action </h2>
        <h4><br><br><br><br><br><br>I offer creative solutions for your business needs. </h4>
        <div class="h7">
 <br>- Make your brand memorable and stand out <br>- Animated Logos
@@ -949,7 +974,7 @@ Subtle motion that adds depth <br>- Background Animations</div>
   <section class="video-section video-section--checiny">
     <video src="View-of-Checiny.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1>Samuel Studio <br>in action</h1>
+      <h2>Samuel Studio <br>in action</h2>
     </div>
   </section>
 
@@ -1012,7 +1037,7 @@ Subtle motion that adds depth <br>- Background Animations</div>
   <section class="video-section">
     <video src="The-Gospel-in-five-minutes-Cover.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1 style="color: black;">Animations that works</h1>
+      <h2 style="color: black;">Animations that works</h2>
       <p style="font-size: 1.5rem;">We help companies communicate more effectively.<br>
 From concept to finished video</p>
     </div>
@@ -1033,10 +1058,9 @@ From concept to finished video</p>
   <a href="https://youtube.com/@SamuelStudio_" target="_blank"><img src="yt icon2.png" alt="YouTube" class="social-icon"></a>
     </div>
   </section>
-        <button id="scrollTopBtn" class="scroll-top-btn">↑</button>
 
   <!-- STOPKA -->
- <footer style="background: #333; color: #fff; padding: 60px 20px; text-align: center;">
+ <footer style="background: #070707; color: #fff; padding: 60px 20px; text-align: center;">
   <div style="margin-bottom: 30px;">
     <a href="https://youtube.com/@SamuelStudio_" target="_blank" style="display: inline-block; margin: 0 20px;">
       <img src="yt icon2.png" alt="YouTube" style="height: 40px; vertical-align: middle;">
@@ -1054,10 +1078,9 @@ From concept to finished video</p>
   <footer class="footer">
   <div class="footer-links">
     <a href="index.html" style="margin: 0 15px;">Home</a>
-    <a href="https://samuelstudio.pl/work" style="margin: 0 15px;">WORK</a>
+    <a href="work.html" style="margin: 0 15px;">WORK</a>
     <a href="about.html" style="margin: 0 15px;">About</a>
     <a href="contact.html" style="margin: 0 15px;">Contact</a>
-    <a href="https://samuelstudio.pl/blog" style="margin: 0 15px;">Blog</a>
            <a href="indexpl.html" title="English version" class="lang-switch">
       <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
 

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background: #fff; 
+      color: #333; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+             lottie-player {
+      width: 120px;
+      height: 120px;
+    }
+
+    header {
+      background-color: #eeb702;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    
+
+    .logo-container img {
+      height: 60px;
+    }
+
+    .center-links {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .center-links a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 600;
+      padding: 1px 6px;
+      transition: color 0.3s;
+    }
+    .center-links a:hover {
+      color: #ffffff;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    
+
+    /* GALERIA */
+    .gallery-section { 
+      max-width: 1200px; 
+      margin: auto; 
+      padding: 40px 20px; 
+    }
+    .gallery-section h2 { 
+      text-align: center; 
+      margin-bottom: 10px; 
+      font-size: 2rem; 
+    }
+    .gallery-section p { 
+      text-align: center; 
+      margin-bottom: 40px; 
+      color: #666; 
+    }
+
+    .gallery-grid { 
+      display: grid; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 20px; 
+    }
+    .gallery-item { 
+      background: #fff; 
+      border-radius: 15px; 
+      overflow: hidden; 
+      border: 1px solid #000000; 
+      text-align: center; 
+      transition: transform 0.3s ease; 
+    }
+    .gallery-item:hover { 
+      transform: scale(1.05); 
+    }
+    .gallery-item img { 
+      width: 100%; 
+      aspect-ratio: 1/1; 
+      object-fit: cover; 
+      display: block; 
+      transition: transform 0.4s ease; 
+    }
+    .gallery-item img:hover { 
+      transform: scale(1.1); 
+    }
+    .gallery-caption { 
+      padding: 15px; 
+    }
+    .gallery-caption p { 
+      margin: 5px 0; 
+    }
+    .gallery-caption a { 
+      color: #c0392b; 
+      text-decoration: none; 
+      font-weight: bold; 
+    }
+    .gallery-caption a:hover { 
+      text-decoration: underline; 
+    }
+
+    @media(max-width: 900px) { 
+      .gallery-grid { grid-template-columns: 1fr 1fr; } 
+    }
+    @media(max-width: 600px) { 
+      .gallery-grid { grid-template-columns: 1fr; } 
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+    .lightbox.active { display: flex; }
+    .lightbox .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <lottie-player src="samuel-studio-logo-animated-lottie.json"
+        background="transparent" speed="1" loop autoplay></lottie-player>
+    </div>
+
+    <div class="center-links">
+    <a href="https://samuelstudio.pl">Home</a>
+    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+       <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
+    </div>
+  </header>
+
+  <section class="gallery-section">
+    <h2>See My Work in Action</h2>
+    <p>Below, you’ll find examples of how animation helps businesses, organizations, and creators tell their stories, explain ideas, and connect with audiences.</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="001.jpeg" alt="WORSHIP in the city center 2022">
+        <div class="gallery-caption">
+          <p>WORSHIP in the city center 2022</p>
+      <a href="#">Promotional spot</a></p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="002.jpeg" alt="Nikifor - View of Krynica">
+        <div class="gallery-caption">
+          <p>Nikifor</p>
+<a href="#">Puppeteer</a></p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="003.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>BIBLE UNBOUND</p>
+<a href="#">The Bible In a Sentence</a></p>
+        </div>
+      </div>
+       <div class="gallery-item">
+        <img src="004.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>Church of the Holy Spirit</p>
+<a href="#">Promotional Spot</a></p>
+        </div>
+      </div>
+
+       <div class="gallery-item">
+        <img src="005.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>Museum of Dialogue and Cultures</p>
+<a href="#">Nikifor</a></p>
+        </div>
+      </div>
+
+       <div class="gallery-item">
+        <img src="006.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>Samuel Studio</p>
+<a href="#">Kosmos</a></p>
+        </div>
+      </div>
+
+       <div class="gallery-item">
+        <img src="007.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>4 ECO</p>
+<a href="#">Promotional spot</a></p>
+        </div>
+      </div>
+
+       <div class="gallery-item">
+        <img src="008.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>WYD Panama in Kielce</p>
+<a href="#">Promotional spot</a></p>
+        </div>
+      </div>
+
+       <div class="gallery-item">
+        <img src="009.jpeg" alt="Nikifor - Mountain Landscape">
+        <div class="gallery-caption">
+          <p>National Museum in Kielce</p>
+<a href="#">View of Chęciny</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
