@@ -169,7 +169,7 @@ header.hidden {
       overflow: hidden; 
       border: 1px solid #000000; 
       text-align: center; 
-      transition: transform 0.3s ease; 
+      transition: transform 0.4s ease; 
     }
     .gallery-item:hover { 
       transform: scale(1.05); 
@@ -188,15 +188,15 @@ header.hidden {
       padding: 15px; 
     }
     .gallery-caption p { 
-      margin: 5px 0; 
+      margin: 6px 0; 
     }
     .gallery-caption a { 
-      color: #c0392b; 
+      color: #000000; 
       text-decoration: none; 
       font-weight: bold; 
     }
     .gallery-caption a:hover { 
-      text-decoration: underline; 
+      color: #ff00008c; 
     }
 
 
@@ -301,7 +301,7 @@ header.hidden {
 </header>
 
 <section class="gallery-section">
-  <h2>See My Work in Action</h2>
+  <h2>See My Work in&nbsp;Action</h2>
   <p>Below, you’ll find examples of how animation helps businesses, organizations, and creators tell their stories, explain ideas, and connect with audiences.</p>
 
   <div class="gallery-grid">
@@ -456,7 +456,6 @@ document.querySelectorAll('.gallery-item').forEach(item => {
   });
 });
 
-// --- Mobile (Intersection Observer) ---
 if (window.innerWidth <= 768) {
   const videos = document.querySelectorAll(".gallery-item video");
 
@@ -465,10 +464,10 @@ if (window.innerWidth <= 768) {
       const video = entry.target;
 
       if (entry.isIntersecting) {
-        video.play();
+        video.play(); // wideo widoczne -> odtwarzaj
       } else {
-        video.pause();
-        video.currentTime = 0;
+        video.pause(); // wideo niewidoczne -> zatrzymaj
+        video.currentTime = 0; // restart od początku
       }
     });
   }, { threshold: 0.6 }); // 60% widoczności = traktujemy jako "widziane"
