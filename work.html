@@ -106,8 +106,8 @@ header.hidden {
 
 .mobile-menu {
   position: fixed;
-  top: 0;
-  left: -100%;
+  top: -100%;
+  left: 0;
   width: 100%;
   height: 100vh;
   background: #eeb702;
@@ -115,7 +115,7 @@ header.hidden {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: left 0.4s ease;
+  transition: top 0.5s ease;
   z-index: 1050;
 }
 
@@ -133,15 +133,7 @@ header.hidden {
       color: #ffffff;
     }
 
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  color: #000;
-}
+
 
 @media (max-width: 768px) {
   .center-links {
@@ -451,7 +443,6 @@ header.hidden {
 document.querySelectorAll('.gallery-item').forEach(item => {
   const video = item.querySelector('video');
 
-  // --- Desktop (hover) ---
   item.addEventListener('mouseenter', () => {
     if (window.innerWidth > 768) {
       video.play();
@@ -470,7 +461,6 @@ if (window.innerWidth <= 768) {
   const videos = document.querySelectorAll(".gallery-item video");
 
   const observer = new IntersectionObserver((entries) => {
-    // szukamy najbardziej widocznego wideo
     let mostVisible = null;
     let maxRatio = 0;
 
@@ -482,12 +472,10 @@ if (window.innerWidth <= 768) {
     });
 
 
-    // odtwarzamy tylko najbardziej widoczne
-    if (mostVisible && maxRatio > 0.4) { // np. min. 40% widoczne
+    if (mostVisible && maxRatio > 0.4) { 
       mostVisible.play();
     }
   }, { threshold: Array.from({length: 11}, (_, i) => i / 10) }); 
-  // threshold: [0,0.1,...,1] – lepsza dokładność
 
   videos.forEach(video => observer.observe(video));
 }
@@ -500,13 +488,16 @@ const closeBtn = document.getElementById("closeBtn");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
+  setTimeout(() => {
+    mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
+  }, 1); // 
 });
 
 closeBtn.addEventListener("click", () => {
   hamburger.classList.remove("active");
-  mobileMenu.style.left = "-100%";
+  mobileMenu.style.top = "-100%"; 
 });
+
 </script>
 
 <script>let lastScroll = 0;
@@ -524,5 +515,9 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 </script>
+
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});</script>
 </body>
 </html>
