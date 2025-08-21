@@ -23,9 +23,9 @@
       height: 120px;
     }
 
-    header {
+header {
       background-color: #eeb702;
-      padding: 15px 30px;
+      padding: 5px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -33,13 +33,18 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-    }
+  transition: top 0.4s ease-in-out;
+}
 
-    
+header.hidden {
+  top: -100px; /* schowany nagłówek poza ekran */
+}
+
 
     .logo-container img {
-      height: 60px;
+      height: 40px;
     }
+
 
     .center-links {
       flex: 1;
@@ -61,20 +66,85 @@
       color: #ffffff;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-    header p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      font-weight: 400;
-      opacity: 0.9;
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* animacja krzyżowa */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* menu mobilne */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: #eeb702;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.4s ease;
+  z-index: 1050;
+}
+
+.mobile-menu a {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  text-decoration: none;
+  color: #000;
+      font-weight: 600;
+      padding: 1px 6px;
+      transition: color 0.3s;
+}
+
+    .mobile-menu a:hover {
+      color: #ffffff;
     }
 
-    
+/* przycisk zamknięcia */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+}
+
+/* responsywność */
+@media (max-width: 768px) {
+  .center-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
 
     /* GALERIA */
     .gallery-section { 
@@ -202,21 +272,41 @@
   
 </head>
 <body>
-  <header>
+<header>
     <div class="logo-container">
       <lottie-player src="samuel-studio-lottie-animation.json"
         background="transparent" speed="1" loop autoplay></lottie-player>
     </div>
 
-    <div class="center-links">
+  <!-- przyciski menu desktop -->
+  <nav class="center-links">
     <a href="https://samuelstudio.pl">Home</a>
     <a href="https://samuelstudio.pl/work">WORK</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-       <a href="indexpl.html" title="Polska wersja" class="lang-switch">
-      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
-    </div>
-  </header>
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
+    </a>
+  </nav>
+
+  <!-- hamburger -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- menu mobilne -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://samuelstudio.pl">Home</a>
+    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
+    </a>
+  </div>
+</header>
 
 <section class="gallery-section">
   <h2>See My Work in Action</h2>
@@ -366,5 +456,38 @@
     video.currentTime = 0; // restart od początku
   });
 });</script>
+
+<script>const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  mobileMenu.style.left = mobileMenu.style.left === "0%" ? "-100%" : "0%";
+});
+
+closeBtn.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  mobileMenu.style.left = "-100%";
+});
+</script>
+
+<script>let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScroll && currentScroll > 40) {
+    // scroll w dół → chowamy
+    header.classList.add("hidden");
+  } else {
+    // scroll w górę → pokazujemy
+    header.classList.remove("hidden");
+  }
+
+  lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>
