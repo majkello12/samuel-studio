@@ -37,7 +37,7 @@ header {
 }
 
 header.hidden {
-  top: -100px; /* schowany nagłówek poza ekran */
+  top: -110px; 
 }
 
 
@@ -84,7 +84,6 @@ header.hidden {
   transition: all 0.4s ease;
 }
 
-/* animacja krzyżowa */
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -95,7 +94,6 @@ header.hidden {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* menu mobilne */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -125,7 +123,6 @@ header.hidden {
       color: #ffffff;
     }
 
-/* przycisk zamknięcia */
 .close-btn {
   position: absolute;
   top: 20px;
@@ -136,7 +133,6 @@ header.hidden {
   color: #000;
 }
 
-/* responsywność */
 @media (max-width: 768px) {
   .center-links {
     display: none;
@@ -146,7 +142,6 @@ header.hidden {
   }
 }
 
-    /* GALERIA */
     .gallery-section { 
       max-width: 1200px; 
       margin: auto; 
@@ -278,7 +273,6 @@ header.hidden {
         background="transparent" speed="1" loop autoplay></lottie-player>
     </div>
 
-  <!-- przyciski menu desktop -->
   <nav class="center-links">
     <a href="https://samuelstudio.pl">Home</a>
     <a href="https://samuelstudio.pl/work">WORK</a>
@@ -289,14 +283,12 @@ header.hidden {
     </a>
   </nav>
 
-  <!-- hamburger -->
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
-  <!-- menu mobilne -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="https://samuelstudio.pl">Home</a>
     <a href="https://samuelstudio.pl/work">WORK</a>
@@ -417,7 +409,6 @@ header.hidden {
 </section>
 
 
-  <!-- Lightbox -->
   <div class="lightbox" id="lightbox">
     <span class="close" id="lightboxClose">&times;</span>
     <img id="lightboxImg" src="" alt="">
@@ -446,16 +437,46 @@ header.hidden {
     });
   </script>
 
-  <script>document.querySelectorAll('.gallery-item').forEach(item => {
+<script>
+document.querySelectorAll('.gallery-item').forEach(item => {
   const video = item.querySelector('video');
+
+  // --- Desktop (hover) ---
   item.addEventListener('mouseenter', () => {
-    video.play();
+    if (window.innerWidth > 768) {
+      video.play();
+    }
   });
+
   item.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0; // restart od początku
+    if (window.innerWidth > 768) {
+      video.pause();
+      video.currentTime = 0;
+    }
   });
-});</script>
+});
+
+// --- Mobile (Intersection Observer) ---
+if (window.innerWidth <= 768) {
+  const videos = document.querySelectorAll(".gallery-item video");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }, { threshold: 0.6 }); // 60% widoczności = traktujemy jako "widziane"
+
+  videos.forEach(video => observer.observe(video));
+}
+</script>
+
 
 <script>const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -479,10 +500,8 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll && currentScroll > 40) {
-    // scroll w dół → chowamy
     header.classList.add("hidden");
   } else {
-    // scroll w górę → pokazujemy
     header.classList.remove("hidden");
   }
 
