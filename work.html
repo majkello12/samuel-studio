@@ -53,6 +53,8 @@ header.hidden {
 
     .logo-container img {
       height: 40px;
+            z-index: 1000;
+
     }
 
 
@@ -596,17 +598,15 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll && currentScroll > 40) {
+    // scroll w dół
     header.classList.add("hidden");
   } else {
+    // scroll w górę lub początek strony
     header.classList.remove("hidden");
   }
 
   lastScroll = currentScroll;
 });
 </script>
-
-<script>document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});</script>
 </body>
 </html>
