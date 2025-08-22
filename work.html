@@ -31,6 +31,9 @@
              lottie-player {
       width: 120px;
       height: 120px;
+            margin: 0; 
+                  z-index: 1500;
+
     }
 
 header {
@@ -530,10 +533,13 @@ header.hidden {
     });
   </script>
 
+
+
 <script>
 document.querySelectorAll('.gallery-item').forEach(item => {
   const video = item.querySelector('video');
 
+  // Desktop – odtwarzanie na hover
   item.addEventListener('mouseenter', () => {
     if (window.innerWidth > 768) {
       video.play();
@@ -548,6 +554,7 @@ document.querySelectorAll('.gallery-item').forEach(item => {
   });
 });
 
+// Mobile – automatyczne odtwarzanie jednego widocznego wideo
 if (window.innerWidth <= 768) {
   const videos = document.querySelectorAll(".gallery-item video");
 
@@ -562,15 +569,22 @@ if (window.innerWidth <= 768) {
       }
     });
 
+    // zatrzymujemy wszystkie
+    videos.forEach(v => {
+      v.pause();
+      v.currentTime = 0;
+    });
 
-    if (mostVisible && maxRatio > 0.4) { 
+    // odtwarzamy tylko to, które jest najbardziej widoczne
+    if (mostVisible && maxRatio > 0.4) {
       mostVisible.play();
     }
-  }, { threshold: Array.from({length: 11}, (_, i) => i / 10) }); 
+  }, { threshold: Array.from({length: 11}, (_, i) => i / 10) });
 
   videos.forEach(video => observer.observe(video));
 }
 </script>
+
 
 
 <script>const hamburger = document.getElementById("hamburger");
