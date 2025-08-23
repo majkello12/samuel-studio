@@ -421,7 +421,6 @@ header.hidden {
 .footer-nav a:hover {
   color: #fff;
   
-
   
 }
 
@@ -440,8 +439,9 @@ header.hidden {
 
 .footer-socials a:hover img {
   transform: scale(1.2);
- filter: brightness(0) saturate(100%);
-/* dolny pasek */
+ filter: brightness(0) saturate(100%);}
+
+
 .footer-bottom {
   border-top: 1px solid #000000;
   margin-top: 20px;
@@ -449,7 +449,7 @@ header.hidden {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .footer-bottom a {
@@ -608,7 +608,7 @@ header.hidden {
     <div class="gallery-item">
       <div class="gallery-media">
         <img src="Cover-Jozef-Szermentowski-WIDOK-CHECIN.jpg" alt="National Museum in Kielce - View of Chęciny cover">
-        <video src="View-of-Checiny-animated-cover.mp4" muted loop></video>
+        <video src="View-of-Checiny-animated-cover.mp4" muted playsinline preload="metadata"></video>
       </div>
       <div class="gallery-caption">
         <p>National Museum in Kielce</p>
@@ -631,11 +631,11 @@ header.hidden {
 
 <footer class="footer">
   <div class="footer-subscribe">
-    <h3>CLICK TO SUBSCRIBE ON YOUTUBE</h3>
+    <h3>CLICK TO SUBSCRIBE</h3>
     <div class="footer-buttons">
       <a href="#" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
-        Animator grafik
+        YT Samuel Studio
       </a>
       <a href="#" class="subscribe-btn">
         <img src="explainers icon.svg" alt="Animator 2"> 
@@ -656,7 +656,7 @@ header.hidden {
       <img src="linked icon.svg" alt="LinkedIn">
     </a>
     <a href="https://www.youtube.com" target="_blank">
-      <img src="fb icon.svg" alt="YouTube">
+      <img src="yt icon.svg" alt="YouTube">
     </a>
     <a href="https://www.facebook.com" target="_blank">
       <img src="fb icon.svg" alt="Facebook">
@@ -721,24 +721,27 @@ document.querySelectorAll('.gallery-item').forEach(item => {
   });
 });
 
-// Mobile – automatyczne odtwarzanie wszystkich widocznych filmów
+// Mobile – automatyczne odtwarzanie filmów w widoku
 if (window.innerWidth <= 768) {
   const videos = document.querySelectorAll(".gallery-item video");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.play();
+        entry.target.play().catch(err => {
+          console.log("Autoplay blocked:", err);
+        });
       } else {
         entry.target.pause();
         entry.target.currentTime = 0;
       }
     });
-  }, { threshold: 0.3 }); // >=30% widoczności, żeby odpalał
+  }, { threshold: 0.5 }); // film musi być widoczny co najmniej w 50%
 
   videos.forEach(video => {
-    video.muted = true; // wymagane na mobile, inaczej autoplay jest blokowany
+    video.muted = true; // wymagane, żeby autoplay działał na mobile
     video.setAttribute("playsinline", "true"); // iOS Safari
+    video.setAttribute("autoplay", "true"); // hint dla przeglądarki
     observer.observe(video);
   });
 }
