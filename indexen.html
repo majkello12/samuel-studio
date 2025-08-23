@@ -31,7 +31,7 @@
 }
 
 body {
-  font-family: 'Nohemi', sans-serif;      
+  font-family: 'Nohemi', Nohemi sans-serif;      
   background: #fff;
       overflow-x: hidden;
         margin: 0;
@@ -712,40 +712,117 @@ a {
   }
 }
 
-/* Stopka - styl linków */
-footer a {
-  text-decoration: none;
-  
-  color: #ffffff;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+.footer {
+  background: #eeb702;
+  color: #000000;
+  text-align: center;
+  padding: 30px 20px;
 }
-footer a:hover {
-  color: #f7c403;
+
+/* napis nad przyciskami */
+.footer-subscribe h3 {
+  margin-top: 0;       /* usuwa odstęp nad napisem */
+  margin-bottom: 15px; /* zostawia odstęp pod spodem */
+  font-size: 22px;
+  font-weight: bold;
 }
-.footer-links {
- 
+
+/* kontener przycisków */
+.footer-buttons {
   display: flex;
-  flex-direction: column;    
   justify-content: center;
-  gap: 15px 30px;          
-  max-width: 600px;
-  margin: 0 auto 20px;
+  gap: 20px; /* 🔹 Odległość między przyciskami */
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
-.footer-links a {
-   font-size: 25px;
-  color: #ccc;
+/* styl przycisku */
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 🔹 Odległość ikony od tekstu */
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s;
-  white-space: nowrap;      
+  border-radius: 120px;
+  transition: 0.3s;
 }
 
-.footer-links a:hover {
-  color: #f7c403;
+.subscribe-btn img {
+  width: 28px;
+  height: 28px;
 }
 
-  .opinie-container {
+.subscribe-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* menu nawigacyjne */
+.footer-nav {
+  margin: 15px 0;
+  
+}
+
+.footer-nav a {
+  margin: 0 15px;
+  color: #000000;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  
+  
+}
+
+/* ikony social */
+.footer-socials {
+  margin-bottom: 25px;
+}
+
+.footer-socials a img {
+  width: 38px;
+  height: 32px;
+  margin: 0 16px;
+    fill: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.2);
+ filter: brightness(0) saturate(100%);}
+
+
+.footer-bottom {
+  border-top: 1px solid #000000;
+  margin-top: 20px;
+  padding-top: 12px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-bottom a {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #000000;
+} 
+
+
+.opinie-container {
     display: flex;
     gap: 40px;
     padding: 40px;
@@ -1059,37 +1136,54 @@ From concept to finished video</p>
     </div>
   </section>
 
-  <!-- STOPKA -->
- <footer style="background: #070707; color: #fff; padding: 60px 20px; text-align: center;">
-  <div style="margin-bottom: 30px;">
-    <a href="https://youtube.com/@SamuelStudio_" target="_blank" style="display: inline-block; margin: 0 20px;">
-      <img src="yt icon2.png" alt="YouTube" style="height: 40px; vertical-align: middle;">
-      <span style="margin-left: 10px; vertical-align: middle;">Subscribe to SAMUEL STUDIO</span>
-    </a>
-   <a href="https://youtube.com/@SamuelStudio_" target="_blank" style="display: inline-block; margin: 0 20px;">
-      <img src="yt icon2.png" alt="YouTube" style="height: 40px; vertical-align: middle;">
-      <span style="margin-left: 10px; vertical-align: middle;">Subscribe to Explainer in Animation</span>
-    </a>
-  </div>
 
-  <div style="margin-bottom: 30px;">
 
 
   <footer class="footer">
-  <div class="footer-links">
-    <a href="index.html" style="margin: 0 15px;">Home</a>
-    <a href="work.html" style="margin: 0 15px;">WORK</a>
-    <a href="about.html" style="margin: 0 15px;">About</a>
-    <a href="contact.html" style="margin: 0 15px;">Contact</a>
-           <a href="indexpl.html" title="English version" class="lang-switch">
-      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;"></a>
-
+  <div class="footer-subscribe">
+    <h3>CLICK TO SUBSCRIBE</h3>
+    <div class="footer-buttons">
+      <a href="#" class="subscribe-btn">
+        <img src="samuelstudio icon.svg" alt="Animator 1"> 
+        YT Samuel Studio
+      </a>
+      <a href="#" class="subscribe-btn">
+        <img src="explainers icon.svg" alt="Animator 2"> 
+        YT Explainers in Animation</a>
+    </div>
   </div>
 
+  <nav class="footer-nav">
+    <a href="index.html">Home</a>
+    <a href="work.html">WORK</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="footer-socials">
+    <a href="https://www.linkedin.com" target="_blank">
+      <img src="linked icon.svg" alt="LinkedIn">
+    </a>
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="yt icon.svg" alt="YouTube">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="fb icon.svg" alt="Facebook">
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="insta icon.svg" alt="Instagram">
+    </a>
+    <a href="indexpl.html" title="English version" class="lang-switch">
+      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;">
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <a href="privacy.html">Privacy Policy</a>
+    <span>Copyright © 2025 | Useful Animated Movie</span>
+  </div>
 </footer>
-<br>
-  <div style="font-size: 0.9rem;">&copy; Copyright by me 2025</div>
-</footer>
+
 
 <script>
   const slider = document.getElementById('opinieSlider');
