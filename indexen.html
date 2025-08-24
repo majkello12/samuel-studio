@@ -1005,7 +1005,7 @@ a {
   <section class="video-section">
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h2>See My Work in Action </h2>
+      <h4>See My Work in Action </h4>
        <h4><br><br><br><br><br><br>I offer creative solutions for your business needs. </h4>
        <div class="h7">
 <br>- Make your brand memorable and stand out <br>- Animated Logos
@@ -1141,7 +1141,7 @@ From concept to finished video</p>
 
   <footer class="footer">
   <div class="footer-subscribe">
-    <h3>CLICK TO SUBSCRIBE</h3>
+    <h1>CLICK TO SUBSCRIBE</h1>
     <div class="footer-buttons">
       <a href="#" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
@@ -1232,10 +1232,8 @@ From concept to finished video</p>
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      // przewijanie w dół – ukryj
       navMenu.style.top = "-100px";
     } else if (scrollTop < lastScrollTop) {
-      // przewijanie w górę – pokaż
       navMenu.style.top = "0";
     }
 
@@ -1262,11 +1260,11 @@ From concept to finished video</p>
 </script>
 <script>
   lottie.loadAnimation({
-    container: document.getElementById('logo-lottie'), // kontener
+    container: document.getElementById('logo-lottie'), 
     renderer: 'svg',
-    loop: true,        // lub false jeśli ma się odtworzyć raz
-    autoplay: true,    // automatyczne odtwarzanie
-    path: 'animacja.json' // ścieżka do pliku .json
+    loop: true,        
+    autoplay: true,    
+    path: 'animacja.json' 
   });
 </script>
 
