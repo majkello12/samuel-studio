@@ -87,7 +87,6 @@ header.hidden {
     .center-links a:hover {
       color: #ffffff;
         transform: scale(1.05);
-
     }
 
 .hamburger {
@@ -413,11 +412,9 @@ header.hidden {
   transform: scale(1.05);
 }
 
-/* menu nawigacyjne */
 .footer-nav {
-  margin: 15px 0;
-  
-}
+    margin: 15px 0;
+  }
 
 .footer-nav a {
   margin: 0 15px;
@@ -431,25 +428,47 @@ header.hidden {
 
 .footer-nav a:hover {
   color: #fff;
-  
-  
+  }
+
+   @media (max-width: 700px) {
+
+
+  .footer-nav {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;   /* nie łamie się do nowej linii */
 }
 
+.footer-nav a {
+  margin: 0 10px;
+  color: #000000;
+  font-weight: bold;
+  font-size: clamp(12px, 4vw, 20px); /* 🔹 automatycznie skaluje się */
+  text-decoration: none;
+  white-space: nowrap; /* 🔹 nie zawija tekstu w linku */
+}}
 
 .footer-socials {
-  display: flex;
-  justify-content: center; /* ikony wyśrodkowane */
-  align-items: center;     /* pionowo w jednej linii */
-    margin-bottom: 15px;
+  display: flex;             
+  justify-content: center;
+  align-items: flex-end;   /* cała grupa ikon wyrównana do dołu */
+  gap: 16px;
+  height: 40px;            /* wspólna wysokość kontenera */
+}
 
-}
 .footer-socials a {
-  display: inline-flex;    /* lepsza kontrola ikon */
-  align-items: center;
+  display: flex;            /* 🔹 potrzebne */
+  align-items: flex-end;    /* 🔹 ikona „stoi” na dole linka */
+  justify-content: center;
+  height: 100%;             /* link też ma 40px */
 }
+
 .footer-socials a img {
   width: 38px;
   height: 32px;
+   max-height: 100%;         /* ikony dopasowane do wysokości */
+  width: auto;
   margin: 0 16px;
     fill: #ffffff;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -468,7 +487,6 @@ header.hidden {
     height: 24px;
   }
 }
-
 
 .footer-bottom {
   border-top: 1px solid #000000;
