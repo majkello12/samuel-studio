@@ -326,6 +326,17 @@ header.hidden {
       .gallery-grid { grid-template-columns: 1fr; } 
     }
 
+
+    @media(max-width: 768px) {
+  .gallery-item .gallery-media img {
+    display: none; /* ukryj obrazki */
+  }
+  .gallery-item .gallery-media video {
+    position: static; /* żeby film zajmował normalnie miejsce */
+    opacity: 1 !important; /* zawsze widoczny */
+    pointer-events: auto;
+  }
+}
     /* LIGHTBOX */
     .lightbox {
       position: fixed;
@@ -424,11 +435,18 @@ header.hidden {
   
 }
 
-/* ikony social */
-.footer-socials {
-  margin-bottom: 25px;
-}
 
+.footer-socials {
+  display: flex;
+  justify-content: center; /* ikony wyśrodkowane */
+  align-items: center;     /* pionowo w jednej linii */
+    margin-bottom: 15px;
+
+}
+.footer-socials a {
+  display: inline-flex;    /* lepsza kontrola ikon */
+  align-items: center;
+}
 .footer-socials a img {
   width: 38px;
   height: 32px;
@@ -440,6 +458,16 @@ header.hidden {
 .footer-socials a:hover img {
   transform: scale(1.2);
  filter: brightness(0) saturate(100%);}
+
+ @media (max-width: 600px) {
+  .footer-socials {
+    gap: 3px;
+  }
+  .footer-socials a img {
+    width: 28px;
+    height: 24px;
+  }
+}
 
 
 .footer-bottom {
@@ -480,7 +508,7 @@ header.hidden {
 
   <nav class="center-links">
     <a href="https://samuelstudio.pl">Home</a>
-    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="https://samuelstudio.pl/work">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="indexpl.html" title="Polska wersja" class="lang-switch">
@@ -496,7 +524,7 @@ header.hidden {
 
   <div class="mobile-menu" id="mobileMenu">
     <a href="https://samuelstudio.pl">Home</a>
-    <a href="https://samuelstudio.pl/work">WORK</a>
+    <a href="https://samuelstudio.pl/work">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="indexpl.html" title="Polska wersja" class="lang-switch">
@@ -608,7 +636,7 @@ header.hidden {
     <div class="gallery-item">
       <div class="gallery-media">
         <img src="Cover-Jozef-Szermentowski-WIDOK-CHECIN.jpg" alt="National Museum in Kielce - View of Chęciny cover">
-        <video src="View-of-Checiny-animated-cover.mp4" muted playsinline preload="metadata"></video>
+        <video src="View-of-Checiny-animated-cover.mp4" muted loop></video>
       </div>
       <div class="gallery-caption">
         <p>National Museum in Kielce</p>
@@ -646,7 +674,7 @@ header.hidden {
 
   <nav class="footer-nav">
     <a href="index.html">Home</a>
-    <a href="work.html">WORK</a>
+    <a href="work.html">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -709,7 +737,6 @@ header.hidden {
 document.querySelectorAll('.gallery-item').forEach(item => {
   const video = item.querySelector('video');
 
-  // Desktop – odtwarzanie na hover
   item.addEventListener('mouseenter', () => {
     if (window.innerWidth > 768) {
       video.play();
@@ -724,7 +751,6 @@ document.querySelectorAll('.gallery-item').forEach(item => {
   });
 });
 
-// Mobile – automatyczne odtwarzanie filmów w widoku
 if (window.innerWidth <= 768) {
   const videos = document.querySelectorAll(".gallery-item video");
 
@@ -739,12 +765,11 @@ if (window.innerWidth <= 768) {
         entry.target.currentTime = 0;
       }
     });
-  }, { threshold: 0.5 }); // film musi być widoczny co najmniej w 50%
-
+  }, { threshold: 0.5 }); 
   videos.forEach(video => {
-    video.muted = true; // wymagane, żeby autoplay działał na mobile
-    video.setAttribute("playsinline", "true"); // iOS Safari
-    video.setAttribute("autoplay", "true"); // hint dla przeglądarki
+    video.muted = true; 
+    video.setAttribute("playsinline", "true"); 
+    video.setAttribute("autoplay", "true"); // 
     observer.observe(video);
   });
 }
@@ -777,10 +802,8 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll && currentScroll > 40) {
-    // scroll w dół
     header.classList.add("hidden");
   } else {
-    // scroll w górę lub początek strony
     header.classList.remove("hidden");
   }
 
@@ -789,14 +812,11 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script>
-// blokada prawego przycisku
 document.addEventListener("contextmenu", (e) => {
   e.preventDefault();
 });
 
-// blokada wybranych skrótów klawiaturowych
 document.addEventListener("keydown", (e) => {
-  // Ctrl+S, Ctrl+U, Ctrl+Shift+I (devtools)
   if (
     (e.ctrlKey && (e.key === "s" || e.key === "u")) ||
     (e.ctrlKey && e.shiftKey && e.key === "I")
