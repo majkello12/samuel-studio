@@ -1136,7 +1136,7 @@ a {
   </div>
 
   <p class="yellow-section-bottom-text">
-        <h2>Don’t let your story fade into the background.</h2>
+        Don’t let your story fade into the background.
   </p>
 </section>
 
@@ -1504,6 +1504,20 @@ closeBtn.addEventListener("click", () => {
   mobileMenu.style.top = "-100%"; 
 });
 
+</script>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  if(mobileMenu.style.top === '0%') {
+    mobileMenu.style.top = '-100%';
+  } else {
+    mobileMenu.style.top = '0';
+  }
+});
 </script>
 
 <script>
