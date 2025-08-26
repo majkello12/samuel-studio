@@ -52,24 +52,24 @@ header {
   align-items: center;
   justify-content: space-between;
   position: sticky;
-  top: 0;
   z-index: 1000;
-    top: env(safe-area-inset-top);  
+      top: 0; /* standard */
+  padding-top: env(safe-area-inset-top); /* uwzględnia notch / pasek systemowy */
   transition: top 0.4s ease; /* <-- łagodne przesuwanie */
 }
 
 header.hidden {
-  top: -100%; 
+  top: calc(-100% - env(safe-area-inset-top));
 }
-
 
 .logo-container {
   display: flex;
   align-items: center;   /* pionowe wyśrodkowanie */
   justify-content: center;
   height: 100%;
-  margin: 0;             /* usuń marginesy */
   overflow: visible;
+    margin: 0;
+  padding-top: env(safe-area-inset-top); /* jeśli chcesz bezpieczeństwo */
 }
 
 .logo-container img {
