@@ -70,14 +70,17 @@ header.hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;  
-  margin-bottom: 1cm;
+  height: 90%;        /* wysokość dopasowana do headera */
+  overflow: visible;   /* ważne, żeby logo nie było przycinane */
   margin-top: 1cm;
+  margin-bottom: 1cm;
 }
 
 .logo-container img {
-  height: auto;   
-  max-height: 60px; 
+  max-height: 30px;    /* ograniczenie wysokości */
+  height: auto;
+  width: auto;         /* pilnujemy proporcji */
+  display: block;  
 }
 
 
