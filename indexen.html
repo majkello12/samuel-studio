@@ -34,51 +34,48 @@
 }
 
 body {
-              font-family: 'Roboto', sans-serif;
-      letter-spacing: 1px;
-    background: #fff;
-      overflow-x: hidden;
-        margin: 0;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  background: #fff;
+  overflow-x: hidden;
+  margin: 0;
   padding: 0;
   height: 100%;
-    }
-
-
+}
 
 header {
-      background-color: #eeb702;
-      padding: 0px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      position: sticky;
-      top: 0;
-           margin: 0; 
-      z-index: 1000;
-  transition: top 0.3s ease-in-out;
+  background-color: #eeb702;
+  height: 90px;                /* nagłówek zawsze 90px */
+  padding: 0 40px;
+  display: flex;
+  align-items: center;         /* wyśrodkowanie pionowe */
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header.hidden {
-  top: -150%; /* chowa w całości niezależnie od wysokości */
+  top: -150%; 
 }
+
 
 
 .logo-container {
   display: flex;
-  align-items: center;
+  align-items: center;   /* pionowe wyśrodkowanie */
   justify-content: center;
-  height: 100%;     /* równa wysokość jak header */
-  margin: 0;        /* usuń marginesy */
+  height: 100%;
+  margin: 0;             /* usuń marginesy */
+  overflow: visible;
 }
 
 .logo-container img {
-  max-height: 90px; /* logo dopasowane do wysokości paska */
+  max-height: 70px;      /* dopasowane do headera */
   height: auto;
   width: auto;
   display: block;
 }
-
 
     .center-links {
       flex: 1;
@@ -1056,7 +1053,7 @@ a {
 
 <header>
 <div class="logo-container">
-  <img src="logosamuelstudio2025.svg" alt="Logo" style="width:120px; height:120px;" />
+  <img src="logosamuelstudio2025.svg" alt="Logo" style="width:90px; height:90px;" />
 </div>
 
 
