@@ -995,36 +995,76 @@ a {
 }
 
 .logo-carousel {
-  width: 570px; 
-  margin: auto;
-  overflow: hidden;
   position: relative;
-  justify-content: center
+  width: 100%;
+  overflow: hidden;
 }
 
 .logo-track {
   display: flex;
-  transition: transform 0.5s ease-in-out; 
+  animation: slide 40s infinite; /* wolniejsza animacja */
 }
 
+/* każdy element = jedno logo */
 .logo-track a {
-  flex: 0 0 100%; 
+  flex: 0 0 25%; /* 4 loga w rzędzie na desktopie */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.logo-track a img {
-      min-width: 200px;
-    max-width: 250px; 
-     object-fit: contain;
+.logo-track img {
+  max-height: 80px;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 700px) {
-  .logo-track a img {
-    min-width: 150px;
-    max-width: 200px; 
+.logo-track img:hover {
+  transform: scale(1.1);
+}
 
+/* ANIMACJA – krok po kroku z pauzą */
+@keyframes slide {
+  0%, 5%   { transform: translateX(0); }
+  10%, 15% { transform: translateX(-25%); }
+  20%, 25% { transform: translateX(-50%); }
+  30%, 35% { transform: translateX(-75%); }
+  40%, 45% { transform: translateX(-100%); }
+  50%, 55% { transform: translateX(-125%); }
+  60%, 65% { transform: translateX(-150%); }
+  70%, 75% { transform: translateX(-175%); }
+  80%, 85% { transform: translateX(-200%); }
+  90%, 95% { transform: translateX(-225%); }
+  100%     { transform: translateX(-250%); }
+}
+
+
+/* MOBILE */
+@media (max-width: 760px) {
+  .logo-track {
+    animation: slide-mobile 40s infinite;
   }
-  .logo-carousel {
-    width: 100%;   
+
+  .logo-track a {
+    flex: 0 0 100%; /* jedno logo w 100% szerokości */
+    justify-content: center;
+  }
+
+  /* ANIMACJA MOBILE – każde logo pełna szerokość (100%) */
+  @keyframes slide-mobile {
+    0%, 5%   { transform: translateX(0); }
+    10%, 15% { transform: translateX(-100%); }
+    20%, 25% { transform: translateX(-200%); }
+    30%, 35% { transform: translateX(-300%); }
+    40%, 45% { transform: translateX(-400%); }
+    50%, 55% { transform: translateX(-500%); }
+    60%, 65% { transform: translateX(-600%); }
+    70%, 75% { transform: translateX(-700%); }
+    80%, 85% { transform: translateX(-800%); }
+    90%, 95% { transform: translateX(-900%); }
+    100%     { transform: translateX(-1000%); }
   }
 }
 
@@ -1177,30 +1217,34 @@ Subtle motion that adds depth <br>- Background Animations</div>
 
 <section style="padding: 60px 20px; text-align: center; background: #fff; overflow: hidden;">
   <section class="text-section">
-    
-  <h2>Brands that trusted Us</h2>
-  <div class="separator"></div>
+    <h2>Brands that trusted Us</h2>
+    <div class="separator"></div>
   </section>
+
   <div class="logo-carousel">
     <div class="logo-track">
-      <a href="https://firma1.pl" target="_blank"><img src="LOGO-UwCM-a-300x164.png" alt="Firma 1"></a>
-      <a href="https://dwaprzymierza.pl/" target="_blank"><img src="logo_dwaprzymierza2019-01-300x214.jpg.webp" alt="Firma 2"></a>
-      <a href="https://muzeum.torun.pl/" target="_blank"><img src="logo-muzeum-okregowe-w-toruniu-300x72.png.webp" alt="Firma 3"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="logo-e1649182133913-300x76.jpg.webp" alt="Firma 4"></a>
-      <a href="https://facebook.com/Chrzescijanskie.Granie" target="_blank"><img src="fundacja_chg_logo-560x280-1-300x150.jpg.webp" alt="Firma 5"></a>
-      <a href="https://firma6.pl" target="_blank"><img src="CM.-Stories-logo-300x170.jpg.webp" alt="Firma 6"></a>
-      <a href="https://firma7.pl" target="_blank"><img src="Logo-Style-3-300x300.png.webp" alt="Firma 7"></a>
-      <a href="https://www.trileas.com/" target="_blank"><img src="TRILEAS-logo-300x246.png.webp" alt="Firma 8"></a>
-      <a href="https://firma6.pl" target="_blank"><img src="FAMILY-FILM-LOGO-230x300.png.webp" alt="Firma 6"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="Redeemified_Logo-300x169.jpg.webp" alt="Firma 4"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="ALFA-BRAVO-LOGO.png" alt="Firma 4"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="Modlitwa-w-drodze-logo-1-300x133.png.webp" alt="Firma 4"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="30052508_10155961110891636_7592915301371484606_o-300x300.jpg" alt="Firma 4"></a>
-      <a href="https://e-religijne.pl" target="_blank"><img src="4-eco-logo-300x137.png.webp" alt="Firma 4"></a>
-
+      <a href="#"><img src="LOGO-UwCM-a-300x164.png" alt="Firma 1"></a>
+      <a href="#"><img src="logo_dwaprzymierza2019-01-300x214.jpg.webp" alt="Firma 2"></a>
+      <a href="#"><img src="logo-muzeum-okregowe-w-toruniu-300x72.png.webp" alt="Firma 3"></a>
+      <a href="#"><img src="logo-e1649182133913-300x76.jpg.webp" alt="Firma 4"></a>
+      <a href="#"><img src="fundacja_chg_logo-560x280-1-300x150.jpg.webp" alt="Firma 5"></a>
+      <a href="#"><img src="CM.-Stories-logo-300x170.jpg.webp" alt="Firma 6"></a>
+      <a href="#"><img src="Logo-Style-3-300x300.png.webp" alt="Firma 7"></a>
+      <a href="#"><img src="TRILEAS-logo-300x246.png.webp" alt="Firma 8"></a>
+      <!-- POWTÓRZENIE LISTY -->
+      <a href="#"><img src="LOGO-UwCM-a-300x164.png" alt="Firma 1"></a>
+      <a href="#"><img src="logo_dwaprzymierza2019-01-300x214.jpg.webp" alt="Firma 2"></a>
+      <a href="#"><img src="logo-muzeum-okregowe-w-toruniu-300x72.png.webp" alt="Firma 3"></a>
+      <a href="#"><img src="logo-e1649182133913-300x76.jpg.webp" alt="Firma 4"></a>
+      <a href="#"><img src="fundacja_chg_logo-560x280-1-300x150.jpg.webp" alt="Firma 5"></a>
+      <a href="#"><img src="CM.-Stories-logo-300x170.jpg.webp" alt="Firma 6"></a>
+      <a href="#"><img src="Logo-Style-3-300x300.png.webp" alt="Firma 7"></a>
+      <a href="#"><img src="TRILEAS-logo-300x246.png.webp" alt="Firma 8"></a>
     </div>
   </div>
 </section>
+
+
 
   <section class="video-section video-section--checiny">
     <video src="View-of-Checiny.mp4" autoplay muted loop></video>
