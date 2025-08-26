@@ -16,6 +16,11 @@
       box-sizing: border-box;
     }
 
+    html, body {
+  margin: 0;
+  padding: 0;
+}
+
     @font-face {
   font-family: 'Nohemi';
   src: url(Nohemi-Regular-BF6438cc579d934.woff) format('woff2'),
@@ -64,10 +69,10 @@ header {
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      position: sticky;
+        position: relative; /* zamiast fixed, jeśli nie musi być przyklejony */
       top: 0;
            margin: 0; 
-      z-index: 1000;
+      z-index: 10;
   transition: top 0.3s ease-in-out;
 }
 
@@ -91,6 +96,9 @@ header.hidden {
   height: auto;
   width: auto;         /* pilnujemy proporcji */
   display: block;  
+  position: relative;
+  z-index: 20;        /* logo nad paskiem */
+}
 }
 
 
