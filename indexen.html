@@ -52,8 +52,10 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  top: env(safe-area-inset-top);  
   z-index: 1000;
 }
+
 
 header.hidden {
   top: -150%; 
@@ -75,6 +77,18 @@ header.hidden {
   height: auto;
   width: auto;
   display: block;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    padding-top: calc(10px + env(safe-area-inset-top));
+    height: calc(70px + env(safe-area-inset-top));
+  }
+
+  .logo-container img {
+    max-height: 50px;
+  }
 }
 
     .center-links {
