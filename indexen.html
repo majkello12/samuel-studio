@@ -43,23 +43,25 @@ body {
   height: 100%;
 }
 
+
 header {
   background-color: #eeb702;
-  height: 90px;                /* nagłówek zawsze 90px */
+  height: 90px;
   padding: 0 40px;
   display: flex;
-  align-items: center;         /* wyśrodkowanie pionowe */
+  align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
-  top: env(safe-area-inset-top);  
   z-index: 1000;
+    top: env(safe-area-inset-top);  
+  transition: top 0.4s ease; /* <-- łagodne przesuwanie */
 }
-
 
 header.hidden {
-  top: -150%; 
+  top: -100%; 
 }
+
 
 .logo-container {
   display: flex;
@@ -1491,19 +1493,20 @@ closeBtn.addEventListener("click", () => {
 
 </script>
 
-<script>let lastScroll = 0;
+<script>
+let lastScroll = window.pageYOffset || document.documentElement.scrollTop;
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
   if (currentScroll > lastScroll && currentScroll > 40) {
     header.classList.add("hidden");
-  } else {
+  } else if (currentScroll < lastScroll) {
     header.classList.remove("hidden");
   }
 
-  lastScroll = currentScroll;
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll; // zabezpieczenie przy przewinięciu do góry
 });
 </script>
 
