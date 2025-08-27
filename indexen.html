@@ -296,17 +296,24 @@ img {
            margin-top: -90px;
       color: #f0bb1c;
     }
+
     .video-overlay .btn {
       padding: 12px 29px;
+          flex: 1 1 300px;      /* rosną do tej samej szerokości */
+    max-width: 350px;     /* maksymalna szerokość przy dużych ekranach */
+    min-width: 300px;     /* minimalna szerokość */
+    text-align: center;
       background: #f0bb1c;
       color: rgb(29, 29, 29);
       border: nonblacke;
-      border-radius: 25px;
+      border-radius: 35px;
       font-size: 27px;
       font-weight: 500;
-
- margin: 80px 15px 0 15px;      cursor: pointer;
-      transition: background 0.1s;
+      font-family: 'Roboto', sans-serif;
+      background: #f0bb1c;
+      transition: transform 0.4s ease;
+      margin: 80px 15px 0 15px;      
+      cursor: pointer;
     }
 
     @media (max-width: 768px) {
@@ -327,19 +334,43 @@ img {
    }
 }
 
-    .video-overlay .btn {
-              font-family: 'Roboto', sans-serif;
-              
-      background: #f0bb1c;
-          transition: transform 0.4s ease;
-    }
-
         .video-overlay .btn:hover {
               font-family: 'Roboto', sans-serif;
                     background: #e2af16;
         transform: scale(1.1);
     }
+    
+    .video-overlay .text-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
 
+
+.video-overlay .separator {
+    width: 150px;           /* szerokość separatora */
+    height: 7px;             /* grubość */
+    background-color: #f0bb1c; /* kolor */
+        margin: 0 auto 20px;
+
+margin-top: 5ch;  
+
+    transform: scaleX(0);
+    transform-origin: center;
+animation: drawLine 5s ease-in-out infinite;}
+
+@keyframes drawLine {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+/* responsywność */
+@media (max-width: 700px) {
+    .video-overlay .separator {
+        width: 120px;
+        margin-top: 6ch;  
+    }
+}
      .video-hero {
       position: relstickyative;
       width: 100%;
@@ -730,7 +761,6 @@ a {
   flex-wrap: wrap;
 }
 
-/* styl przycisku */
 .subscribe-btn {
   display: flex;
   align-items: center;
@@ -1039,6 +1069,96 @@ a {
   }
 }
 
+.video-section2 {
+    position: relative;
+    width: 100%;
+    min-height: 85vh;
+    overflow: hidden;
+}
+
+.video-section2 video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.video-overlay2 {
+    position: relative;
+        display: flex;
+
+    z-index: 1;
+    text-align: center;
+    padding: 110px 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        text-align: center; /* poziome wyśrodkowanie */
+    padding: 110px 20px;
+    color: #fff;
+}
+
+
+
+.video-overlay2 h4 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+        justify-content: center;
+        text-align: center; /* poziome wyśrodkowanie */
+    list-style-type: none;
+}
+
+.video-overlay2 .h7 {
+    max-width: 900px; /* ograniczenie szerokości na dużych ekranach */
+    font-size: 1.5rem;
+    line-height: 2;
+        justify-content: center;
+        text-align: center; /* poziome wyśrodkowanie */
+
+}
+
+.video-overlay2 .h7 ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+/* responsywność */
+@media (max-width: 1024px) {
+    .video-overlay2 h4 {
+        font-size: 1.6rem;
+    }
+    .video-overlay2 h5 {
+        font-size: 1.5rem;
+    }
+    .video-overlay2 .h7 {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-overlay2 {
+        padding: -40px 15px;
+    }
+    .video-overlay2 h4 {
+        font-size: 1.4rem;
+    }
+    .video-overlay2 h5 {
+        font-size: 1.3rem;
+    }
+    .video-overlay2 .h7 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+
 </style>
 </head>
 <body>
@@ -1078,17 +1198,21 @@ a {
   </div>
 </header>
 
-  <section class="video-section" id="video">
+<section class="video-section" id="video">
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h1>Reach your audience more effectively</h1>
-      
-            <h4>Animations that stand out and engage.</h2>
+        <h1>Reach your audience more effectively</h1>
+        <h4>Animations that stand out and engage.</h4>
 
-              <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">See How it Works</button>
-      <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">Explore Examples</button>
+        <!-- separator -->
+        <div class="separator"></div>
+
+        <div class="buttons">
+            <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">See How it Works</button>
+            <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">Explore Examples</button>
+        </div>
     </div>
-  </section>
+</section>
 
   
 
@@ -1165,22 +1289,27 @@ a {
     </p>
   </section>
 
-  <section class="video-section">
-    <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
-    <div class="video-overlay">
-      <h4>See My Work in Action </h4>
-       <h4><br><br><br><br><br><br>I offer creative solutions for your business needs. </h4>
-       <div class="h7">
-<br>- Make your brand memorable and stand out <br>- Animated Logos
-<br>- Simplify complex topics and engage your audience <br>- Explainers
-<br>- Tell your story with motion <br>- Storytelling
-<br>- Enhance your video projects <br>- Animated elements for larger productions
-<br>Perfect for digital branding and social media <br>- Animated GIFs
-Grab attention and drive awareness <br>- Promotional Animations
-<br>- Eye - catching visual storytelling for your campaigns <br>- Animated Posters
-Subtle motion that adds depth <br>- Background Animations</div>
+<section class="video-section2">
+  <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
+  <div class="video-overlay2">
+    
+    <h4><li>See My Work in Action.</li> I offer creative solutions for your business needs.</h4>
+
+    <div class="h7">
+      <ul>
+        <li>Make your brand memorable and stand out – Animated Logos</li>
+        <li>Simplify complex topics and engage your audience – Explainers</li>
+        <li>Tell your story with motion – Storytelling</li>
+        <li>Enhance your video projects – Animated elements for larger productions</li>
+        <li>Perfect for digital branding and social media – Animated GIFs</li>
+        <li>Grab attention and drive awareness – Promotional Animations</li>
+        <li>Eye-catching visual storytelling for your campaigns – Animated Posters</li>
+        <li>Subtle motion that adds depth – Background Animations</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
   
 
 
@@ -1311,31 +1440,25 @@ From concept to finished video</p>
 
 
 
-  <section class="text-section">
-  <h2>Ready to create something extraordinary?</h2>
-  <div class="separator"></div>
-  <p>
-    Let’s work together and bring your ideas to life. Contact me today  
-    <span class="highlight">to discuss your next project.</span>
-  </p>
-  </section>
-
+  
 
 <section class="video-section" id="video">
-  <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
-  
-  <div class="video-overlay">
-    <h1>Ready to create something extraordinary?</h1>
-    <h4>Let’s work together and bring your ideas to life.</h4>
-    <br><br>
-<h3 style="color: white;">Contact me today to discuss your next project.</h3>    
-    <div class="buttons">
+    <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
+    <div class="video-overlay">
+        <h1>Ready to create something extraordinary?</h1>
+        <h4>Let’s work together and bring your ideas to life. Contact me today.</h4>
+
+        <!-- separator -->
+        <div class="separator"></div>
+
+        <div class="buttons">
       <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">Get a Free Consultation</button>
       <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">Contact me</button>
+        </div>
     </div>
-  </div>
 </section>
-  
+
+
   <section id="kontakt">
     <div style="margin-bottom: -30px;">
     <h2 style="margin-bottom: 30px;">Contact me</h2>
@@ -1343,6 +1466,8 @@ From concept to finished video</p>
     <p>call: <a href="tel:+48693733366">+48 693 733 366</a></p>
   </section>
 
+
+  
 
 
 
