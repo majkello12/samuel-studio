@@ -195,6 +195,41 @@ img {
   display: none;
 }
 
+.video-col {
+    display: flex;
+    justify-content: center; /* poziome wyśrodkowanie */
+    align-items: center;     /* pionowe wyśrodkowanie */
+    width: 100%;
+    max-width: 1200px;       /* opcjonalnie ograniczenie szerokości */
+    margin: 0 auto;           /* wyśrodkowanie kontenera */
+    overflow: hidden;
+}
+
+.video-col video {
+    width: 100%;             /* wypełnia kontener */
+    height: auto;            /* zachowuje proporcje */
+    max-height: 80vh;        /* maksymalna wysokość na ekranie */
+    object-fit: cover;       /* wypełnia kontener, przycinając jeśli trzeba */
+    border-radius: 8px;      /* opcjonalnie zaokrąglone rogi */
+}
+.video-col2 {
+    display: flex;
+    justify-content: center; /* poziome wyśrodkowanie */
+    align-items: center;     /* pionowe wyśrodkowanie */
+    width: 100%;
+    max-width: 1200px;       /* opcjonalnie ograniczenie szerokości */
+    margin: 0 auto;           /* wyśrodkowanie kontenera */
+    overflow: hidden;
+}
+
+.video-col2 video {
+    width: 100%;             /* wypełnia kontener */
+    height: auto;            /* zachowuje proporcje */
+    max-height: 80vh;        /* maksymalna wysokość na ekranie */
+    object-fit: cover;       /* wypełnia kontener, przycinając jeśli trzeba */
+    border-radius: 8px;      /* opcjonalnie zaokrąglone rogi */
+}
+
 @media (max-width: 768px) {
   .line-break-sm {
     display: inline;
@@ -249,6 +284,24 @@ img {
   border-radius: 20px;
     max-width: 500px;
 
+}
+
+.video-col2 {
+    display: flex;
+    justify-content: center; /* poziome wyśrodkowanie */
+    align-items: center;     /* pionowe wyśrodkowanie */
+    width: 100%;
+    max-width: 1200px;       /* opcjonalnie ograniczenie szerokości */
+    margin: 0 auto;           /* wyśrodkowanie kontenera */
+    overflow: hidden;
+}
+
+.video-col2 video {
+    width: 100%;             /* wypełnia kontener */
+    height: auto;            /* zachowuje proporcje */
+    max-height: 80vh;        /* maksymalna wysokość na ekranie */
+    object-fit: cover;       /* wypełnia kontener, przycinając jeśli trzeba */
+    border-radius: 8px;      /* opcjonalnie zaokrąglone rogi */
 }
 
 .bottom-video {
@@ -1292,7 +1345,9 @@ a {
     </div>
   </div>
 
-
+    <div class="video-col2">
+      <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
+    </div>
   <div class="text-col" style="margin-top: -50px;">
     <h2><br>No one wants to be ignored.</h2>
     <p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.<br></p>
@@ -1386,6 +1441,37 @@ a {
 </section>
 
 
+
+<section class="yellow-section" id="oferta">
+  <div class="ellipse-video">
+    <video src="question-mark.mp4" autoplay muted loop></video>
+  </div>
+
+  <h2>Simple, Clear, and Effective Process.</h2>
+
+  <div class="grid-2x2">
+    <div class="grid-item" onclick="location.href='https://link1.pl'">
+      <img src="image1.png" alt="Animacja reklamowa">
+      <div class="desc">I create animation that speaks visually</div>
+    </div>
+    <div class="grid-item" onclick="location.href='https://link2.pl'">
+      <img src="image2.png" alt="Animacja produktowa">
+      <div class="desc">You get a finished film that works.</div>
+    </div>
+    <div class="grid-item" onclick="location.href='https://link3.pl'">
+      <img src="image3.png" alt="Spot reklamowy">
+      <div class="desc">We define the story that you want to tell.</div>
+    </div>
+    <div class="grid-item" onclick="location.href='https://link3.pl'">
+      <img src="image1.png" alt="Spot reklamowy">
+      <div class="desc">Let's create something unforgettable together.</div>
+    </div>
+  </div>
+
+  <p class="yellow-section-bottom-text">
+        Order today
+  </p>
+</section>
 
   <section class="video-section5">
     <video src="View-of-Checiny.mp4" autoplay muted loop></video>
