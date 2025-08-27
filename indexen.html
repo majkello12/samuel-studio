@@ -400,9 +400,9 @@ img {
 
 
 .video-overlay .separator {
-    width: 150px;           /* szerokość separatora */
-    height: 7px;             /* grubość */
-    background-color: #f0bb1c; /* kolor */
+    width: 150px;           
+    height: 7px;             
+    background-color: #f0bb1c; 
         margin: 0 auto 20px;
 
 margin-top: 5ch;  
@@ -416,7 +416,6 @@ animation: drawLine 5s ease-in-out infinite;}
     100% { transform: scaleX(1); }
 }
 
-/* responsywność */
 @media (max-width: 700px) {
     .video-overlay .separator {
         width: 120px;
@@ -646,6 +645,11 @@ padding: 20px 10px;
   padding: 160px 20px 60px;
   text-align: center;
   align-items: center;
+}
+@media (max-width: 700px) {
+  #oferta.yellow-section {
+    background-color: hsl(45, 95%, 52%);
+  }
 }
 
 .yellow-section h2 {
@@ -1242,6 +1246,141 @@ a {
 }
 
 
+
+
+
+
+.yellow-section0{
+  background: #f0bb1c;
+  text-align: center;
+  padding: 60px 20px;
+  color: #000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
+}
+
+.text-section0 h2 {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+.separator0 {
+  width: 180px;
+  height: 7px;
+  background-color: #ffffff; /* biały separator */
+  margin: 10px auto 30px;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: drawLine 4s ease-in-out infinite;
+}
+@keyframes drawLine {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+/* kontener karuzeli */
+.carousel-container0 {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* track trzyma slajdy (każdy slajd zawiera tekst + obrazek) */
+.carousel-track0 {
+  width: 100%;
+}
+
+/* pojedynczy slajd */
+.carousel-slide0 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.carousel-slide0.active {
+  display: flex;
+}
+
+/* tekst nad grafiką */
+.slide-text {
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 500;
+  max-width: 90%;
+}
+
+.circle-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.651);
+  transition: transform 0.5s ease;
+}
+
+.circle-img:hover {
+  transform: scale(1.3);
+}
+
+.see-more-btn2 {
+  font-size: 20px;
+  padding: 12px 32px;
+  background: rgb(0, 0, 0)
+  color: #f0bb1c;
+  border: none;
+  border-radius: 30px;
+  margin: 36px auto 0;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.see-more-btn2:hover {
+  transform: scale(1.05);
+}
+
+/* strzałki nawigacyjne */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0);
+  color: #000000;
+  border: none;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  font-size: 52px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.nav:active { transform: translateY(-50%) scale(1.98); }
+.nav.prev { left: -130px; }
+.nav.next { right: -130px; }
+
+/* responsywność */
+@media (max-width: 900px) {
+  .circle-img { width: 280px; height: 280px; }
+}
+@media (max-width: 700px) {
+  .text-section0 h2 { font-size: 1.6rem; }
+  .separator0 { width: 120px; margin-top: 1.5rem; }
+  .circle-img { width: 200px; height: 200px; }
+  .nav.prev { left: 6px; }
+  .nav.next { right: 6px; }
+  .nav { font-size: 35px; }
+  .see-more-btn { font-size: 18px; padding: 10px 28px; }
+}
 </style>
 </head>
 <body>
@@ -1442,37 +1581,6 @@ a {
 
 
 
-<section class="yellow-section" id="oferta">
-  <div class="ellipse-video">
-    <video src="question-mark.mp4" autoplay muted loop></video>
-  </div>
-
-  <h2>Simple, Clear, and Effective Process.</h2>
-
-  <div class="grid-2x2">
-    <div class="grid-item" onclick="location.href='https://link1.pl'">
-      <img src="image1.png" alt="Animacja reklamowa">
-      <div class="desc">I create animation that speaks visually</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link2.pl'">
-      <img src="image2.png" alt="Animacja produktowa">
-      <div class="desc">You get a finished film that works.</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link3.pl'">
-      <img src="image3.png" alt="Spot reklamowy">
-      <div class="desc">We define the story that you want to tell.</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link3.pl'">
-      <img src="image1.png" alt="Spot reklamowy">
-      <div class="desc">Let's create something unforgettable together.</div>
-    </div>
-  </div>
-
-  <p class="yellow-section-bottom-text">
-        Order today
-  </p>
-</section>
-
   <section class="video-section5">
     <video src="View-of-Checiny.mp4" autoplay muted loop></video>
     <div class="video-overlay5">
@@ -1494,27 +1602,27 @@ a {
     <div class="opinie-track">
       <div class="opinia">
         <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
-          <img src="opinia1.jpeg" alt="Opinia 1">
+          <img src="opinia1.png" alt="Opinia 1">
         </a>
       </div>
       <div class="opinia">
         <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1m" target="_blank">
-          <img src="opinia1.jpeg" alt="Opinia 2">
+          <img src="opinia2.png" alt="Opinia 2">
         </a>
       </div>
       <div class="opinia">
         <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
-          <img src="opinia1.jpeg" alt="Opinia 3">
+          <img src="opinia3.png" alt="Opinia 3">
         </a>
       </div>
       <div class="opinia">
         <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
-          <img src="opinia1.jpeg" alt="Opinia 4">
+          <img src="opinia4.png" alt="Opinia 4">
         </a>
       </div>
       <div class="opinia">
         <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
-          <img src="opinia1.jpeg" alt="Opinia 5">
+          <img src="opinia5.png" alt="Opinia 5">
         </a>
       </div>
     </div>
@@ -1536,9 +1644,14 @@ a {
         <video src="Trileas-Animated-Cover.mp4" autoplay muted loop></video>
         <div class="desc">Trileas logo visualisation</div>
       </div>
+
+            <div class="grid-item">
+        <video src="The-Gospel-in-five-minutes-Cover.mp4" autoplay muted loop></video>
+        <div class="desc">Trileas logo visualisation</div>
+      </div>
       <div class="grid-item">
-        <video src="St-Thomas-Apostol-animated-cover-1.mp4" autoplay muted loop></video>
-        <div class="desc">St Thomas animation</div>
+        <video src="animated-cover-of-modern-3d-animation.mp4" autoplay muted loop></video>
+        <div class="desc">Modern 3D animation</div>
       </div>
     </div>
     <button class="see-more-btn">See More</button>
@@ -1546,9 +1659,9 @@ a {
   </section>
 
   <section class="video-section">
-    <video src="The-Gospel-in-five-minutes-Cover.mp4" autoplay muted loop></video>
+    <video src="Samuel-Studio-Reel-2024 2.mp4" autoplay muted loop></video>
     <div class="video-overlay">
-      <h5 style="color: black;">Animations that works</h5>
+      <h5 style="color: rgb(0, 0, 0);">Animations that works</h5>
       <p style="font-size: 1.5rem;">We help companies communicate more effectively.<br>
 From concept to finished video</p>
     </div>
@@ -1556,6 +1669,51 @@ From concept to finished video</p>
 
 
 
+
+<section class="yellow-section0">
+  <div class="text-section0 top">
+    <h2>Simple, Clear, and Effective Process.</h2>
+    <div class="separator0"></div>
+  </div>
+
+  <div class="carousel-container0" aria-roledescription="carousel">
+    <button class="nav prev" aria-label="Poprzedni slajd">‹</button>
+
+    <div class="carousel-track0">
+      <div class="carousel-slide0 active" data-index="0">
+        <p class="slide-text">I create animation that speaks visually</p>
+        <img src="image1.png" alt="grafika 1" class="circle-img">
+      </div>
+
+      <div class="carousel-slide0" data-index="1">
+        <p class="slide-text">You get a finished film that works.</p>
+        <img src="image2.png" alt="grafika 2" class="circle-img">
+      </div>
+
+      <div class="carousel-slide0" data-index="2">
+        <p class="slide-text">We define the story that you want to tell.</p>
+        <img src="image3.png" alt="grafika 3" class="circle-img">
+      </div>
+
+      <div class="carousel-slide0" data-index="3">
+        <p class="slide-text">Let's create something unforgettable together.</p>
+        <img src="image2.png" alt="grafika 4" class="circle-img">
+      </div>
+    </div>
+
+    <button class="nav next" aria-label="Następny slajd">›</button>
+  </div>
+
+  <button class="see-more-btn2"  
+    onclick="window.location.href='https://www.google.com/maps/place//data=!4m3!3m2!1s0xac688efcb209881f:0x50fac03e7d6b27cb!12e1'">
+    Order today
+  </button>
+
+  <div class="text-section0 bottom">
+    <h2>Let’s create together.</h2>
+    <div class="separator0"></div>
+  </div>
+</section>
   
 
 <section class="video-section" id="video">
@@ -1757,7 +1915,7 @@ window.addEventListener("scroll", () => {
     header.classList.remove("hidden");
   }
 
-  lastScroll = currentScroll <= 0 ? 0 : currentScroll; // zabezpieczenie przy przewinięciu do góry
+  lastScroll = currentScroll <= 0 ? 0 : currentScroll; 
 });
 </script>
 
@@ -1803,6 +1961,62 @@ window.onpageshow = function(event) {
     window.location.reload();
   }
 };
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = Array.from(document.querySelectorAll('.carousel-slide0'));
+  if (!slides.length) return;
+
+  let current = 0;
+  let autoplayInterval = null;
+  const INTERVAL_MS = 4000;
+
+  const prevBtn = document.querySelector('.nav.prev');
+  const nextBtn = document.querySelector('.nav.next');
+  const container = document.querySelector('.carousel-container0');
+
+  function showSlide(index) {
+    index = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    current = index;
+  }
+
+  function startAutoplay(){
+    stopAutoplay();
+    autoplayInterval = setInterval(() => showSlide(current + 1), INTERVAL_MS);
+  }
+
+  function stopAutoplay(){
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+
+  // przyciski
+  prevBtn.addEventListener('click', () => {
+    showSlide(current - 1);
+    startAutoplay(); // reset autoplay
+  });
+  nextBtn.addEventListener('click', () => {
+    showSlide(current + 1);
+    startAutoplay(); // reset autoplay
+  });
+
+  // pauza po najechaniu kursorem (użytkownik może czytać)
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+
+  // obsługa klawiatury (strzałki)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { showSlide(current - 1); startAutoplay(); }
+    if (e.key === 'ArrowRight') { showSlide(current + 1); startAutoplay(); }
+  });
+
+  // uruchom
+  showSlide(0);
+  startAutoplay();
+});
 </script>
 
 </body>
