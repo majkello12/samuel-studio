@@ -278,9 +278,9 @@ img {
 }
 
 .white-section .text-col2 {
-  text-align: center;
+  text-align: left;
   max-width: 800px;
-  margin: 40px auto;  
+  margin: -90px auto;  
 }
 
 .white-section .text-col2 h2,
@@ -292,9 +292,9 @@ img {
   width: 180px;
   height: 7px;
   background-color: #f0bb1c;
-  margin: 10px auto 30px;
+margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
   transform: scaleX(0);
-  transform-origin: center;
+  transform-origin: center; /* ważne: animacja rysowania od lewej */
   animation: drawLine 4s ease-in-out infinite;
 }
 @keyframes drawLine {
@@ -668,7 +668,7 @@ padding: 20px 10px;
 
     .ellipse-video {
       position: absolute;
-      top: 710px;
+      top: 630px;
       left: 50%;
       transform: translateX(-50%);
       width: 200px;
@@ -686,7 +686,7 @@ padding: 20px 10px;
     @media (max-width: 768px) {
 
         .ellipse-video {
-      top: 720px;
+      top: 630px;
 
     }}
 
@@ -991,7 +991,7 @@ a {
 
 
     .text-section h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -1004,7 +1004,7 @@ a {
     margin-top: 18px;
   align-items: center;
   justify-content: space-between;
-  margin: 18px auto;   
+  margin: 10px 0 30px 0;;   
   transform: scaleX(0);
   transform-origin: center;
   animation: drawLine 7s ease-in-out infinite;
@@ -1130,7 +1130,7 @@ a {
 .video-section2 {
   position: relative;
   width: 100%;
-  height: 100vh; /* wypełnia całą wysokość widoku */
+  height: 130vh; /* wypełnia całą wysokość widoku */
   overflow: hidden;
   background: #000; /* na wypadek wolniejszego ładowania wideo */
 }
@@ -1155,14 +1155,15 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 140px;
   width: 100%;
   height: 100%;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
   line-height: 2.2; /* większe odstępy między wierszami */
   z-index: 2;
 }
@@ -1253,14 +1254,14 @@ a {
 
 .text-section0 h2 {
   font-size: 2.2rem;
-  margin: 0 0 10px 0;
+  margin: 0 0 0px 0;
   font-weight: 600;
 }
 .separator0 {
   width: 180px;
   height: 7px;
   background-color: #ffffff; 
-  margin: 10px auto 30px;
+  margin: 10px 0 30px 0;
   transform: scaleX(0);
   transform-origin: center;
   animation: drawLine 4s ease-in-out infinite;
@@ -1384,7 +1385,7 @@ a {
     
 
     .gallery-section h2 {
-  text-align: center;
+  text-align: left;
   font-size: 2rem;
   margin: 40px 0; 
 }
@@ -1392,7 +1393,7 @@ a {
 
 
 .gallery-section p {
-  text-align: center;
+  text-align: left;
   max-width: 700px;
         margin-bottom: 40px; 
       color: #000000; 
@@ -1523,7 +1524,7 @@ a {
 .video-section4 {
   background: #fff;
   padding: 60px 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .section-header h2 {
