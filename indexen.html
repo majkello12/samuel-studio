@@ -40,6 +40,9 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  h1, h2, h3, h4, h5, h6, p {
+  margin-left: 10px; /* albo padding-left */
+}
 }
 
 
@@ -307,7 +310,7 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
 @media (max-width: 768px) {
   .white-section .top-row {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
   .white-section .text-col {
@@ -616,7 +619,7 @@ padding: 20px 10px;
   .h7 {
     padding: 20px 9px; 
     font-size: 18px;    
-    text-align: center;  
+    text-align: left;  
     margin-top: 10px;
      margin-bottom: 84px;
   }
@@ -1002,9 +1005,7 @@ a {
   background-color: #f0bb1c;
     margin-bottom: 18px;
     margin-top: 18px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0 30px 0;;   
+margin: 10px 0 30px 0; 
   transform: scaleX(0);
   transform-origin: center;
   animation: drawLine 7s ease-in-out infinite;
@@ -1030,11 +1031,10 @@ a {
 
 @media (max-width: 700px) {
     .text-section h2 {
-  text-align: center;
+  text-align: left;
 }
 
 .text-section .separator {
-   margin: 18px auto;
   width: 250px;             
   height: 8px;         
 }}
@@ -1133,6 +1133,7 @@ a {
   height: 130vh; /* wypełnia całą wysokość widoku */
   overflow: hidden;
   background: #000; /* na wypadek wolniejszego ładowania wideo */
+padding: 60px 20px 120px 80px; /* 120px od dołu */
 }
 
 .video-container2 {
@@ -1158,16 +1159,16 @@ a {
   margin-top: 140px;
   width: 100%;
   height: 100%;
-  padding: 60px 20px;
+  padding: 60px 20px 80px 80px; /* tu: większy padding z lewej */
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
+  justify-content: flex-start; /* od góry */
+  align-items: flex-start;     /* po lewej */
   text-align: left;
-  line-height: 2.2; /* większe odstępy między wierszami */
+  line-height: 2.2;
   z-index: 2;
+  box-sizing: border-box; /* żeby padding nie psuł układu */
 }
-
 .video-overlay2 h4 {
   color: #f0bb1c;
   font-size: 2.4rem;
@@ -1218,24 +1219,20 @@ a {
 .video-overlay2 li:nth-child(7) { animation-delay: 1.4s; }
 .video-overlay2 li:nth-child(8) { animation-delay: 1.6s; }
 
-/* Responsywność na mniejszych ekranach */
 @media (max-width: 768px) {
-  .video-section2 {
-    height: 100vh; /* wideo nadal wypełnia całą sekcję */
-  }
-
   .video-overlay2 {
-    padding: 40px 15px;
+    padding: 40px 20px 80px 40px; /* mniejszy lewy padding */
+    margin-top: 80px; /* mniej od góry */
   }
 
   .video-overlay2 h4 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    font-size: 1.6rem; /* mniejszy nagłówek */
+    margin-bottom: 15px;
   }
 
   .video-overlay2 li {
-    font-size: 1.4rem;
-    margin: 15px 0; /* margines dolny między wierszami */
+    font-size: 1.2rem; /* mniejsze punkty listy */
+    margin: 10px 0;
     line-height: 1.6;
   }
 }
@@ -1243,25 +1240,27 @@ a {
 
 .yellow-section0{
   background: #f0bb1c;
-  text-align: center;
-  padding: 60px 20px;
+  text-align: left;
+  padding: 90px 20px;
   color: #000;
   display:flex;
   flex-direction:column;
-  align-items:center;
+  align-items: left;
 
 }
 
 .text-section0 h2 {
   font-size: 2.2rem;
-  margin: 0 0 0px 0;
   font-weight: 600;
+    text-align: left;
+
 }
 .separator0 {
   width: 180px;
   height: 7px;
   background-color: #ffffff; 
   margin: 10px 0 30px 0;
+  
   transform: scaleX(0);
   transform-origin: center;
   animation: drawLine 4s ease-in-out infinite;
