@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
   <title>Samuel Studio</title>
@@ -50,9 +50,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
 z-index: 1000;
-      top: 0; 
   transition: top 0.4s ease; 
 
 }
@@ -68,8 +69,10 @@ z-index: 1000;
 }
 
 .logo-container img {
- min-height: 150px;   width: auto;
-  display: block;
+ width: auto;
+ display: block;
+   height: 90px;  
+  width: auto;
 }
 
 
