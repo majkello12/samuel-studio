@@ -25,10 +25,15 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  h, h3, h, h5, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
-  margin-left: 90px; /* albo padding-left */
+  h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
+  margin-left: 62px; /* albo padding-left */
 }
 }
+
+@media (max-width: 768px) {
+    h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
+  margin-left: 12px; }}
+
 
 
 header {
@@ -229,7 +234,7 @@ img {
 
 .white-section .text-col {
   flex: 1;
-  margin-left: 40px;    
+  margin-left: 80px;    
 }
 
 .white-section .text-col h2,
@@ -242,7 +247,7 @@ img {
 }
 
 .white-section .video-col video {
-  width: 100%;
+  width: 120%;
   height: auto;
   border-radius: 12px;
 }
@@ -267,6 +272,15 @@ img {
   object-fit: cover;
   border-radius: 8px;
 }
+
+
+@media (max-width: 768px) {
+.video-col2 video {
+  width: 150%;
+  height: auto;
+  object-fit: cover;
+}}
+
 
 .white-section .text-col2 {
   text-align: left;
@@ -325,7 +339,7 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
       position: relative;
       z-index: 1;
       text-align: center;
-      padding-top: 260px;
+      padding-top: 190px;
     }
     .video-overlay h1 {
       font-size: 49px;
@@ -343,8 +357,8 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
     text-align: center;
       background: #f0bb1c;
       color: rgb(29, 29, 29);
-      border-radius: 35px;
-      font-size: 29px;
+      border-radius: 65px;
+      font-size: 25px;
       font-weight: 500;
       font-family: 'Roboto', sans-serif;
       transition: transform 0.4s ease;
@@ -560,7 +574,7 @@ animation: drawLine 5s ease-in-out infinite;}
 
    h2 {
       color: #050505;
-       font-size: 36px;
+       font-size: 33px;
       margin-bottom: 30px;
         margin-top: -15px; 
 
@@ -574,12 +588,15 @@ animation: drawLine 5s ease-in-out infinite;}
 }
 
 
-h5 {
-    color: #050505;
-       font-size: 36px;
-      margin-bottom: 30px;
-        margin-top: -175px; 
-    }
+    h5 {
+  font-size: 20px;
+  color: black;
+  border-radius: 38px;
+        margin-bottom: 20px;
+
+
+
+}
     h6 {
        font-size: 18px;
         font-weight: 400;
@@ -624,8 +641,7 @@ padding: 20px 10px;
 .yellow-section {
   font-family: 'Roboto', sans-serif;
   background: #f0bb1c;
-  padding: 160px 20px 60px;
-  text-align: center;
+  padding: 160px 7px 60px;
   align-items: center;
 }
 @media (max-width: 700px) {
@@ -636,6 +652,8 @@ padding: 20px 10px;
 
 .yellow-section h2 {
   margin-bottom: 80px; 
+    padding: 10px 80px 0px;
+
 }
 
 .yellow-section-bottom-text {
@@ -648,6 +666,8 @@ padding: 20px 10px;
 @media (max-width: 768px) {
   .yellow-section h2 {
     margin-bottom: 40px; 
+        padding: 10px 44px 0px;
+
   }
   
   .yellow-section-bottom-text {
@@ -694,7 +714,7 @@ padding: 0 40px;
       background: rgb(255, 255, 255);
       padding: 12px;
       border-radius: 39px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.274);
       transition: transform 0.3s;
       cursor: pointer;
        text-align: center;
@@ -725,7 +745,7 @@ padding: 0 40px;
       background: rgb(255, 255, 255);
       padding: 15px;
       border-radius: 39px;
-      box-shadow: 0 400px 10px rgba(0, 0, 0, 0.062);
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.137);
       transition: transform 0.3s;
       cursor: pointer;
        text-align: center;
@@ -818,7 +838,7 @@ a {
   align-items: center;
   gap: 10px; 
   padding: 10px 25px;
-  background: #ffffff;
+border: 1px solid #000000;  background: #ffffff;
   color: #000000;
   font-weight: bold;
   text-decoration: none;
@@ -876,13 +896,15 @@ a {
   display: flex;             
   justify-content: center;
   align-items: flex-end;  
+  
   gap: 16px;
   height: 40px;           
 }
 
 .footer-socials a {
   display: flex;           
-  align-items: flex-end;   
+  align-items: flex-end;  
+   
   justify-content: center;
   height: 100%;            
 }
@@ -1243,9 +1265,9 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 .text-section0 h2 {
   font-size: 2.2rem;
   font-weight: 600;
-    text-align: left;
+    text-align: left;}
 
-}
+
 .separator0 {
   width: 180px;
   height: 7px;
@@ -1325,7 +1347,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 .nav {
   position: absolute;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0);
   color: #000000;
@@ -1341,8 +1363,8 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   z-index: 5;
 }
 .nav:active { transform: translateY(-50%) scale(1.98); }
-.nav.prev { left: -130px; }
-.nav.next { right: -130px; }
+.nav.prev { left: -19px; }
+.nav.next { right: -19px; }
 
 @media (max-width: 900px) {
   .circle-img { width: 280px; height: 280px; }
@@ -1597,6 +1619,29 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   color: #ffffff; /* biały na hover */
 }
 
+.animated-text {
+  display: inline-block;
+  white-space: pre-wrap;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 </style>
 </head>
 <body>
@@ -1658,8 +1703,9 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
     <video src="question-mark.mp4" autoplay muted loop></video>
   </div>
 
-  <h2>Do you have something important to show<br> but don't know how to do it effectively?</h2>
-
+<h2 class="animated-text">
+  Do you have something important to show but don't know how to do it effectively?
+</h2>
   <div class="grid-2x2">
     <div class="grid-item" onclick="location.href='https://link1.pl'">
       <img src="ANIMATED-ICON-LOGO.gif.webp" alt="Animacja reklamowa">
@@ -1720,7 +1766,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   <div class="video-container2">
 <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop playsinline></video>
     <div class="video-overlay2">
-      <h4>I offer <span class="highlight">creative solutions</span> for your business needs.</h4>
+      <h4>I offer creative solutions for your business needs.</h4>
       <div class="separator2"></div>
       <ul>
         <li class="white">
@@ -1808,7 +1854,8 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 <section class="yellow-section0">
   <div class="text-section0 top">
-    <h2>Simple, Clear, and Effective Process.</h2>
+<h2 class="animated-text">
+      Simple, Clear, and Effective Process.</h2>
     <div class="separator0"></div>
   </div>
 
@@ -1981,7 +2028,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
   <footer class="footer">
   <div class="footer-subscribe">
-    <h3>CLICK TO SUBSCRIBE</h3>
+    <h5>CLICK TO SUBSCRIBE</h5>
     <div class="footer-buttons">
       <a href="#" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
@@ -2276,6 +2323,22 @@ if (window.innerWidth <= 768) {
   });
 }
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const text = document.querySelector(".animated-text");
+    const words = text.innerHTML.split(" "); // dzielimy po spacji
+    text.innerHTML = "";
+
+    words.forEach((word, i) => {
+      const span = document.createElement("span");
+      span.textContent = word + " ";
+      span.style.animationDelay = `${i * 0.13}s`; // opóźnienie co 0.3s
+      text.appendChild(span);
+    });
+  });
+</script>
+
 
 </body>
 </html>
