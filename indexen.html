@@ -1258,20 +1258,23 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 .video-overlay2 li:nth-child(8) { animation-delay: 1.6s; }
 
 @media (max-width: 768px) {
-  .video-overlay2 {
-    padding: 40px 20px 80px 40px; /* mniejszy lewy padding */
-    margin-top: 80px; /* mniej od góry */
+.video-overlay2 {
+  padding: 20px 40px 40px; /* mniejsze paddingi */
+    margin-top: 110px;        /* konkretny margines od góry */
+    align-items: center;     /* centrowanie poziome */
+    text-align: left;
+    height: auto;  
   }
 
   .video-overlay2 h4 {
-    font-size: 1.6rem; /* mniejszy nagłówek */
-    margin-bottom: 15px;
+    font-size: 1.3em;  /* dopasowanie do ekranu */
+    margin-bottom: 12px;
   }
 
   .video-overlay2 li {
-    font-size: 1.2rem; /* mniejsze punkty listy */
-    margin: 10px 0;
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 12px 0;      /* mniejsze odstępy między elementami */
   }
 }
 
@@ -1335,7 +1338,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 }
 
 .slide-text {
-  font-size: 1.905rem;
+  font-size: 1.5rem;
   margin: 0;
   font-weight: 500;
   max-width: 90%;
@@ -1844,7 +1847,7 @@ vertical-align: bottom;
 
 <section style="padding: 60px 20px; text-align: center; background: #fff; overflow: hidden;">
   <section class="text-section">
-    <h2>Brands that trusted Us</h2>
+    <h2>Brands that trusted&nbsp;Us</h2>
     <div class="separator"></div>
   </section>
 
