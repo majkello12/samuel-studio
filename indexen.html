@@ -68,8 +68,16 @@ z-index: 1000;
   width: auto;
 }
 
-
 @media (max-width: 768px) {
+  header {
+    padding: 0 15px; /* zmniejszamy odstępy */
+    height: 70px;    /* można trochę obniżyć nagłówek */
+  }
+
+  .hamburger {
+    width: 24px;   /* minimalnie mniejszy */
+    height: 20px;
+  }
 
   .logo-container img {
     max-height: 90px;
@@ -161,6 +169,7 @@ z-index: 1000;
   .center-links {
     display: none;
   }
+  
   .hamburger {
     display: flex;
   }
