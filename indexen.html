@@ -25,14 +25,13 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
-  margin-left: 132px; /* albo padding-left */
+h, h3, .gallery-section h2, .grid-item, .section-header h2, 
+.text-section, .text-section0, .separator, .separator0, 
+.separator2, .reel-link, .video-overlay2 {
+  margin-left: 11vw; /* lewy margines dla dużych ekranów */
 }
 }
 
-@media (max-width: 768px) {
-    h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
-  margin-left: 12px; }}
 
 
 
@@ -58,18 +57,8 @@ max-width: 100vw;
   display: flex;
   align-items: center;  
   justify-content: center;
-  overflow: visible;
-    margin: 0;
     z-index: 1050;
 }
-
-.logo-container img {
- width: auto;
- display: block;
-   height: 90px;  
-  width: auto;
-}
-
 
 
     .center-links {
@@ -130,10 +119,6 @@ max-width: 100vw;
         padding: 0 -50px; 
 
     height: 22px;
-  }
-
-  .logo-container img {
-    max-height: 90px;
   }
 }
 .mobile-menu {
@@ -312,9 +297,9 @@ img {
   width: 180px;
   height: 7px;
   background-color: #f0bb1c;
-margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
+  margin: 0 0 5vh 20vh; /* lewy margines zmniejszony do 20px */
   transform: scaleX(0);
-  transform-origin: center; /* ważne: animacja rysowania od lewej */
+  transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
 @keyframes drawLine {
@@ -1189,7 +1174,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   margin-top: 140px;
   width: 100%;
   height: 100%;
-      padding: 40px 20px 80px 110px; /* mniejszy lewy padding */
+      padding: 40px 20px 80px 0px; /* mniejszy lewy padding */
 
   display: flex;
   flex-direction: column;
@@ -1254,7 +1239,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 @media (max-width: 768px) {
 .video-overlay2 {
-  padding: 20px 40px 40px; /* mniejsze paddingi */
+  padding: 20px 40px -70px; /* mniejsze paddingi */
     margin-top: 110px;        /* konkretny margines od góry */
     align-items: center;     /* centrowanie poziome */
     text-align: left;
@@ -1277,7 +1262,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 .yellow-section0{
   background: #f0bb1c;
   text-align: left;
-  padding: 90px 20px;
+  padding: 90px 0px;
   color: #000;
   display:flex;
   flex-direction:column;
@@ -1452,7 +1437,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
       border-radius: 15px; 
       overflow: hidden; 
       border: 1px solid #000000; 
-      text-align: center; 
+      text-align: left; 
       transition: transform 0.4s ease; 
     }
     .gallery-item:hover { 
@@ -1473,6 +1458,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
     }
     .gallery-caption p { 
       margin: 6px 0; 
+
     }
     .gallery-caption a { 
       color: #000000; 
@@ -1781,7 +1767,7 @@ Do you have something important to show but don't know how to do it effectively?
     <div class="video-col2">
       <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
     </div>
-  <div class="text-col" style="margin-top: -50px;">
+  <div class="text-col" style="margin-top: 0px;">
     <h2><br>No one wants to be ignored.</h2>
             <div class="separator2"></div>
 
@@ -1843,7 +1829,7 @@ Do you have something important to show but don't know how to do it effectively?
 <section style="padding: 60px 20px; text-align: center; background: #fff; overflow: hidden;">
   <section class="text-section">
     <h2>Brands that trusted&nbsp;Us</h2>
-    <div class="separator"></div>
+    <div class="separator2"></div>
   </section>
 
   <div class="logo-carousel">
@@ -1883,7 +1869,7 @@ Do you have something important to show but don't know how to do it effectively?
 
 
 <section class="yellow-section0">
-  <div class="text-section0 top">
+  <div class="text-section0">
 <h2>
       Simple, Clear, and Effective Process.</h2>
     <div class="separator0"></div>
@@ -1922,7 +1908,7 @@ Do you have something important to show but don't know how to do it effectively?
     Order today
   </button>
 
-  <div class="text-section0 bottom">
+  <div class="text-section0">
     <h2>Let’s create together.</h2>
     <div class="separator0"></div>
   </div>
@@ -1931,7 +1917,7 @@ Do you have something important to show but don't know how to do it effectively?
   <section class="text-section">
     
   <h2>What Clients Say</h2>
-  <div class="separator"></div>
+  <div class="separator2"></div>
   </section>
 
 <section style="padding: 60px 20px; text-align: center; background: #f9f9f9;">
