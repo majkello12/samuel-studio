@@ -30,7 +30,7 @@ body {
 h3, .gallery-section h2, .section-header h2, 
 .text-section, .text-section0, .separator, .separator0, 
 .separator2, .reel-link, .video-overlay2 {
-  margin-left: 15%; 
+  margin-left: 14%; 
 }
 
 @media (max-width: 768px) {
@@ -59,7 +59,6 @@ header {
   justify-content: space-between;
   position: fixed;
   top: 0;
-
   width: 100%;
 z-index: 1000;
 max-width: 100vw; 
@@ -243,14 +242,11 @@ img {
   margin: 0 auto;
 }
 
-.white-section .text-col {
+.white-section .text-col,
+.white-section .text-col2 {
   flex: 1;
-  margin-left: 80px;    
-}
-
-.white-section .text-col h2,
-.white-section .text-col p {
-  margin-bottom: 20px;
+  font-size: 22px;
+  margin-left: 280px;   /* taki sam margines dla wszystkich kolumn tekstowych */
 }
 
 .white-section .video-col {
@@ -296,17 +292,14 @@ img {
   object-fit: cover;
   margin-bottom: 50px;
 }
+
+@media (max-width: 768px) {
+  .white-section .text-col,
+  .white-section .text-col2 {
+    margin-left: 20px;  /* mniejszy margines na telefonach */
+    margin-right: 20px;
+  }
 }
-
-
-.white-section .text-col2 {
-  text-align: left;
-  max-width: 800px;
-}
-
-.white-section .text-col2 h2,
-.white-section .text-col2 p {
-  margin-bottom: 20px;
 }
 
 .separator2 {
@@ -328,7 +321,7 @@ img {
   }
 
   .white-section .text-col {
-    margin-left: 0; 
+    margin-left: 10; 
   }
 }
 
@@ -387,11 +380,8 @@ img {
     font-size: 1.4rem;
   }
 
-  .video-overlay .h7 {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
-      .video-overlay .btn {
+
+   .video-overlay .btn {
   margin: 10 auto;
    }
 }
@@ -402,11 +392,7 @@ img {
         transform: scale(1.1);
     }
     
-    .video-overlay .text-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
+
 
 
 .video-overlay .separator {
@@ -451,13 +437,6 @@ animation: drawLine 5s ease-in-out infinite;}
       z-index: 1;
       text-align: center;
       padding-top: 320px;
-    }
-
-
-    @media (max-width: 768px) {
-    .video-overlay3 h5 {
-    font-size: 1.8rem;
-  }
     }
 
      .video-hero {
@@ -525,12 +504,6 @@ animation: drawLine 5s ease-in-out infinite;}
     }
 
 
-    @media (max-width: 768px) {
-    .video-overlay5 h5 {
-    font-size: 1.8rem;
-  }
-    }
-
     .overlay-text {
   position: absolute;
   left: 50%;
@@ -588,7 +561,7 @@ animation: drawLine 5s ease-in-out infinite;}
 
 
     h5 {
-  font-size: 20px;
+  font-size: 22px;
   color: black;
   border-radius: 38px;
         margin-bottom: 20px;
@@ -597,45 +570,29 @@ animation: drawLine 5s ease-in-out infinite;}
 
 }
     h6 {
-       font-size: 18px;
+       font-size: 28px;
         font-weight: 400;
        color: rgb(0, 0, 0);
           margin-bottom: 4px;
-       margin-top: 9px;
+       margin-top: -9px;
     }
+
     h4 {
        font-size: 31px;
        color: rgb(255, 255, 255);
    margin-top: -80px;
- 
- 
-    }
-     .h7 {
-     
-       font-size: 25px;
-       color: rgb(247, 247, 247);
-          margin-bottom: -44px;
-padding: 20px 10px;
-       margin-top: 40px;
       }
 
       @media (max-width: 768px) {
-  .h7 {
-    padding: 20px 9px; 
-    font-size: 18px;    
-    text-align: left;  
-    margin-top: 10px;
-     margin-bottom: 84px;
-  }
-}
-      
-      .h8 {
-       font-size: 30px;
-       color: rgb(0, 0, 0);
-       margin-bottom: 44px;
-       margin-top: 90px;
-      }
 
+      h6 {
+       font-size: 21px;
+        font-weight: 400;
+       color: rgb(0, 0, 0);
+          margin-bottom: 4px;
+       margin-top: -9px;
+}
+    }
    
 .yellow-section {
   font-family: 'Roboto', sans-serif;
@@ -664,16 +621,36 @@ padding: 20px 10px;
 
         padding: 10px 44px 0px;
   }
-  
-  .yellow-section-bottom-text {
-    margin-top: 40px;
-    font-size: 1.2rem;
     }
     #oferta.yellow-section {
     background-color: hsl(43, 91%, 54%);
   }
+
+  .yellow-section h2.yellow-h2 {
+    margin-top: -150px;
+   margin-left: 170px;
+  font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
 }
 
+  .yellow-section h2.yellow2-h2 {
+   margin-left: 170px;
+   margin-top: 60px;
+  font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+}
+
+@media (max-width: 768px) {
+
+  .yellow-section h2.yellow-h2 {
+   margin-left: 10px;
+  font-size: clamp(30px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+}
+
+  .yellow-section h2.yellow2-h2 {
+   margin-left: 10px;
+   margin-top: 60px;
+  font-size: clamp(30px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+}
+}
 
     .ellipse-video {
       position: absolute;
@@ -697,76 +674,64 @@ padding: 20px 10px;
       top: 830px;
     }}
 
-    .grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:20px;
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px; /* odstęp poziomy między elementami w wierszu */
+  row-gap: 30px;       /* brak odstępu pionowego między wierszami */
   margin: 10px 0 0 0; 
   max-width: 100%; 
   justify-items: center; 
-  padding: 40px 0 0 20px;
-         column-gap: -40px;
-    }
-    .grid-item {
-      background: rgb(255, 255, 255);
-      padding: 15px;
-      border-radius: 39px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-max-width: 400px;
+  padding: 40px 20px 0 20px; /* padding od boków */
+}
+
+.grid-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 39px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 400px;
   transition: transform 0.3s;
   cursor: pointer;
   text-align: center;
-    }
+}
 
+.grid-item:hover {
+  transform: translateY(-10px);
+}
 
+.grid-item img {
+  width: 100%;
+  border-radius: 39px;
+}
 
-    .grid-item:hover {
-      transform: translateY(-10px);
-    }
-    .grid-item img {
-      width: 100%;
-      border-radius: 39px;
-    }
+.grid-item .desc {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #000;
+}
 
-
-    .grid-item .desc {
-      margin-top: 10px;
-      font-weight: 500;
-      color: #000000;}
-      
-  @media (max-width: 768px){
-    
-.grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap:20px;
-      max-width: 1000px;
+/* Mobile */
+@media (max-width: 768px) {
+  .grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr;  /* 1 kolumna na mobile */
+    column-gap: 0;               /* nie ma kolumny w 1 kolumnie */
+    row-gap: 20px;               /* odstęp pionowy między elementami */
+    max-width: 90%;
     margin: 120px auto 0 auto;
-     justify-items: center; 
-padding: 0 40px;
-    }
-    .grid-item {
-      background: rgb(255, 255, 255);
-      padding: 15px;
-      border-radius: 39px;
-      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.137);
-      transition: transform 0.3s;
-      cursor: pointer;
-       text-align: center;
-    }
-    .grid-item:hover {
-      transform: translateY(-5px);
-    }
-    .grid-item img {
-      width: 100%;
-      border-radius: 39px;
-    }
-    .grid-item .desc {
-      margin-top: 10px;
-      font-weight: 500;
-      color: #333;
-    }}
+    justify-items: center;
+    padding: 0 20px;
+  }
 
+  .grid-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .grid-item .desc {
+    color: #333;
+  }
+}
 
 
     #kontakt {
@@ -810,7 +775,6 @@ a {
 
 
 
-
 .footer {
   background: #f0bb1c;
   color: #000000;
@@ -818,12 +782,6 @@ a {
   padding: 30px 20px;
 }
 
-.footer-subscribe h3 {
-  margin-top: 0;       
-  margin-bottom: 15px; 
-  font-size: 22px;
-  font-weight: bold;
-}
 
 .footer-buttons {
   display: flex;
@@ -1039,16 +997,6 @@ border: 1px solid #000000;  background: #ffffff;
   height: 8px;         
 }}
 
-.text-section p {
-  text-align: center;
-  max-width: 700px;
-        margin-bottom: 40px; 
-      color: #000000; 
-
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
 .text-section .highlight {
   font-weight: bold;
 }
@@ -1056,6 +1004,8 @@ border: 1px solid #000000;  background: #ffffff;
 .logo-carousel {
   position: relative;
   width: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
   overflow: hidden;
 }
 
@@ -1081,6 +1031,8 @@ border: 1px solid #000000;  background: #ffffff;
   max-width: 100%;
   object-fit: contain;
   transition: transform 0.3s;
+    margin-bottom: 70px;
+
 }
 
 .logo-track img:hover {
@@ -1173,7 +1125,7 @@ border: 1px solid #000000;  background: #ffffff;
 .video-overlay2 h4 {
   color: #f0bb1c;
     padding: 0px 30px 20px 0px; 
-  font-size: 1.61rem;
+  font-size: 2.31rem;
   font-weight: 900;
   margin-bottom: 25px;
 }
@@ -1252,7 +1204,6 @@ border: 1px solid #000000;  background: #ffffff;
   display:flex;
   flex-direction:column;
   align-items: left;
-
 }
 
 .text-section0 h2 {
@@ -1265,7 +1216,7 @@ border: 1px solid #000000;  background: #ffffff;
   width: 180px;
   height: 7px;
   background-color: #ffffff; 
-  margin: 0px 0 0 6vw;
+  margin: 0px 50 0 6vw;
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
@@ -1275,6 +1226,7 @@ transform-origin: left;
   width: 180px;
   height: 7px;
   background-color: #ffffff; 
+  margin-top: 0px;
   margin: 0px 0 0 11vw;
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
@@ -1288,13 +1240,15 @@ transform-origin: left;
 .carousel-container0 {
   position: relative;
   width: 100%;
-  max-width: 420px;
-  margin: 0px 0 0 8vw;
+  max-width: 1300px;
+  margin: 0px 0 0 0vw;
+  margin-bottom: 70px;
   display: flex;
 }
 
 .carousel-track0 {
   width: 100%;
+  margin-top: 50px;
 }
 
 .carousel-slide0 {
@@ -1302,7 +1256,7 @@ transform-origin: left;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 26px;
 }
 
 .carousel-slide0.active {
@@ -1363,8 +1317,8 @@ transform-origin: left;
   z-index: 5;
 }
 .nav:active { transform: translateY(-50%) scale(1.98); }
-.nav.prev { left: -19px; }
-.nav.next { right: -19px; }
+.nav.prev { left: 219px; }
+.nav.next { right: 219px; }
 
 @media (max-width: 900px) {
   .circle-img { width: 280px; height: 280px; }
@@ -1389,7 +1343,6 @@ transform-origin: left;
     .gallery-section h2 {
   text-align: left;
   font-size: 2rem;
-  margin: 40px 0; 
 }
 
 
@@ -1432,6 +1385,7 @@ transform-origin: left;
 
 
     .gallery-grid { 
+      margin-top: 40px;
       display: grid; 
       grid-template-columns: repeat(3, 1fr); 
       gap: 20px; 
@@ -1513,7 +1467,8 @@ transform-origin: left;
   color: #f0bb1c;
   border: none;
   border-radius: 30px;
-  margin: 50px 0 50px 0px; 
+  margin: 50px 0 50px 260px; 
+  margin-left: 340px;
   cursor: pointer;
   
   transition: background 0.3s ease;
@@ -1525,6 +1480,22 @@ transform-origin: left;
   transform: scale(1.1);
   transition: transform 0.4s ease;
 }
+
+@media (max-width: 700px) {
+
+.see-more-btn3 {
+  padding: 14px 46px;
+  background: #000;
+  color: #f0bb1c;
+  border: none;
+  border-radius: 30px;
+  margin: 50px 0 50px 70px; 
+  cursor: pointer;
+  
+  transition: background 0.3s ease;
+  display: inline-block; 
+}}
+
 
 .gallery-media {
   position: relative;
@@ -1659,7 +1630,7 @@ transform-origin: left;
 }
 
 .video-overlay05 a {
-  font-size: 1.52rem; 
+  font-size: 1.72rem; 
   font-weight: 600;
   color: #f0bb1c; 
   text-decoration: none;
@@ -1765,91 +1736,57 @@ vertical-align: bottom;
 
 
 
-  <section class="gallery-section1">
-        <h2>Do you have something important to show but don't know how to do it effectively?
-</h2>
-        <div class="separator0"></div>
+<section class="yellow-section" id="oferta">
+  <div class="ellipse-video">
+    <video src="question-mark.mp4" autoplay muted loop></video>
+  </div>
 
-  <div class="gallery-grid1">
-
-    <div class="gallery-item1">
-      <div class="gallery-media">
-      <img src="ANIMATED-ICON-LOGO.gif.gif" alt="Animacja reklamowa">
-      <video src="ANIMATED-ICON-LOGO.gif.webp" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>You don’t have an animated logo to make your brand stand out.</p>
-      </div>
+<h2 class="yellow-h2">Do you have something important to show<br> but don't know how to do it effectively?</h2>
+  <div class="grid-2x2">
+    <div class="grid-item" onclick="location.href='https://link1.pl'">
+      <img src="ANIMATED-ICON-LOGO1.gif.webp" alt="Animacja reklamowa">
+      <div class="desc">You don’t have an animated logo to make your brand stand out.</div>
     </div>
-
-    <div class="gallery-item1">
-      <div class="gallery-media">
-        <img src="Animated-Icon-Audience.gif.gif" alt="YAGOOSH - Puppeteer cover">
-        <video src="The-Gospel-in-five-minutes-Cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Your lectures don’t capture your audience's attention.</p>
-      </div>
+    <div class="grid-item" onclick="location.href='https://link2.pl'">
+      <img src="Animated-Icon-Audience1.gif.webp" alt="Animacja produktowa">
+      <div class="desc">Your lectures don’t capture your audience's attention.</div>
     </div>
+    <div class="grid-item" onclick="location.href='https://link3.pl'">
+      <img src="Animated-Icon-Eye1.gif.webp" alt="Spot reklamowy">
+      <div class="desc">You find it hard to explain complex topics in an engaging way.</div>
+    </div>
+    <div class="grid-item" onclick="location.href='https://link3.pl'">
+      <img src="Animated-Icon-Attendance1.gif.webp" alt="Spot reklamowy">
+      <div class="desc">Low attendance at your events makes you feel unappreciated.</div>
+    </div>
+  </div>
 
-    <div class="gallery-item1">
-      <div class="gallery-media">
-        <img src="Animated-Icon-Eye.gif.gif" alt="Bible Unbound - The Bible In a Sentence cover">
-        <video src="animated-cover-of-modern-3d-animation.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>You find it hard to explain complex topics in an engaging way.</p>
-      </div>
-      </div>
+<h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>  
+</section>
 
-          <div class="gallery-item1">
-      <div class="gallery-media">
-        <img src="Animated-Icon-Attendance.gif.gif" alt="Bible Unbound - The Bible In a Sentence cover">
-        <video src="animated-cover-of-modern-3d-animation.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Low attendance at your events makes you feel unappreciated.</p>
-      </div>
-      
-      </div>
-            <h2>Don’t let your story fade into the background.</h2> 
-
-      
-
-<div class="see-more-container">
-  <button class="see-more-btn2">See More</button>
-</div>
-    </section>
-
- <section class="white-section">
+<section class="white-section">
   <div class="top-row">
     <div class="text-col">
-      <h2>
-        I’m Paweł Pauksztełło,<br>
-        founder of Samuel Studio.
-      </h2>
-      <p>
-        <div class="separator2"></div>
-        <h6>I help you capture attention and communicate your message clearly.
-        <br><br>Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.
-      </p></h6>
+      <h2>I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
+      <div class="separator2"></div>
+      <p>I help you capture attention and communicate your message clearly.</p>
+      <p>Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.</p>
     </div>
     <div class="video-col">
       <video src="Pawel-Pauksztello-Samuel-Studio-Owner-Founder.mp4" autoplay muted loop playsinline></video>
     </div>
   </div>
 
-    <div class="video-col2">
-      <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
-    </div>
-  <div class="text-col" style="margin-top: 0px;">
-    <h2><br>No one wants to be ignored.</h2>
-            <div class="separator2"></div>
+  <div class="video-col2">
+    <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
+  </div>
 
-    <h6><p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.<br></p>
-  </div><br>
+  <div class="text-col2">
+    <h2>No one wants to be ignored.</h2>
+    <div class="separator2"></div>
+    <p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.</p>
+  </div>
 </section>
-
 
 
 <section class="video-section2">
@@ -1899,13 +1836,14 @@ vertical-align: bottom;
 
   
 
+<section style="padding: 60px 0 0 0px; background: #f9f9f9;">
 
 
-<section style="padding: 60px 20px; text-align: center; background: #fff; overflow: hidden;">
-  <section class="text-section">
-    <h2>Brands that trusted&nbsp;Us</h2>
+    <div class="section-header">
+    <h2>Brands that trusted Us</h2>
     <div class="separator2"></div>
-  </section>
+  </div>
+
 
   <div class="logo-carousel">
     <div class="logo-track">
@@ -1978,26 +1916,26 @@ vertical-align: bottom;
     <button class="nav next" aria-label="Następny slajd">›</button>
   </div>
 
-
-  <div class="see-more-container">
-   <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
-    Order today
-</div>
-
   <div class="text-section0">
     <h2>Let’s create together.</h2>
     <div class="separator0" ></div>
   </div>
+    <div class="see-more-container">
+   <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
+    Order today
+</div>
 </section>
 
 
   </section>
 
-<section style="padding: 60px 0 0 90px; background: #f9f9f9;">
+<section style="padding: 60px 0 0 0px; background: #f9f9f9;">
 
-    
-  <h2>What Clients Say</h2>
-  <div class="separator2"></div>
+
+    <div class="section-header">
+    <h2>What Clients Say</h2>
+    <div class="separator2"></div>
+  </div>
 
   <div class="opinie-carousel">
     <div class="opinie-track">
@@ -2041,6 +1979,7 @@ vertical-align: bottom;
   <section class="gallery-section">
         <h2>Recent Work</h2>
         <div class="separator0"></div>
+
 
   <div class="gallery-grid">
 
