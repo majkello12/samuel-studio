@@ -325,7 +325,20 @@ img {
   transform: scaleX(0);
   transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
-}}
+}
+.separator8 {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
+}
 
 .text-1,
 .text-3 {
@@ -346,7 +359,6 @@ img {
   font-size: 22px;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .text-1,
   .text-2,
@@ -360,6 +372,7 @@ img {
   .text-1,
 .text-3 {
   font-size: 29px;
+  margin-left: 200px;
 }
 }
 
@@ -981,6 +994,14 @@ border: 1px solid #000000;  background: #ffffff;
   border-radius: 12px;
 }
 
+@media (max-width: 768px) {
+  .opinie-carousel {
+    max-width: 90%; /* zmniejszamy szerokość do 90% ekranu */
+    margin: 0 auto; /* centrowanie */
+    padding: 0 10px; /* marginesy po bokach */
+  }
+}
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -1212,7 +1233,7 @@ border: 1px solid #000000;  background: #ffffff;
 
 @media (max-width: 768px) {
 .video-overlay2 {
-  padding: 20px 40px 40px; 
+  padding: 20px 40px 0px; 
     margin-top: 110px;        
     align-items: center;    
     text-align: left;
@@ -1264,7 +1285,7 @@ transform-origin: left;
   height: 7px;
   background-color: #ffffff; 
   margin-top: 0px;
-  margin: 0px 0 0 11vw;
+  margi
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }}
@@ -1290,7 +1311,8 @@ transform-origin: left;
   height: 7px;
   background-color: #ffffff; 
   margin-top: 0px;
-  margin: 0px 0 0 11vw;
+    margin-left: 5%;
+
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }}
@@ -1529,7 +1551,7 @@ transform-origin: left;
   border: none;
   border-radius: 30px;
   margin: 50px 0 50px 260px; 
-  margin-left: 340px;
+  margin-left: 300px;
   cursor: pointer;
   
   transition: background 0.3s ease;
@@ -1649,7 +1671,7 @@ margin-left: 15%;
 .section-header9 h2 {
   font-size: 2rem;
   font-weight: bold;
-margin-left: 12%;
+margin-left: 10%;
 }}
 
 .video-container {
@@ -1931,7 +1953,7 @@ vertical-align: bottom;
 <section style="padding: 60px 0 0 0px; background: #ffffff;">
 
 
-    <div class="section-header8">
+    <div class="section-header9">
     <h2>Brands that trusted Us</h2>
     <div class="separator8"></div>
   </div>
@@ -2064,7 +2086,7 @@ vertical-align: bottom;
 
   <div class="see-more-container">
    <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
-    Order today
+    Write a review
 </div>
 </section>
 
