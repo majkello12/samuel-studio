@@ -242,16 +242,7 @@ img {
   margin: 0 auto;
 }
 
-.white-section .text-col,
-.white-section .text-col2 {
-  flex: 1;
-  font-size: 22px;
-  margin-left: 280px;   /* taki sam margines dla wszystkich kolumn tekstowych */
-}
 
-.white-section .video-col {
-  flex: 1;
-}
 
 .white-section .video-col video {
   width: 110%;
@@ -279,29 +270,6 @@ img {
 }
 
 
-@media (max-width: 768px) {
-.video-col video {
-  width: 120%;
-  height: auto;
-  object-fit: cover;
-}
-
-.video-col2 video {
-  width: 120%;
-  height: auto;
-  object-fit: cover;
-  margin-bottom: 50px;
-}
-
-@media (max-width: 768px) {
-  .white-section .text-col,
-  .white-section .text-col2 {
-    margin-left: 20px;  /* mniejszy margines na telefonach */
-    margin-right: 20px;
-  }
-}
-}
-
 .separator2 {
   width: 180px;
   height: 7px;
@@ -320,9 +288,79 @@ img {
     text-align: left;
   }
 
-  .white-section .text-col {
-    margin-left: 10; 
+}
+
+.separator8 {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 15%;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
+.separator7 {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin-top: 30px;
+  margin-bottom: 50px;
+    margin-left: 0px;  /* tutaj możesz zmieniać odstęp od lewej */
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+.separator7 {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin-top: 30px;
+  margin-bottom: 50px;
+    margin-left: -80px;  /* tutaj możesz zmieniać odstęp od lewej */
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}}
+
+.text-1,
+.text-3 {
+  display: block;
+  width: fit-content;
+}
+
+.text-1,
+.text-3 {
+  margin-top: 70px;
+  margin-left: 14%;
+  font-size: 22px;
+}
+
+.text-2,
+.text-4 {
+  margin-left: 10%;  /* wspólny margines dla drugich paragrafów */
+  font-size: 22px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .text-1,
+  .text-2,
+  .text-3,
+  .text-4 {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 22px;
   }
+
+  .text-1,
+.text-3 {
+  font-size: 29px;
+}
 }
 
     .video-section {
@@ -603,8 +641,7 @@ animation: drawLine 5s ease-in-out infinite;}
 
 .yellow-section h2 {
   margin-bottom: 80px; 
-    padding: 10px 80px 0px;
-           font-size: 31px;
+margin-left: -38%;           font-size: 31px;
 }
 
 .yellow-section-bottom-text {
@@ -617,9 +654,8 @@ animation: drawLine 5s ease-in-out infinite;}
 @media (max-width: 768px) {
   .yellow-section h2 {
     margin-bottom: 40px; 
-        font-size: 1.5rem;
-
-        padding: 10px 44px 0px;
+        font-size: 1.2rem;
+        margin-left: -0%;
   }
     }
     #oferta.yellow-section {
@@ -627,28 +663,28 @@ animation: drawLine 5s ease-in-out infinite;}
   }
 
   .yellow-section h2.yellow-h2 {
-    margin-top: -150px;
-   margin-left: 170px;
+    margin-top: -190px;
+    margin-left: 15%; 
   font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
 }
 
   .yellow-section h2.yellow2-h2 {
-   margin-left: 170px;
-   margin-top: 60px;
+   margin-left: 15%;
+   margin-top: 80px;
   font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
 }
 
 @media (max-width: 768px) {
 
   .yellow-section h2.yellow-h2 {
-   margin-left: 10px;
-  font-size: clamp(30px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+   margin-left: 35px;
+  font-size: clamp(26px, 3vw, 38px); /* można też ustawiać rozmiar responsywnie */
 }
 
   .yellow-section h2.yellow2-h2 {
-   margin-left: 10px;
+   margin-left: 35px;
    margin-top: 60px;
-  font-size: clamp(30px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(26px, 3vw, 38px); /* można też ustawiać rozmiar responsywnie */
 }
 }
 
@@ -1209,6 +1245,7 @@ border: 1px solid #000000;  background: #ffffff;
 .text-section0 h2 {
   font-size: 2.2rem;
   font-weight: 600;
+  margin-left: 2%;
     text-align: left;}
 
 
@@ -1236,6 +1273,28 @@ transform-origin: left;
   0% { transform: scaleX(0); }
   100% { transform: scaleX(1); }
 }
+
+
+.separator9 {
+  width: 180px;
+  height: 7px;
+  background-color: #ffffff; 
+  margin-left: 2%;
+transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+.separator9 {
+  width: 180px;
+  height: 7px;
+  background-color: #ffffff; 
+  margin-top: 0px;
+  margin: 0px 0 0 11vw;
+transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}}
+
 
 .carousel-container0 {
   position: relative;
@@ -1265,7 +1324,9 @@ transform-origin: left;
 
 .slide-text {
   font-size: 1.5rem;
-  margin: 0px 0 0 6vw;
+  margin: 0px 0 0 0vw;
+  text-align: center;
+  align-items: center;
   font-weight: 500;
   max-width: 90%;
 }
@@ -1565,9 +1626,31 @@ transform-origin: left;
 .section-header h2 {
   font-size: 2rem;
   font-weight: bold;
+
   margin-bottom: 10px;
 }
 
+
+.section-header8 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+margin-left: 15%;
+  margin-bottom: 10px;
+}
+
+.section-header9 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+margin-left: 15%;
+  margin-bottom: 10px;
+}
+
+    @media(max-width: 768px) {
+.section-header9 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+margin-left: 12%;
+}}
 
 .video-container {
   max-width: 1200px;
@@ -1630,9 +1713,9 @@ transform-origin: left;
 }
 
 .video-overlay05 a {
-  font-size: 1.72rem; 
+  font-size: 1.42rem; 
   font-weight: 600;
-  color: #f0bb1c; 
+  color: #ffffff; 
   text-decoration: none;
   transition: color 0.3s ease;
   display: block; 
@@ -1646,7 +1729,16 @@ transform-origin: left;
 .video-overlay05 {
   bottom: -140px;
   transform: translateX(-50%);
-}}
+  font-size: 20px;
+}
+.video-overlay05 a {
+  font-size: 1.42rem; 
+  text-decoration: none;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+  display: block; 
+}
+}
 
 .animated-text {
   display: inline-block;
@@ -1763,14 +1855,13 @@ vertical-align: bottom;
 
 <h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>  
 </section>
-
 <section class="white-section">
   <div class="top-row">
     <div class="text-col">
-      <h2>I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
+      <h2 class="text-1">I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
       <div class="separator2"></div>
-      <p>I help you capture attention and communicate your message clearly.</p>
-      <p>Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.</p>
+      <p class="text-2">I help you capture attention and communicate your message clearly.
+      Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.</p>
     </div>
     <div class="video-col">
       <video src="Pawel-Pauksztello-Samuel-Studio-Owner-Founder.mp4" autoplay muted loop playsinline></video>
@@ -1782,11 +1873,12 @@ vertical-align: bottom;
   </div>
 
   <div class="text-col2">
-    <h2>No one wants to be ignored.</h2>
+    <h2 class="text-3">No one wants to be ignored.</h2>
     <div class="separator2"></div>
-    <p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.</p>
+    <p class="text-4">Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.</p>
   </div>
 </section>
+
 
 
 <section class="video-section2">
@@ -1795,7 +1887,7 @@ vertical-align: bottom;
 <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop playsinline></video>
     <div class="video-overlay2">
       <h4>I offer creative solutions for your business needs.</h4>
-      <div class="separator2"></div>
+      <div class="separator7"></div>
       <ul>
         <li class="white">
           • Make your brand memorable and stand out – 
@@ -1836,12 +1928,12 @@ vertical-align: bottom;
 
   
 
-<section style="padding: 60px 0 0 0px; background: #f9f9f9;">
+<section style="padding: 60px 0 0 0px; background: #ffffff;">
 
 
-    <div class="section-header">
+    <div class="section-header8">
     <h2>Brands that trusted Us</h2>
-    <div class="separator2"></div>
+    <div class="separator8"></div>
   </div>
 
 
@@ -1885,7 +1977,7 @@ vertical-align: bottom;
   <div class="text-section0">
 <h2>
       Simple, Clear, and Effective Process.</h2>
-    <div class="separator0"></div>
+    <div class="separator9"></div>
   </div>
 
   <div class="carousel-container0" aria-roledescription="carousel">
@@ -1918,7 +2010,7 @@ vertical-align: bottom;
 
   <div class="text-section0">
     <h2>Let’s create together.</h2>
-    <div class="separator0" ></div>
+    <div class="separator9" ></div>
   </div>
     <div class="see-more-container">
    <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
@@ -1932,9 +2024,9 @@ vertical-align: bottom;
 <section style="padding: 60px 0 0 0px; background: #f9f9f9;">
 
 
-    <div class="section-header">
+    <div class="section-header9">
     <h2>What Clients Say</h2>
-    <div class="separator2"></div>
+    <div class="separator8"></div>
   </div>
 
   <div class="opinie-carousel">
