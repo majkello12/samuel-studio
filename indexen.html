@@ -6,9 +6,7 @@
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
   <title>Samuel Studio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">  <style>
     * {
       margin: 0;
       padding: 0;
@@ -16,34 +14,26 @@
     }
 
 
-    @font-face {
-  font-family: 'Nohemi';
-  src: url(Nohemi-Regular-BF6438cc579d934.woff) format('woff2'),
-    font-weight: normal;
-
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url(Satoshi-Regular.woff2) format('woff2'),
-  font-weight: normal;
-  font-style: normal;
-
-}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 1px;
+   font-family: "Source Sans 3", sans-serif; 
+  letter-spacing: 0.4px;
+   font-weight: 400;
+  font-style: normal;
   background: #fff;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   height: 100%;
-  h1, h2, h3, h4, h5, h6, p, .text-section, text-section0, .separator, .separator0, separator2 {
-  margin-left: 10px; /* albo padding-left */
+  h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
+  margin-left: 12px; /* albo padding-left */
 }
 }
+
+@media (max-width: 768px) {
+    h, h3, h, .gallery-section h2, grid-item, .section-header h2, .text-section, text-section0, .separator, .separator0, .separator2, .text-section0, .reel-link, video-overlay2  {
+  margin-left: 12px; }}
+
 
 
 header {
@@ -98,8 +88,8 @@ z-index: 1000;
       color: #000000;
       text-decoration: none;
       font-size: 22px;
-      font-weight: 600;
-      padding: 1px 6px;
+      font-weight: 700;
+      padding: 1px 26px;
       transition: color 0.3s;
     }
     .center-links a:hover {
@@ -244,7 +234,7 @@ img {
 
 .white-section .text-col {
   flex: 1;
-  margin-left: 40px;    
+  margin-left: 80px;    
 }
 
 .white-section .text-col h2,
@@ -257,7 +247,7 @@ img {
 }
 
 .white-section .video-col video {
-  width: 100%;
+  width: 120%;
   height: auto;
   border-radius: 12px;
 }
@@ -270,6 +260,9 @@ img {
   max-width: 1200px;
   margin: -24px auto;
   overflow: hidden;
+  margin-left: -40px;
+  margin-top: -40px; 
+  margin-bottom: -130px;
 }
 
 .video-col2 video {
@@ -279,6 +272,15 @@ img {
   object-fit: cover;
   border-radius: 8px;
 }
+
+
+@media (max-width: 768px) {
+.video-col2 video {
+  width: 150%;
+  height: auto;
+  object-fit: cover;
+}}
+
 
 .white-section .text-col2 {
   text-align: left;
@@ -321,7 +323,7 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
     .video-section {
       position: relative;
       width: 100%;
-   height: 80ch;
+   height: 115ch;
 
       overflow: hidden;
     }
@@ -337,13 +339,13 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
       position: relative;
       z-index: 1;
       text-align: center;
-      padding-top: 260px;
+      padding-top: 190px;
     }
     .video-overlay h1 {
-      font-size: 2.4rem;
-       letter-spacing: 1.7px;
+      font-size: 49px;
+       letter-spacing: 0px;
            margin-bottom: 100px;
-           margin-top: -140px;
+           margin-top: -10px;
       color: #f0bb1c;
     }
 
@@ -355,12 +357,12 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
     text-align: center;
       background: #f0bb1c;
       color: rgb(29, 29, 29);
-      border-radius: 35px;
-      font-size: 27px;
+      border-radius: 65px;
+      font-size: 25px;
       font-weight: 500;
       font-family: 'Roboto', sans-serif;
       transition: transform 0.4s ease;
-      margin: 40px 15px 0 0;      
+      margin: 20px 15px 0 0;      
       cursor: pointer;
     }
 
@@ -370,7 +372,7 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
   }
 
   .video-overlay h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .video-overlay .h7 {
@@ -399,7 +401,7 @@ margin: 10px 0 30px 0; /* brak auto, przyklejony do lewej */
     width: 150px;           
     height: 7px;             
     background-color: #f0bb1c; 
-        margin: 0 auto 20px;
+        margin: 0 auto 200px;
 
 margin-top: 5ch;  
 
@@ -572,7 +574,7 @@ animation: drawLine 5s ease-in-out infinite;}
 
    h2 {
       color: #050505;
-       font-size: 36px;
+       font-size: 33px;
       margin-bottom: 30px;
         margin-top: -15px; 
 
@@ -586,15 +588,18 @@ animation: drawLine 5s ease-in-out infinite;}
 }
 
 
-h5 {
-    color: #050505;
-       font-size: 36px;
-      margin-bottom: 30px;
-        margin-top: -175px; 
-    }
+    h5 {
+  font-size: 20px;
+  color: black;
+  border-radius: 38px;
+        margin-bottom: 20px;
+
+
+
+}
     h6 {
-       font-size: 17px;
-        font-weight: 500;
+       font-size: 18px;
+        font-weight: 400;
        color: rgb(0, 0, 0);
           margin-bottom: 4px;
        margin-top: 9px;
@@ -602,7 +607,7 @@ h5 {
     h4 {
        font-size: 31px;
        color: rgb(255, 255, 255);
-   margin-top: -70px;
+   margin-top: -80px;
  
  
     }
@@ -636,18 +641,14 @@ padding: 20px 10px;
 .yellow-section {
   font-family: 'Roboto', sans-serif;
   background: #f0bb1c;
-  padding: 160px 20px 60px;
-  text-align: center;
+  padding: 160px 7px 60px;
   align-items: center;
-}
-@media (max-width: 700px) {
-  #oferta.yellow-section {
-    background-color: hsl(43, 91%, 54%);
-  }
 }
 
 .yellow-section h2 {
   margin-bottom: 80px; 
+    padding: 10px 80px 0px;
+           font-size: 31px;
 }
 
 .yellow-section-bottom-text {
@@ -660,18 +661,24 @@ padding: 20px 10px;
 @media (max-width: 768px) {
   .yellow-section h2 {
     margin-bottom: 40px; 
+        font-size: 1.5rem;
+
+        padding: 10px 44px 0px;
   }
   
   .yellow-section-bottom-text {
     margin-top: 40px;
     font-size: 1.2rem;
+    }
+    #oferta.yellow-section {
+    background-color: hsl(43, 91%, 54%);
   }
 }
 
 
     .ellipse-video {
       position: absolute;
-      top: 630px;
+      top: 830px;
       left: 50%;
       transform: translateX(-50%);
       width: 200px;
@@ -689,7 +696,7 @@ padding: 20px 10px;
     @media (max-width: 768px) {
 
         .ellipse-video {
-      top: 630px;
+      top: 830px;
 
     }}
 
@@ -704,9 +711,9 @@ padding: 0 40px;
     }
     .grid-item {
       background: rgb(255, 255, 255);
-      padding: 15px;
+      padding: 12px;
       border-radius: 39px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.274);
       transition: transform 0.3s;
       cursor: pointer;
        text-align: center;
@@ -737,7 +744,7 @@ padding: 0 40px;
       background: rgb(255, 255, 255);
       padding: 15px;
       border-radius: 39px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.062);
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.137);
       transition: transform 0.3s;
       cursor: pointer;
        text-align: center;
@@ -830,7 +837,7 @@ a {
   align-items: center;
   gap: 10px; 
   padding: 10px 25px;
-  background: #ffffff;
+border: 1px solid #000000;  background: #ffffff;
   color: #000000;
   font-weight: bold;
   text-decoration: none;
@@ -888,13 +895,15 @@ a {
   display: flex;             
   justify-content: center;
   align-items: flex-end;  
+  
   gap: 16px;
   height: 40px;           
 }
 
 .footer-socials a {
   display: flex;           
-  align-items: flex-end;   
+  align-items: flex-end;  
+   
   justify-content: center;
   height: 100%;            
 }
@@ -952,7 +961,14 @@ a {
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.412s ease;
+
 }
+
+.opinie-carousel :hover {
+  transform: scale(1.009);
+}
+
 
 .opinie-track {
   display: flex;
@@ -1159,10 +1175,10 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   margin-top: 140px;
   width: 100%;
   height: 100%;
-  padding: 60px 20px 80px 80px; /* tu: większy padding z lewej */
+      padding: 40px 20px 80px 110px; /* mniejszy lewy padding */
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* od góry */
   align-items: flex-start;     /* po lewej */
   text-align: left;
   line-height: 2.2;
@@ -1171,8 +1187,10 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 }
 .video-overlay2 h4 {
   color: #f0bb1c;
-  font-size: 2.4rem;
-  font-weight: bold;
+    padding: 0px 30px 20px 0px; /* tu: większy padding z lewej */
+
+  font-size: 1.9rem;
+  font-weight: 900;
   margin-bottom: 25px;
 }
 
@@ -1183,9 +1201,9 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 }
 
 .video-overlay2 li {
-  font-size: 2rem;
-  margin: 20px 0; /* margines między wierszami */
-  line-height: 1.8;
+  font-size: 1.8rem;
+  margin: 40px 0; /* margines między wierszami */
+  line-height: 1.5;
   opacity: 0;
   animation: fadeSlideIn 0.6s ease forwards;
 }
@@ -1195,13 +1213,14 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 .video-overlay2 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
   transition: transform 0.3s ease, font-weight 0.3s ease;
 }
 
 .video-overlay2 a:hover {
   font-weight: bold;
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 /* Animacja wprowadzania wierszy */
@@ -1252,9 +1271,9 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 .text-section0 h2 {
   font-size: 2.2rem;
   font-weight: 600;
-    text-align: left;
+    text-align: left;}
 
-}
+
 .separator0 {
   width: 180px;
   height: 7px;
@@ -1297,7 +1316,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 }
 
 .slide-text {
-  font-size: 1.05rem;
+  font-size: 1.905rem;
   margin: 0;
   font-weight: 500;
   max-width: 90%;
@@ -1334,7 +1353,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 .nav {
   position: absolute;
-  top: 50%;
+  top: 65%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0);
   color: #000000;
@@ -1350,8 +1369,8 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   z-index: 5;
 }
 .nav:active { transform: translateY(-50%) scale(1.98); }
-.nav.prev { left: -130px; }
-.nav.next { right: -130px; }
+.nav.prev { left: -19px; }
+.nav.next { right: -19px; }
 
 @media (max-width: 900px) {
   .circle-img { width: 280px; height: 280px; }
@@ -1560,7 +1579,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 .reel-link {
   font-size: 1.2rem;
-  text-decoration: underline;
+  text-decoration: none;
   color: #000;
   transition: font-weight 0.3s ease;
 }
@@ -1586,7 +1605,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 .video-overlay05 {
   position: absolute;
-  bottom: -250px; /* odstęp od dołu */
+  bottom: -190px; /* odstęp od dołu */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -1605,6 +1624,36 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 .video-overlay05 a:hover {
   color: #ffffff; /* biały na hover */
 }
+
+@media (max-width: 768px) {
+.video-overlay05 {
+  bottom: -140px; /* odstęp od dołu */
+  transform: translateX(-50%);
+}}
+
+.animated-text {
+  display: inline-block;
+  white-space: pre-wrap;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+vertical-align: bottom;
+  transform: translateY(40px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 </style>
 </head>
@@ -1667,8 +1716,9 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
     <video src="question-mark.mp4" autoplay muted loop></video>
   </div>
 
-  <h2>Do you have something important to show<br> but don't know how to do it effectively?</h2>
-
+<h2 class="animated-text">
+  Do you have something important to show but don't know how to do it effectively?
+</h2>
   <div class="grid-2x2">
     <div class="grid-item" onclick="location.href='https://link1.pl'">
       <img src="ANIMATED-ICON-LOGO.gif.webp" alt="Animacja reklamowa">
@@ -1697,14 +1747,14 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   <div class="top-row">
     <div class="text-col">
       <h2>
-        I’m <strong>Paweł Pauksztełło</strong>,<br>
-        founder of <strong>Samuel Studio</strong>.
+        I’m Paweł Pauksztełło,<br>
+        founder of Samuel Studio.
       </h2>
       <p>
         <div class="separator2"></div>
-        I help you capture attention and communicate your message clearly.
+        <h6>I help you capture attention and communicate your message clearly.
         <br><br>Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.
-      </p>
+      </p></h6>
     </div>
     <div class="video-col">
       <video src="Pawel-Pauksztello-Samuel-Studio-Owner-Founder.mp4" autoplay muted loop playsinline></video>
@@ -1714,18 +1764,12 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
     <div class="video-col2">
       <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
     </div>
-  <div class="text-col2" style="margin-top: -50px;">
+  <div class="text-col" style="margin-top: -50px;">
     <h2><br>No one wants to be ignored.</h2>
             <div class="separator2"></div>
 
-    <p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.<br></p>
+    <h6><p>Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.<br></p>
   </div><br>
-</section>
-<section class="white-section">
-  <div class="top-row">
-    <div class="text-col">
-    </div>
-  </div>
 </section>
 
 
@@ -1735,7 +1779,7 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   <div class="video-container2">
 <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop playsinline></video>
     <div class="video-overlay2">
-      <h4>I offer <span class="highlight">creative solutions</span> for your business needs.</h4>
+      <h4>I offer creative solutions for your business needs.</h4>
       <div class="separator2"></div>
       <ul>
         <li class="white">
@@ -1823,7 +1867,8 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
 
 <section class="yellow-section0">
   <div class="text-section0 top">
-    <h2>Simple, Clear, and Effective Process.</h2>
+<h2 class="animated-text">
+      Simple, Clear, and Effective Process.</h2>
     <div class="separator0"></div>
   </div>
 
@@ -1990,16 +2035,13 @@ padding: 60px 20px 120px 80px; /* 120px od dołu */
   <h4><a href="mailto:kontakt@animacja.pl">kontakt@animacja.pl</a></h4>
   <h4><a href="tel:+48693733366">+48 693 733 366</a></h4>
 </div>
-
-        <div class="buttons">
-        </div>
     </div>
 </section>
 
 
   <footer class="footer">
   <div class="footer-subscribe">
-    <h3>CLICK TO SUBSCRIBE</h3>
+    <h5>CLICK TO SUBSCRIBE</h5>
     <div class="footer-buttons">
       <a href="#" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
@@ -2294,6 +2336,26 @@ if (window.innerWidth <= 768) {
   });
 }
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const text = document.querySelector(".animated-text");
+    const words = text.innerHTML.split(" "); // dzielimy po spacji
+    text.innerHTML = "";
+
+words.forEach((word, i) => {
+  const span = document.createElement("span");
+  span.textContent = word;
+  span.style.animationDelay = `${i * 0.13}s`;
+  text.appendChild(span);
+
+  if (i < words.length - 1) {
+    text.appendChild(document.createTextNode(" "));
+  }
+});
+  });
+</script>
+
 
 </body>
 </html>
