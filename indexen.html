@@ -245,7 +245,7 @@ img {
 
 
 .white-section .video-col video {
-  width: 110%;
+  width: 100%;
   height: auto;
 }
 
@@ -269,6 +269,18 @@ img {
   border-radius: 8px;
 }
 
+@media (max-width: 768px) {
+
+.video-col2 video {
+  margin-top: 400px; 
+  margin-bottom: 130px;
+  margin: -40px auto -130px auto; 
+}
+.text-col22 {
+    order: 2;
+ margin-top: 60%;
+    text-align: left;
+}}
 
 .separator2 {
   width: 180px;
@@ -321,7 +333,7 @@ img {
   background-color: #f0bb1c;
   margin-top: 30px;
   margin-bottom: 50px;
-    margin-left: -80px;  /* tutaj możesz zmieniać odstęp od lewej */
+    margin-left: -50px;  /* tutaj możesz zmieniać odstęp od lewej */
   transform: scaleX(0);
   transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
@@ -337,7 +349,6 @@ img {
   transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
-
 }
 
 .text-1,
@@ -355,26 +366,92 @@ img {
 
 .text-2,
 .text-4 {
-  margin-left: 10%;  /* wspólny margines dla drugich paragrafów */
+  margin-left: 10%; 
   font-size: 22px;
 }
 
 @media (max-width: 768px) {
   .text-1,
-  .text-2,
   .text-3,
-  .text-4 {
+    .text-2,
+.text-4 {
     margin-left: 20px;
+      margin-top: 70px;
+
     margin-right: 20px;
     font-size: 22px;
+  }}
+
+
+  :root {
+  --section-left-margin: 14%; /* zmieniasz w jednym miejscu */
+  --section-left-margin-mobile: 5%;
+}
+
+.white-section {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.white-section .top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-margin {
+  margin-left: var(--section-left-margin);
+}
+
+.separator {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin: 30px 0 50px 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .left-margin {
+    margin-left: var(--section-left-margin-mobile);
+    margin-right: var(--section-left-margin-mobile);
   }
 
-  .text-1,
-.text-3 {
-  font-size: 29px;
-  margin-left: 200px;
+  .white-section .top-row {
+    flex-direction: column;
+    text-align: left;
+  }
 }
+
+
+.para-top {
+  margin-left: -38%;   /* np. tak jak reszta tekstu */
 }
+
+/* Paragraf dolny */
+.para-bottom {
+  margin-left: 14%;   /* możesz ustawić niezależnie */
+  margin-right: 10%;
+}
+
+/* wersja mobilna */
+@media (max-width: 768px) {
+  .para-top {
+    margin-left: 0%;
+    margin-right: 5%;
+  }
+  .para-bottom {
+    margin-left: 6%;
+        margin-top: 0%;
+
+  }
+}
+
 
     .video-section {
       position: relative;
@@ -424,11 +501,13 @@ img {
 
     @media (max-width: 768px) {
     .video-overlay h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+text-align: center;
   }
 
   .video-overlay h4 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    
   }
 
 
@@ -621,11 +700,11 @@ animation: drawLine 5s ease-in-out infinite;}
 
 }
     h6 {
-       font-size: 28px;
-        font-weight: 400;
-       color: rgb(0, 0, 0);
-          margin-bottom: 4px;
-       margin-top: -9px;
+      color: #050505;
+       font-size: 33px;
+      margin-bottom: 30px;
+        margin-top: -15px; 
+        margin-left: 14%;
     }
 
     h4 {
@@ -635,15 +714,14 @@ animation: drawLine 5s ease-in-out infinite;}
       }
 
       @media (max-width: 768px) {
-
       h6 {
        font-size: 21px;
-        font-weight: 400;
+        font-weight: 600;
        color: rgb(0, 0, 0);
           margin-bottom: 4px;
+          margin-left: 5%;
        margin-top: -9px;
-}
-    }
+}}
    
 .yellow-section {
   font-family: 'Roboto', sans-serif;
@@ -690,7 +768,8 @@ margin-left: -38%;           font-size: 31px;
 @media (max-width: 768px) {
 
   .yellow-section h2.yellow-h2 {
-   margin-left: 35px;
+   margin-left: 44px;
+   margin-bottom: -50px;
   font-size: clamp(26px, 3vw, 38px); /* można też ustawiać rozmiar responsywnie */
 }
 
@@ -1170,7 +1249,7 @@ border: 1px solid #000000;  background: #ffffff;
   margin-top: 140px;
   width: 100%;
   height: 100%;
-      padding: 40px 20px 80px 0px; 
+      padding: 40px 20px 80px 12px; 
   display: flex;
   flex-direction: column;
   align-items: flex-start;    
@@ -1231,10 +1310,24 @@ border: 1px solid #000000;  background: #ffffff;
 .video-overlay2 li:nth-child(7) { animation-delay: 1.4s; }
 .video-overlay2 li:nth-child(8) { animation-delay: 1.6s; }
 
+
+.yellow-section0{
+  background: #f0bb1c;
+  text-align: left;
+  padding: 90px;
+  margin-left: -5%;
+  color: #000;
+  display:flex;
+  flex-direction:column;
+  align-items: left;
+}
+
+
 @media (max-width: 768px) {
 .video-overlay2 {
   padding: 20px 40px 0px; 
     margin-top: 110px;        
+    margin-left: 2px;
     align-items: center;    
     text-align: left;
     height: auto;  
@@ -1250,18 +1343,10 @@ border: 1px solid #000000;  background: #ffffff;
     line-height: 1.4;
     margin: 12px 0;     
   }
-}
-
-
 .yellow-section0{
-  background: #f0bb1c;
-  text-align: left;
-  padding: 90px 0px;
+  margin-left: -15%;
   color: #000;
-  display:flex;
-  flex-direction:column;
-  align-items: left;
-}
+}}
 
 .text-section0 h2 {
   font-size: 2.2rem;
@@ -1305,6 +1390,17 @@ transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
 
+.separator11 {
+  width: 180px;
+  height: 7px;
+  background-color: #f0bb1c;
+  margin-left: 14%;
+  margin-top: 5$;
+  margin-bottom: 3%;
+transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+
 @media (max-width: 768px) {
 .separator9 {
   width: 180px;
@@ -1313,6 +1409,15 @@ transform-origin: left;
   margin-top: 0px;
     margin-left: 5%;
 
+transform-origin: left;
+  animation: drawLine 4s ease-in-out infinite;
+}
+.separator11 {
+  width: 180px;
+  height: 7px;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }}
@@ -1345,12 +1450,11 @@ transform-origin: left;
 }
 
 .slide-text {
-  font-size: 1.5rem;
-  margin: 0px 0 0 0vw;
+  font-size: 1.4rem;
   text-align: center;
   align-items: center;
   font-weight: 500;
-  max-width: 90%;
+  max-width: 80%;
 }
 
 .circle-img {
@@ -1407,7 +1511,7 @@ transform-origin: left;
   .circle-img { width: 280px; height: 280px; }
 }
 @media (max-width: 700px) {
-  .text-section0 h2 { font-size: 1.6rem; }
+  .text-section0 h2 { font-size: 1.6rem; margin-left: 15px;}
   .circle-img { width: 200px; height: 200px; }
   .nav.prev { left: 6px; }
   .nav.next { right: 6px; }
@@ -1426,6 +1530,8 @@ transform-origin: left;
     .gallery-section h2 {
   text-align: left;
   font-size: 2rem;
+    margin: 40px 0; 
+    margin-left: 14%;
 }
 
 
@@ -1448,11 +1554,10 @@ transform-origin: left;
         background: #f0bb1c;
             }
 
-    .gallery-section1 h2 {
-  text-align: left;
-  font-size: 2rem;
-  margin: 40px 0; 
-}
+@media (max-width: 700px) {
+    .gallery-section h2 {
+margin-left: 13px;}}
+
 
 
 
@@ -1667,12 +1772,23 @@ margin-left: 15%;
   margin-bottom: 10px;
 }
 
+.section-header6 h2 {
+  font-size: 2rem;
+  font-weight: bold;
+margin-left: 14%;
+  margin-bottom: 10px;
+}
+
     @media(max-width: 768px) {
 .section-header9 h2 {
   font-size: 2rem;
   font-weight: bold;
-margin-left: 10%;
-}}
+margin-left: 9%;
+}
+.section-header6 h2 {
+margin-left: 5%;
+  font-size: 1.5rem;
+}
 
 .video-container {
   max-width: 1200px;
@@ -1723,7 +1839,7 @@ margin-left: 10%;
   .reel-link {
     font-size: 1rem;
   }
-}
+}}
 
 .video-overlay05 {
   position: absolute;
@@ -1735,31 +1851,28 @@ margin-left: 10%;
 }
 
 .video-overlay05 a {
-  font-size: 1.42rem; 
+  font-size: 1.9rem; 
   font-weight: 600;
   color: #ffffff; 
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.4s ease;
   display: block; 
 }
 
 .video-overlay05 a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 
 @media (max-width: 768px) {
-.video-overlay05 {
-  bottom: -140px;
-  transform: translateX(-50%);
-  font-size: 20px;
-}
-.video-overlay05 a {
-  font-size: 1.42rem; 
-  text-decoration: none;
-  margin-top: 20px;
-  transition: color 0.3s ease;
-  display: block; 
-}
+  .video-overlay05 {
+    bottom: -140px;
+    font-size: 20px;
+  }
+
+  .video-overlay05 a {
+    font-size: 1.32rem;  
+    margin-top: 20px;
+  }
 }
 
 .animated-text {
@@ -1784,6 +1897,7 @@ vertical-align: bottom;
     transform: translateY(0);
   }
 }
+
 
 
 </style>
@@ -1873,18 +1987,23 @@ vertical-align: bottom;
       <img src="Animated-Icon-Attendance1.gif.webp" alt="Spot reklamowy">
       <div class="desc">Low attendance at your events makes you feel unappreciated.</div>
     </div>
-  </div>
+  </div>  
+  
+  <h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>
+  </section>
 
-<h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>  
-</section>
+
 <section class="white-section">
   <div class="top-row">
-    <div class="text-col">
-      <h2 class="text-1">I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
-      <div class="separator2"></div>
-      <p class="text-2">I help you capture attention and communicate your message clearly.
-      Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.</p>
+    <div class="text-col left-margin">
+      <h2>I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
+      <div class="separator"></div>
+      <p class="para-top">
+        I help you capture attention and communicate your message clearly.
+        Check out <a href="#" class="portfolio-link">my portfolio</a> and see how my animations work in practice.
+      </p>
     </div>
+
     <div class="video-col">
       <video src="Pawel-Pauksztello-Samuel-Studio-Owner-Founder.mp4" autoplay muted loop playsinline></video>
     </div>
@@ -1894,10 +2013,12 @@ vertical-align: bottom;
     <video src="Is-This-Your-Story.mp4" autoplay muted loop playsinline></video>
   </div>
 
-  <div class="text-col2">
-    <h2 class="text-3">No one wants to be ignored.</h2>
-    <div class="separator2"></div>
-    <p class="text-4">Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.</p>
+  <div class="text-col22">
+    <h6>No one wants to be ignored.</h6>
+    <div class="separator11"></div>
+    <p class="para-bottom">
+      Well-crafted animation grabs attention, engages your audience, and makes your message unforgettable.
+    </p>
   </div>
 </section>
 
@@ -2136,7 +2257,7 @@ vertical-align: bottom;
 
 
 <section class="video-section4">
-  <div class="section-header">
+  <div class="section-header6">
     <h2>Animations that works</h2>
     <div class="separator2"></div>
   </div>
@@ -2156,7 +2277,7 @@ vertical-align: bottom;
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
     <div class="video-overlay">
         <h1>Ready to create something extraordinary?</h1>
-        <h4>Let’s work together and bring your ideas to life. Contact me today.</h4>
+        <h4>Let’s work together and bring your ideas to&nbsp;life. Contact me today.</h4>
 
         <div class="separator"></div>
 
