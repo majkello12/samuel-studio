@@ -758,13 +758,13 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2.yellow-h2 {
     margin-top: -190px;
     margin-left: 15%; 
-  font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(14px, 3vw, 36px); /* można też ustawiać rozmiar responsywnie */
 }
 
   .yellow-section h2.yellow2-h2 {
    margin-left: 15%;
    margin-top: 80px;
-  font-size: clamp(14px, 3vw, 48px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(14px, 3vw, 36px); /* można też ustawiać rozmiar responsywnie */
 }
 
 @media (max-width: 768px) {
@@ -772,13 +772,13 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2.yellow-h2 {
    margin-left: 44px;
    margin-bottom: -50px;
-  font-size: clamp(26px, 3vw, 38px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(10px, 3vw, 28px); /* można też ustawiać rozmiar responsywnie */
 }
 
   .yellow-section h2.yellow2-h2 {
    margin-left: 35px;
    margin-top: 60px;
-  font-size: clamp(26px, 3vw, 38px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(10px, 3vw, 28px); /* można też ustawiać rozmiar responsywnie */
 }
 }
 
@@ -1277,6 +1277,7 @@ border: 1px solid #000000;  background: #ffffff;
 .video-overlay2 li {
   font-size: 1.7rem;
   margin: 40px 0; 
+
   line-height: 1.5;
   opacity: 0;
   animation: fadeSlideIn 0.6s ease forwards;
@@ -1336,8 +1337,8 @@ border: 1px solid #000000;  background: #ffffff;
   }
 
   .video-overlay2 h4 {
-    font-size: 1.3em;  
-    margin-bottom: 12px;
+    font-size: 1.1em;  
+    margin-bottom: -9px;
   }
 
   .video-overlay2 li {
@@ -1349,6 +1350,17 @@ border: 1px solid #000000;  background: #ffffff;
   margin-left: -15%;
   color: #000;
 }}
+
+.video-overlay2 li:last-child {
+  margin-bottom: 80px; /* większy odstęp na dużych ekranach */
+}
+
+/* na urządzeniach mobilnych odstęp mniejszy */
+@media (max-width: 768px) {
+  .video-overlay2 li:last-child {
+    margin-bottom: 40px;
+  }
+}
 
 .text-section0 h2 {
   font-size: 2.2rem;
@@ -1660,7 +1672,8 @@ margin-left: 13px;}}
   margin: 50px 0 50px 260px; 
   margin-left: 300px;
   cursor: pointer;
-  
+    white-space: nowrap;
+
   transition: background 0.3s ease;
   display: inline-block; 
 }
@@ -1674,14 +1687,15 @@ margin-left: 13px;}}
 @media (max-width: 700px) {
 
 .see-more-btn3 {
-  padding: 14px 46px;
+  padding: 14px 79px;
   background: #000;
   color: #f0bb1c;
   border: none;
   border-radius: 30px;
-  margin: 50px 0 50px 70px; 
+  margin: 50px 0 50px 50px; 
+  margin-left: 10%;
   cursor: pointer;
-  
+  white-space: nowrap;
   transition: background 0.3s ease;
   display: inline-block; 
 }}
@@ -1781,6 +1795,20 @@ margin-left: 14%;
   margin-bottom: 10px;
 }
 
+.video-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 10px;
+  margin-top: 7%;
+}
+.reel-link {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #000;
+  transition: font-weight 0.3s ease;}
+
+
     @media(max-width: 768px) {
 .section-header9 h2 {
   font-size: 2rem;
@@ -1838,9 +1866,7 @@ margin-left: 5%;
     font-size: 1.2rem;
   }
 
-  .reel-link {
-    font-size: 1rem;
-  }
+
 }}
 
 .video-overlay05 {
@@ -2596,7 +2622,7 @@ if (window.innerWidth <= 768) {
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const text = document.querySelector(".animated-text");
-    const words = text.innerHTML.split(" "); // dzielimy po spacji
+    const words = text.innerHTML.split(" "); 
     text.innerHTML = "";
 
 words.forEach((word, i) => {
