@@ -62,6 +62,10 @@ header {
 z-index: 1000;
   transition: top 0.4s ease; 
 }
+header.hidden {
+  top: -100px;
+  opacity: 0; 
+}
 
 
 .logo-container {
@@ -322,7 +326,7 @@ img {
   background-color: #f0bb1c;
   margin-top: 30px;
   margin-bottom: 50px;
-    margin-left: 0px;  /* tutaj możesz zmieniać odstęp od lewej */
+    margin-left: 0px;  
   transform: scaleX(0);
   transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
@@ -335,9 +339,8 @@ img {
   background-color: #f0bb1c;
   margin-top: 30px;
   margin-bottom: 50px;
-    margin-left: -50px;  /* tutaj możesz zmieniać odstęp od lewej */
+    margin-left: -51%;  
   transform: scaleX(0);
-  transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
 .separator8 {
@@ -386,7 +389,7 @@ img {
 
 
   :root {
-  --section-left-margin: 14%; /* zmieniasz w jednym miejscu */
+  --section-left-margin: 14%; 
   --section-left-margin-mobile: 5%;
 }
 
@@ -432,16 +435,14 @@ img {
 
 
 .para-top {
-  margin-left: -38%;   /* np. tak jak reszta tekstu */
+  margin-left: -38%;   
 }
 
-/* Paragraf dolny */
 .para-bottom {
-  margin-left: 14%;   /* możesz ustawić niezależnie */
+  margin-left: 14%;   /
   margin-right: 10%;
 }
 
-/* wersja mobilna */
 @media (max-width: 768px) {
   .para-top {
     margin-left: 0%;
@@ -758,13 +759,13 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2.yellow-h2 {
     margin-top: -190px;
     margin-left: 15%; 
-  font-size: clamp(14px, 3vw, 36px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(14px, 3vw, 36px); 
 }
 
   .yellow-section h2.yellow2-h2 {
    margin-left: 15%;
    margin-top: 80px;
-  font-size: clamp(14px, 3vw, 36px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(14px, 3vw, 36px); 
 }
 
 @media (max-width: 768px) {
@@ -772,13 +773,13 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2.yellow-h2 {
    margin-left: 44px;
    margin-bottom: -50px;
-  font-size: clamp(10px, 3vw, 28px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(22px, 3vw, 28px); 
 }
 
   .yellow-section h2.yellow2-h2 {
    margin-left: 35px;
    margin-top: 60px;
-  font-size: clamp(10px, 3vw, 28px); /* można też ustawiać rozmiar responsywnie */
+  font-size: clamp(22px, 3vw, 28px); 
 }
 }
 
@@ -807,12 +808,12 @@ margin-left: -38%;           font-size: 31px;
 .grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10px; /* odstęp poziomy między elementami w wierszu */
-  row-gap: 30px;       /* brak odstępu pionowego między wierszami */
+  column-gap: 10px; 
+  row-gap: 30px;      
   margin: 10px 0 0 0; 
   max-width: 100%; 
   justify-items: center; 
-  padding: 40px 20px 0 20px; /* padding od boków */
+  padding: 40px 20px 0 20px; 
 }
 
 .grid-item {
@@ -845,9 +846,9 @@ margin-left: -38%;           font-size: 31px;
 @media (max-width: 768px) {
   .grid-2x2 {
     display: grid;
-    grid-template-columns: 1fr;  /* 1 kolumna na mobile */
-    column-gap: 0;               /* nie ma kolumny w 1 kolumnie */
-    row-gap: 20px;               /* odstęp pionowy między elementami */
+    grid-template-columns: 1fr;  
+    column-gap: 0;               
+    row-gap: 20px;              
     max-width: 90%;
     margin: 120px auto 0 auto;
     justify-items: center;
@@ -1077,9 +1078,9 @@ border: 1px solid #000000;  background: #ffffff;
 
 @media (max-width: 768px) {
   .opinie-carousel {
-    max-width: 90%; /* zmniejszamy szerokość do 90% ekranu */
-    margin: 0 auto; /* centrowanie */
-    padding: 0 10px; /* marginesy po bokach */
+    max-width: 90%; 
+    margin: 0 auto; 
+    padding: 0 10px; 
   }
 }
 
@@ -1224,11 +1225,17 @@ border: 1px solid #000000;  background: #ffffff;
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
+
+.video-container2 {
+  margin-bottom: 200%;
+    height: auto;
+  }
 .video-section2 {
   width: 100%;
     height: 190vw;
   box-sizing: border-box;
-}}
+  }}
+
 
 .video-container2 {
   position: relative;
@@ -1352,10 +1359,9 @@ border: 1px solid #000000;  background: #ffffff;
 }}
 
 .video-overlay2 li:last-child {
-  margin-bottom: 80px; /* większy odstęp na dużych ekranach */
+  margin-bottom: 80px; 
 }
 
-/* na urządzeniach mobilnych odstęp mniejszy */
 @media (max-width: 768px) {
   .video-overlay2 li:last-child {
     margin-bottom: 40px;
@@ -1384,7 +1390,6 @@ transform-origin: left;
   height: 7px;
   background-color: #ffffff; 
   margin-top: 0px;
-  margi
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }}
@@ -1409,7 +1414,7 @@ transform-origin: left;
   height: 7px;
   background-color: #f0bb1c;
   margin-left: 14%;
-  margin-top: 5$;
+  margin-top: 5%;
   margin-bottom: 3%;
 transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
@@ -1520,6 +1525,24 @@ transform-origin: left;
 .nav:active { transform: translateY(-50%) scale(1.98); }
 .nav.prev { left: 219px; }
 .nav.next { right: 219px; }
+
+@media (max-width: 768px) {
+.carousel-container0 {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0px 0 0 0vw;
+  margin-bottom: 70px;
+  display: flex;
+}
+
+
+  .carousel-container0 .prev {
+    left: 15%;   }
+  .carousel-container0 .next {
+    right: 5%;  
+  }
+}
 
 @media (max-width: 900px) {
   .circle-img { width: 280px; height: 280px; }
@@ -1769,7 +1792,6 @@ margin-left: 13px;}}
 .section-header h2 {
   font-size: 2rem;
   font-weight: bold;
-
   margin-bottom: 10px;
 }
 
@@ -1800,13 +1822,31 @@ margin-left: 14%;
   font-weight: bold;
   color: #000000;
   margin-bottom: 10px;
-  margin-top: 7%;
+  margin-top: 2%;
 }
 .reel-link {
   font-size: 1.8rem;
   text-decoration: none;
   color: #000;
   transition: font-weight 0.3s ease;}
+
+
+  .video-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container video {
+  width: 95%;
+  height: auto;
+  display: block;
+  align-items: center;
+  object-fit: cover;
+  border-radius: 15px;  /* zaokrąglenie rogów wideo */
+  border: 1px solid #000;   
+}
 
 
     @media(max-width: 768px) {
@@ -1823,8 +1863,9 @@ margin-left: 5%;
 .video-container {
   max-width: 1200px;
   margin: 0 auto;
+ 
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 14px;
 }
 
 .video-container video {
@@ -1832,7 +1873,8 @@ margin-left: 5%;
   height: auto;
   display: block;
   object-fit: cover;
-  border-radius: 12px;
+    border: 1px solid #000;   
+
 }
 
 .video-caption {
@@ -1973,12 +2015,17 @@ vertical-align: bottom;
         <h1>Reach your audience more effectively</h1>
         <h4>Animations that stand out and engage.</h4>
 
-        <div class="separator"></div>
-
-        <div class="buttons">
-            <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">See How it Works</button>
-            <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">Explore Examples</button>
-        </div>
+        <div class="separator" style="background-color: #ffffff;"></div>
+<div class="buttons">
+  <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">
+    See How it Works
+  </button>
+  <button class="btn" 
+          style="background:#fff; color:#000000;" 
+          onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">
+    Explore Examples
+  </button>
+</div>
     </div>
 </section>
 
@@ -2307,14 +2354,18 @@ vertical-align: bottom;
         <h1>Ready to create something extraordinary?</h1>
         <h4>Let’s work together and bring your ideas to&nbsp;life. Contact me today.</h4>
 
-        <div class="separator"></div>
+        <div class="separator" style="background-color: #ffffff;"></div>
 
         <div class="buttons">
       <button class="btn" onclick="document.getElementById('oferta').scrollIntoView({ behavior: 'smooth' })">Get a Free Consultation</button>
-      <button class="btn" onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">Contact me</button>
+        <button class="btn" 
+          style="background:#fff; color:#000000;" 
+          onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">
+  Contact Me
+  </button>
         </div>
 <div class="video-overlay05">
-  <h4><a href="mailto:kontakt@animacja.pl">kontakt@animacja.pl</a></h4>
+  <h4><a href="mailto:kontakt@animacja.pl">pawel@samuelstudio.com</a></h4>
   <h4><a href="tel:+48693733366">+48 693 733 366</a></h4>
 </div>
     </div>
@@ -2460,19 +2511,19 @@ closeBtn.addEventListener("click", () => {
 
 
 
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   let lastScroll = 0;
+  const threshold = 80; // od ilu px zaczyna się chowanie
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > lastScroll && currentScroll > 80) {
-      header.style.top = "-100px";
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      header.classList.add("hidden");
     } else {
-      header.style.top = "0";
+      header.classList.remove("hidden");
     }
 
     lastScroll = currentScroll;
