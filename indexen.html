@@ -1969,6 +1969,83 @@ vertical-align: bottom;
 }
 
 
+.gallery-grid-offerta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+gap: 6rem;
+  width: 60%;
+  height: 60%;
+  margin: 4rem auto 0 auto;
+}
+
+/* Małe ekrany: 1 element w wierszu */
+@media (max-width: 768px) {
+  .gallery-grid-offerta {
+    grid-template-columns: 1fr;
+      width: 85%;
+  height: 85%;
+  }
+}
+
+.gallery-item-offerta {
+  border: 2px solid #000;      
+  border-radius: 22px;
+  overflow: hidden;
+    width: 100%;
+
+  display: flex;
+  flex-direction: column;       
+  align-items: stretch;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item-offerta:hover {
+   transform: scale(1.03);
+}
+
+.gallery-media-offerta {
+  width: 100%;
+  display: block;
+}
+
+.gallery-media-offerta img,
+.gallery-media-offerta video {
+  width: 100%;
+  height: auto;                
+  display: block;
+  border-bottom: 1px solid #000; 
+}
+
+/* Caption pod media */
+.gallery-caption-offerta {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  min-height: 250px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.gallery-caption-offerta p {
+  margin: 0;
+  color: #000;
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+
+  .gallery-caption-offerta {
+  padding: 3rem;
+  min-height: 100px;
+}
+
+.gallery-caption-offerta p {
+  margin: 0;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 400;
+}}
 
 </style>
 </head>
@@ -2044,28 +2121,53 @@ vertical-align: bottom;
     <video src="question-mark.mp4" autoplay muted loop></video>
   </div>
 
-<h2 class="yellow-h2">Do you have something important to show but don't know how to do&nbsp;it&nbsp;effectively?</h2>
-  <div class="grid-2x2">
-    <div class="grid-item" onclick="location.href='https://link1.pl'">
-      <img src="ANIMATED-ICON-LOGO1.gif.webp" alt="Animacja reklamowa">
-      <div class="desc">You don’t have an animated logo to make your brand stand out.</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link2.pl'">
-      <img src="Animated-Icon-Audience1.gif.webp" alt="Animacja produktowa">
-      <div class="desc">Your lectures don’t capture your audience's attention.</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link3.pl'">
-      <img src="Animated-Icon-Eye1.gif.webp" alt="Spot reklamowy">
-      <div class="desc">You find it hard to explain complex topics in an engaging way.</div>
-    </div>
-    <div class="grid-item" onclick="location.href='https://link3.pl'">
-      <img src="Animated-Icon-Attendance1.gif.webp" alt="Spot reklamowy">
-      <div class="desc">Low attendance at your events makes you feel unappreciated.</div>
-    </div>
-  </div>  
+  <h2 class="yellow-h2">Do you have something important to show but don't know how to do&nbsp;it&nbsp;effectively?</h2>
   
+  <div class="gallery-grid gallery-grid-offerta">
+
+    <div class="gallery-item-offerta">
+      <div class="gallery-media-offerta">
+        <img src="ANIMATED-ICON-LOGO1.gif.webp" alt="WORSHIP in the city center 2022 - cover image">
+      </div>
+      <div class="gallery-caption-offerta">
+        <p>You don’t have an animated logo to make your brand stand out.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item-offerta">
+      <div class="gallery-media-offerta">
+        <img src="Animated-Icon-Audience1.gif.webp" alt="YAGOOSH - Puppeteer cover">
+      </div>
+      <div class="gallery-caption-offerta">
+        <p>Your lectures don’t capture your audience's attention.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item-offerta">
+      <div class="gallery-media-offerta">
+        <img src="Animated-Icon-Eye1.gif.webp" alt="Bible Unbound - The Bible In a Sentence cover">
+      </div>
+      <div class="gallery-caption-offerta">
+        <p>You find it hard to explain complex topics in an engaging way.</p>
+      </div>
+    </div>
+
+    <div class="gallery-item-offerta">
+      <div class="gallery-media-offerta">
+        <img src="Animated-Icon-Attendance1.gif.webp" alt="Bible Unbound - The Bible In a Sentence cover">
+      </div>
+      <div class="gallery-caption-offerta">
+        <p>Low attendance at your events makes you feel unappreciated.</p>
+      </div>
+    </div>
+
+  </div>
+
   <h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>
-  </section>
+</section>
+
+
+
 
 
 <section class="white-section">
