@@ -339,7 +339,7 @@ img {
   background-color: #f0bb1c;
   margin-top: 30px;
   margin-bottom: 50px;
-    margin-left: -51%;  
+    margin-left: -40%;  
   transform: scaleX(0);
   animation: drawLine 4s ease-in-out infinite;
 }
@@ -1051,18 +1051,16 @@ border: 1px solid #000000;  background: #ffffff;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.412s ease;
-
+  transition: transform 0.4s ease;
 }
 
 .opinie-carousel :hover {
-  transform: scale(1.009);
+  transform: scale(1.011);
 }
 
 
 .opinie-track {
   display: flex;
-  transition: transform 0.6s ease;
 }
 
 .opinia {
@@ -1507,12 +1505,12 @@ transform-origin: left;
 
 .nav {
   position: absolute;
-  top: 65%;
+  top: 70%;
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0);
   color: #000000;
   border: none;
-  width: 84px;
+  width: 254px;
   height: 84px;
   border-radius: 50%;
   font-size: 52px;
@@ -1554,6 +1552,11 @@ transform-origin: left;
   .nav.next { right: 6px; }
   .nav { font-size: 35px; }
   .see-more-btn { font-size: 18px; padding: 10px 28px; }
+
+  .nav {
+      width: 184px;
+
+}
 }
 
 
@@ -1593,8 +1596,6 @@ transform-origin: left;
 @media (max-width: 700px) {
     .gallery-section h2 {
 margin-left: 13px;}}
-
-
 
 
 .gallery-section1 p {
@@ -1694,9 +1695,8 @@ margin-left: 13px;}}
   margin: 50px 0 50px 260px; 
   margin-left: 300px;
   cursor: pointer;
-    white-space: nowrap;
-
-  transition: background 0.3s ease;
+  white-space: nowrap;
+  transition: transform 0.4s ease, background 0.3s ease;  
   display: inline-block; 
 }
 
@@ -1710,16 +1710,8 @@ margin-left: 13px;}}
 
 .see-more-btn3 {
   padding: 14px 79px;
-  background: #000;
-  color: #f0bb1c;
-  border: none;
-  border-radius: 30px;
   margin: 50px 0 50px 50px; 
   margin-left: 10%;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.3s ease;
-  display: inline-block; 
 }}
 
 
@@ -2116,7 +2108,7 @@ gap: 6rem;
   </div>
 
   <h2 class="yellow-h2">Do you have something important to show but don't know how to do&nbsp;it&nbsp;effectively?</h2>
-  
+  <br>
   <div class="gallery-grid gallery-grid-offerta">
 
     <div class="gallery-item-offerta">
@@ -2124,7 +2116,7 @@ gap: 6rem;
         <img src="ANIMATED-ICON-LOGO1.gif.webp" alt="WORSHIP in the city center 2022 - cover image">
       </div>
       <div class="gallery-caption-offerta">
-        <p>You don’t have an animated logo to make your brand stand out.</p>
+        <p>You don’t have an&nbsp;animated logo to make your brand stand out.</p>
       </div>
     </div>
 
@@ -2157,7 +2149,7 @@ gap: 6rem;
 
   </div>
 
-  <h2 class="yellow2-h2">Don’t let your story fade into the background.</h2>
+  <h2 class="yellow2-h2">Don’t let your story fade into the&nbsp;background.</h2>
 </section>
 
 
@@ -2322,15 +2314,19 @@ gap: 6rem;
     <button class="nav next" aria-label="Następny slajd">›</button>
   </div>
 
+<section class="order-section">
   <div class="text-section0">
     <h2>Let’s create together.</h2>
-    <div class="separator9" ></div>
+    <div class="separator9"></div>
   </div>
-    <div class="see-more-container">
-   <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
-    Order today
-</div>
+
+  <div class="see-more-container">
+    <button class="see-more-btn3" onclick="window.location.href='https://samuelstudio.com'">
+      Order today
+    </button>
+  </div>
 </section>
+
 
 
   </section>
