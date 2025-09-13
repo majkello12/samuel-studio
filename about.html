@@ -515,118 +515,6 @@ margin-left: 15%;
 
 
 
-.contact-section {
-  background: #f9f9f9;
-  padding: 80px 30px;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-container {
-  max-width: 700px;
-  width: 100%;
-  background: #fff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-}
-
-.contact-container h2 {
-  text-align: center;
- font-size: clamp(14px, 3vw, 36px);   margin-bottom: 10px;
-}
-
-.contact-container p {
-  text-align: center;
-  font-size: clamp(22px, 3vw, 28px);   
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.contact-form .form-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.contact-form label {
-  margin-bottom: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #eeb702;
-  box-shadow: 0 0 6px rgba(238, 183, 2, 0.3);
-}
-
-.form-checkbox {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.form-checkbox input {
-  margin-right: 10px;
-}
-
-.form-checkbox a {
-  color: #eeb702;
-  text-decoration: underline;
-  transition: 0.3s ease;
-}
-
-.form-checkbox a:hover {
-  color: #000;
-}
-
-.submit-btn {
-  width: 60%;
-  padding: 14px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #eeb702;
-  color: #000;
-  border: none;
-  border-radius: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.submit-btn:hover {
-  background: #000;
-  color: #fff;
-  transform: scale(1.03);
-}
-
-@media (max-width: 600px) {
-  .contact-container {
-    padding: 20px;
-  }
-
-  .contact-container h2 {
-    font-size: 1.6rem;
-  }
-
-  .submit-btn {
-    font-size: 1rem;
-  }
-}
-
-
-
-
 </style>
   
 </head>
@@ -665,15 +553,35 @@ margin-left: 15%;
 </header>
 
 <section class="text-section">
-  <h2>Contact</h2>
+  <h2>Hello and welcome</h2>
   <div class="separator"></div>
 
 <p>
-You can contact me by e-mail. Provide a brief explanation of what animation you need and your timeline, theme, language and style. After agreeing on them, I will start working on the project. I’ll keep you updated on the graphics progress and also send you small test animations to make sure I’m on the right track. I will send the finished product your way.
+  My name&nbsp;is Paweł Pauksztełło, and&nbsp;I’m&nbsp;a&nbsp;motion designer from&nbsp;Poland. 
+  I&nbsp;create animations that help businesses, organizations, and&nbsp;individuals communicate their messages clearly and&nbsp;effectively. 
+  Whether you&nbsp;need to&nbsp;explain a&nbsp;concept, promote an&nbsp;event, or&nbsp;tell a&nbsp;story, 
+  I&nbsp;deliver high-quality animations that engage and&nbsp;inform.
 </p>
-<p>Paweł Pauksztełło</p>
-<p>Samuel Studio – Animation & Motion Design Kielce</p>
-<p>e-mail: pawel@samuelstudio.pl</p>
+
+<p>
+  Many people struggle to&nbsp;present their ideas in&nbsp;a&nbsp;way that captures attention and&nbsp;makes an&nbsp;impact. 
+  Animation solves this problem by&nbsp;turning information into a&nbsp;visual experience that is&nbsp;easy to&nbsp;understand and&nbsp;remember. 
+  I&nbsp;focus on&nbsp;creating animations that support my&nbsp;clients’ goals—whether in&nbsp;education, marketing, or&nbsp;storytelling. 
+  See examples of&nbsp;my&nbsp;work: 
+  <a href="portfolio.html" class="highlight-link">Portfolio</a>
+</p>
+
+<p>
+  I&nbsp;also specialize in&nbsp;visualizing Christian themes, helping churches and&nbsp;faith-based organizations 
+  share their messages in&nbsp;a&nbsp;meaningful way. 
+  <a href="christian-animations.html" class="highlight-link">Christian Animation</a>
+</p>
+
+<p>
+  Outside of&nbsp;work, I&nbsp;spend time with&nbsp;my&nbsp;wife and&nbsp;three sons. 
+  I’m also involved in&nbsp;my&nbsp;parish as&nbsp;a&nbsp;lector and&nbsp;help organize Worship events in&nbsp;my&nbsp;city.
+</p>
+<p>If you need an animation that makes your message clear and&nbsp;engaging, let’s&nbsp;work together!
 </p>
   <div class="see-more-container">
    <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
@@ -684,48 +592,56 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
 
 
 
-<section class="contact-section">
-  <div class="contact-container">
-
-
-    <form class="contact-form" action="mailto:your@email.com" method="POST">
-      
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Comment or Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-      </div>
-
-      <div class="form-checkbox">
-        <input type="checkbox" id="privacy" required>
-        <label for="privacy">
-          I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a>.
-        </label>
-      </div>
-
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-  </div>
-</section>
 
   
 
 
+<section style="padding: 60px 0 0 0px; background: #f9f9f9;">
 
+
+    <div class="section-header9">
+    <h2>What Clients Say</h2>
+    <div class="separator8"></div>
+  </div>
+
+  <div class="opinie-carousel">
+    <div class="opinie-track">
+      <div class="opinia">
+        <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
+          <img src="opinia1.png" alt="Opinia 1">
+        </a>
+      </div>
+      <div class="opinia">
+        <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1m" target="_blank">
+          <img src="opinia2.png" alt="Opinia 2">
+        </a>
+      </div>
+      <div class="opinia">
+        <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
+          <img src="opinia3.png" alt="Opinia 3">
+        </a>
+      </div>
+      <div class="opinia">
+        <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
+          <img src="opinia4.png" alt="Opinia 4">
+        </a>
+      </div>
+      <div class="opinia">
+        <a href="https://www.google.com/search?sca_esv=8e23599b05dcda53&sxsrf=AE3TifOD2Eq75ubp-mwDPJzIYybLXtVqyA:1756146450645&uds=AOm0WdE2fekQnsyfYEw8JPYozOKzOrb8msZ41PbwrtZCXgAS73mjE7vfglHotkveeSsehsF7n7_aNLXU9IjqTLnhpaHW5JSmbdOg1DYPGlSgQCOhxcNAtRO-KOuuOkPuYQJFm4ohHkhAHIRomp2fd8_9H9ZoxMzlNyrArlXtvkRcJIipU9vtzrRDTqgBOBJl6btSzrmhvgorgupv84bQFF1BFBAzEanXtw&q=Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach+Opinie&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E7R6JI_1RwpooYacCjMiXkLWjXwcJ5GZ9efbiggoACmyzoCnvCjaYFsjXLiywuJjMwc-ecctZwV1c6CML7HEQwVXORu_9OAavF2o0S8LgA5cNhM2SoQ1V1YH1w6ay8YerXoxUukSuXLEpL6u9iAvYA10DaEw&hl=pl-PL&sa=X&ved=2ahUKEwic3PSqy6aPAxVLFBAIHQvLBXIQ_4MLegQITBAN&biw=1920&bih=1039&dpr=1" target="_blank">
+          <img src="opinia5.png" alt="Opinia 5">
+        </a>
+      </div>
+    </div>
+
+    <button class="arrow prev">&#10094;</button>
+    <button class="arrow next">&#10095;</button>
+  </div>
+
+  <div class="see-more-container">
+   <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
+    Write a review
+</div>
+</section>
 
 
 <footer class="footer">
