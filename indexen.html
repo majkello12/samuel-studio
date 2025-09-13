@@ -356,8 +356,6 @@ img {
   margin-top: 30px;
   margin-bottom: 50px;
     margin-left: -40%;  
-  transform: scaleX(0);
-  animation: drawLine 4s ease-in-out infinite;
 }
 .separator8 {
   width: 180px;
@@ -460,7 +458,6 @@ img {
   margin-left: 14%;   
   margin-right: 10%;
     font-size: clamp(22px, 3vw, 28px); 
-
 }
 
 @media (max-width: 768px) {
@@ -559,7 +556,7 @@ margin-top: 5ch;
 
     transform: scaleX(0);
     transform-origin: center;
-animation: drawLine 5s ease-in-out infinite;}
+animation: drawLine 4s ease-in-out infinite;}
 
 
 
@@ -770,17 +767,11 @@ margin-left: -38%;           font-size: 31px;
     margin-bottom: 40px; 
         font-size: 1.2rem;
         margin-left: -0%;
-  }
-    }
+  }}
+
     #oferta.yellow-section {
     background-color: hsl(43, 91%, 54%);
   }
-
-  .yellow-section h2.yellow-h2 {
-    margin-top: -190px;
-    margin-left: 15%; 
-  font-size: clamp(14px, 3vw, 36px); 
-}
 
   .yellow-section h2.yellow2-h2 {
    margin-left: 15%;
@@ -1139,7 +1130,7 @@ border: 1px solid #000000;  background: #ffffff;
     margin-top: 18px;
   transform: scaleX(0);
   transform-origin: center;
-  animation: drawLine 7s ease-in-out infinite;
+  animation: drawLine 4s ease-in-out infinite;
 }
 
 
@@ -1239,7 +1230,7 @@ border: 1px solid #000000;  background: #ffffff;
 
 .video-section2 {
   width: 100%;
-    height: 80vw; 
+    height: 60vw; 
   box-sizing: border-box;
 }
 @media (max-width: 768px) {
@@ -1250,7 +1241,7 @@ border: 1px solid #000000;  background: #ffffff;
   }
 .video-section2 {
   width: 100%;
-    height: 190vw;
+    height: 300vw;
   box-sizing: border-box;
   }}
 
@@ -1281,15 +1272,14 @@ border: 1px solid #000000;  background: #ffffff;
   flex-direction: column;
   align-items: flex-start;    
   text-align: left;
-  line-height: 2.2;
+  line-height: 1.6;
   z-index: 2;
   box-sizing: border-box; 
 }
 .video-overlay2 h4 {
   color: #f0bb1c;
     padding: 0px 30px 20px 0px; 
-  font-size: 2.31rem;
-  font-weight: 900;
+ font-size: clamp(14px, 3vw, 36px);  
   margin-bottom: 25px;
 }
 
@@ -1354,25 +1344,27 @@ border: 1px solid #000000;  background: #ffffff;
 @media (max-width: 768px) {
 .video-overlay2 {
   padding: 20px 40px 0px; 
-    margin-top: 110px;        
-    margin-left: 2px;
-    align-items: center;    
-    text-align: left;
-    height: auto;  
+  margin-top: 110px;        
+  margin-left: 2px;
+  align-items: center;    
+  text-align: left;
+  height: auto;  
   }
 
   .video-overlay2 h4 {
-    font-size: 1.1em;  
-    margin-bottom: -9px;
+   font-size: clamp(22px, 3vw, 28px);    
+   margin-bottom: -9px;
   }
 
   .video-overlay2 li {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin: 12px 0;     
+  font-size: clamp(22px, 3vw, 28px);     
+  line-height: 1.38;
+  margin: 12px 0;     
   }
 .yellow-section0{
   margin-left: -15%;
+  text-align: center;
+  
   color: #000;
 }}
 
@@ -1487,8 +1479,8 @@ transform-origin: left;
 }
 
 .slide-text {
-  font-size: 1.4rem;
-  text-align: center;
+font-size: clamp(22px, 3vw, 28px);   
+text-align: center;
   align-items: center;
   font-weight: 500;
   max-width: 80%;
@@ -1547,13 +1539,16 @@ transform-origin: left;
 @media (max-width: 768px) {
   .carousel-container0 {
     position: relative;
-    width: 90%;              /* trochę węższe, żeby nie kleiło się do krawędzi */
+    width: 90%;            
     max-width: 1300px;
-    margin: 0 auto 70px auto; /* auto wyśrodkuje w poziomie */
+    margin: 0 auto 70px auto; 
     display: flex;
-    justify-content: center; /* wyśrodkowanie zawartości w poziomie */
-    align-items: center;     /* wyśrodkowanie w pionie (jeśli potrzebne) */
+        flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+
+  
 
 
   .carousel-container0 .prev {
@@ -1956,6 +1951,8 @@ margin-left: 5%;
 
   .video-overlay05 a {
     font-size: 1.32rem;  
+      font-weight: 400;
+
     margin-top: 20px;
   }
 }
@@ -2141,7 +2138,7 @@ gap: 6rem;
     <video src="question-mark.mp4" autoplay muted loop></video>
   </div>
 
-  <h2 class="yellow-h2">Do you have something important to show but don't know how to do&nbsp;it&nbsp;effectively?</h2>
+  <h2 class="yellow-h2">Do you have something important to&nbsp;show but don't know how to&nbsp;do&nbsp;it&nbsp;effectively?</h2>
   <br>
   <div class="gallery-grid gallery-grid-offerta">
 
@@ -2183,7 +2180,7 @@ gap: 6rem;
 
   </div>
 
-  <h2 class="yellow2-h2">Don’t let your story fade into the&nbsp;background.</h2>
+  <h2 class="yellow2-h2">Don’t let your story fade into&nbsp;the&nbsp;background.</h2>
 </section>
 
 
@@ -2230,36 +2227,35 @@ gap: 6rem;
       <div class="separator7"></div>
       <ul>
         <li class="white">
-          • Make your brand memorable and stand out – 
-          <a href="#">Animated Logos</a>
+          • Make your brand memorable and stand out <a href="#">–&nbsp;Animated Logos</a>
         </li>
         <li class="yellow">
-          • Simplify complex topics and engage your audience – 
-          <a href="#">Explainers</a>
+          • Simplify complex topics and engage your audience 
+          <a href="#">–&nbsp;Explainers</a>
         </li>
         <li class="white">
-          • Tell your story with motion – 
-          <a href="#">Storytelling</a>
+          • Tell your story with motion
+          <a href="#">–&nbsp;Storytelling</a>
         </li>
         <li class="yellow">
-          • Enhance your video projects – 
-          <a href="#">Animated elements for larger productions</a>
+          • Enhance your video projects
+          <a href="#">–&nbsp;Animated elements for&nbsp;larger&nbsp;productions</a>
         </li>
         <li class="white">
-          • Perfect for digital branding and social media – 
-          <a href="#">Animated GIFs</a>
+          • Perfect for digital branding and social media
+          <a href="#">–&nbsp;Animated GIFs</a>
         </li>
         <li class="yellow">
-          • Grab attention and drive awareness – 
-          <a href="#">Promotional Animations</a>
+          • Grab attention and drive awareness
+          <a href="#">–&nbsp;Promotional Animations</a>
         </li>
         <li class="white">
-          • Eye-catching visual storytelling for your campaigns – 
-          <a href="#">Animated Posters</a>
+          • Eye-catching visual storytelling for your campaigns
+          <a href="#">–&nbsp;Animated Posters</a>
         </li>
         <li class="yellow">
-          • Subtle motion that adds depth – 
-          <a href="#">Background Animations</a>
+          • Subtle motion that adds depth
+          <a href="#">–&nbsp;Background Animations</a>
         </li>
       </ul>
     </div>
@@ -2491,7 +2487,7 @@ gap: 6rem;
   </button>
         </div>
 <div class="video-overlay05">
-  <h4><a href="mailto:kontakt@animacja.pl">pawel@samuelstudio.com</a></h4>
+  <h4><a href="mailto:pawel@samuelstudio.com">pawel@samuelstudio.com</a></h4>
   <h4><a href="tel:+48693733366">+48 693 733 366</a></h4>
 </div>
     </div>
@@ -2565,24 +2561,7 @@ gap: 6rem;
     });
 
   </script>
-      <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
-<script>
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollTopBtn.style.display = "block";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
-  });
-
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+    
 <script>
   let lastScrollTop = 0;
   const navMenu = document.querySelector('.nav.menu');
