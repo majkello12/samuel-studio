@@ -286,7 +286,23 @@ img {
     order: 2;
  margin-top: 60%;
     text-align: left;
+      font-size: clamp(22px, 3vw, 28px); 
+
 }}
+
+.text-col h2 {
+  font-size: 2.5rem; /* domyślny rozmiar na większe ekrany */
+  line-height: 1.2;  /* lepsze odstępy między liniami */
+}
+
+@media (max-width: 768px) {
+  .text-col h2 {
+    font-size: 2rem; /* mniejszy na telefonach/tabletach */
+    text-align: center; /* opcjonalnie wyśrodkowanie */
+    max-width: 90%; /* niech nie wychodzi poza ekran */
+    margin: 0 auto; /* wyśrodkowanie */
+  }
+}
 
 .separator2 {
   width: 180px;
@@ -435,18 +451,24 @@ img {
 
 
 .para-top {
-  margin-left: -38%;   
+  margin-left: -38%;  
+    font-size: clamp(22px, 3vw, 28px); 
+ 
 }
 
 .para-bottom {
-  margin-left: 14%;   /
+  margin-left: 14%;   
   margin-right: 10%;
+    font-size: clamp(22px, 3vw, 28px); 
+
 }
 
 @media (max-width: 768px) {
   .para-top {
     margin-left: 0%;
     margin-right: 5%;
+      font-size: clamp(22px, 3vw, 28px); 
+
   }
   .para-bottom {
     margin-left: 6%;
@@ -491,6 +513,7 @@ img {
     max-width: 350px;     
     min-width: 300px;    
     text-align: center;
+    
       background: #f0bb1c;
       color: rgb(29, 29, 29);
       border-radius: 65px;
@@ -504,21 +527,19 @@ img {
 
     @media (max-width: 768px) {
     .video-overlay h1 {
-    font-size: 1.6rem;
-text-align: center;
-  }
+    font-size: 2rem;
+  margin: 10, 0;
 
-  .video-overlay h4 {
-    font-size: 1.1rem;
-    
-  }
+ text-align: center;
+ 
+  }  .video-overlay h4 {
+    font-size: 1.5rem;
+      }
 
 
    .video-overlay .btn {
   margin: 10 auto;
-   }
-}
-
+   }}
         .video-overlay .btn:hover {
               font-family: 'Roboto', sans-serif;
                     background: #e2af16;
@@ -546,8 +567,7 @@ animation: drawLine 5s ease-in-out infinite;}
     .video-overlay .separator {
         width: 120px;
         margin-top: 6ch;  
-    }
-}
+    }}
 
 
     .video-section3 {
@@ -1676,6 +1696,7 @@ margin-left: 13px;}}
     }
     .gallery-caption p { 
       margin: 6px 0; 
+      
 
     }
     .gallery-caption a { 
@@ -1851,7 +1872,7 @@ margin-left: 9%;
 }
 .section-header6 h2 {
 margin-left: 5%;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .video-container {
@@ -2021,7 +2042,7 @@ gap: 6rem;
 .gallery-caption-offerta p {
   margin: 0;
   color: #000;
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 400;
     line-height: 1.3;    
 
