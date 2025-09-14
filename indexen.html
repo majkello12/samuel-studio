@@ -275,6 +275,14 @@ img {
   border-radius: 8px;
 }
 
+
+.text-col-left-margin {    
+ margin-top: 6px;
+    text-align: left;
+    margin-left: 170px;
+      font-size: clamp(22px, 3vw, 28px); }
+
+
 @media (max-width: 768px) {
 
 .video-col2 video {
@@ -288,7 +296,13 @@ img {
     text-align: left;
       font-size: clamp(22px, 3vw, 28px); 
 
-}}
+}
+.text-col-left-margin {    
+ margin-top: 6px;
+    text-align: left;
+    margin-left: 10px;
+      font-size: clamp(22px, 3vw, 28px); }
+}
 
 .text-col h2 {
   font-size: 2.5rem; /* domyślny rozmiar na większe ekrany */
@@ -766,7 +780,7 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2 {
     margin-bottom: 40px; 
         font-size: 1.2rem;
-        margin-left: -0%;
+        margin-left: 0;
   }}
 
     #oferta.yellow-section {
@@ -774,22 +788,32 @@ margin-left: -38%;           font-size: 31px;
   }
 
   .yellow-section h2.yellow2-h2 {
-   margin-left: 15%;
-   margin-top: 80px;
-  font-size: clamp(14px, 3vw, 36px); 
+   margin-bottom: 20px;
+   margin-left: 295px;
+   margin-top: 60px;
+  font-size: clamp(22px, 3vw, 28px); 
 }
+  .yellow-section h2.yellow-h2 {
+   margin-bottom: 20px;
+   margin-left: 295px;
+   margin-top: -40px;
+  font-size: clamp(22px, 3vw, 28px); 
+}
+
 
 @media (max-width: 768px) {
 
   .yellow-section h2.yellow-h2 {
-   margin-left: 44px;
-   margin-bottom: -50px;
+   margin-bottom: 10px;
+   margin-left: 45px;
+   margin-top: -160px;
   font-size: clamp(22px, 3vw, 28px); 
 }
 
   .yellow-section h2.yellow2-h2 {
-   margin-left: 35px;
-   margin-top: 60px;
+   margin-bottom: 40px;
+   margin-left: 45px;
+   margin-top: 70px;
   font-size: clamp(22px, 3vw, 28px); 
 }
 }
@@ -2138,7 +2162,7 @@ gap: 6rem;
     <video src="question-mark.mp4" autoplay muted loop></video>
   </div>
 
-  <h2 class="yellow-h2">Do you have something important to&nbsp;show but don't know how to&nbsp;do&nbsp;it&nbsp;effectively?</h2>
+  <h2 class="yellow-h2">Do you have something important&nbsp;to&nbsp;show but&nbsp;don't&nbsp;know&nbsp;how to&nbsp;do&nbsp;it&nbsp;effectively?</h2>
   <br>
   <div class="gallery-grid gallery-grid-offerta">
 
@@ -2189,7 +2213,7 @@ gap: 6rem;
 
 <section class="white-section">
   <div class="top-row">
-    <div class="text-col left-margin">
+    <div class="text-col-left-margin">
       <h2>I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
       <div class="separator"></div>
       <p class="para-top">
@@ -2407,6 +2431,8 @@ gap: 6rem;
     Write a review
 </div>
 </section>
+
+
 
   <section class="gallery-section">
         <h2>Recent Work</h2>
