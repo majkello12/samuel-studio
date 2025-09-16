@@ -178,14 +178,16 @@ header.hidden {
   text-align: left;
   font-size: 2rem;
   margin-bottom: 10px;
+  margin-top: 8%;
 }
 
 .text-section .separator {
   width: 250px;             
   height: 8px;              
   background-color: #eeb702; 
-  margin-bottom: 18px;
-  margin-top: 4%;
+  margin-bottom: 13%;
+  margin-top: 14%;
+  margin-top: 6%;
   text-align: left;
   transform: scaleX(0);
   transform-origin: left;
@@ -424,10 +426,20 @@ margin-bottom: 10%;
 .section-header9 h2 {
   font-size: 2rem;
   font-weight: bold;
-margin-left: 18%;
+margin-left: 20%;
 margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
+
+ @media (max-width: 768px) {
+
+.section-header9 h2 {
+  font-size: 1.7rem;
+  font-weight: bold;
+margin-left: 16%;
+margin-top: 4%;
+  margin-bottom: 11%;
+}}
 
 .opinie-carousel {
   position: relative;
@@ -634,7 +646,6 @@ margin-top: 5%;
 
 }
 
-/* Animowane podkreślenie */
 .text-section a::after {
   content: "";
   position: absolute;
@@ -673,12 +684,19 @@ margin-top: 5%;
   border: none;
   border-radius: 30px;
   margin: 50px 0 50px 260px; 
-  margin-left: 17%;
+  margin-left: 20%;
   cursor: pointer;
   white-space: nowrap;
   transition: transform 0.4s ease, background 0.3s ease;  
   display: inline-block; 
 }
+
+@media (max-width: 768px) {
+
+.review-btn {
+  margin-left: 17%;
+}}
+
 
 .review-btn:hover {
   background: #000000;

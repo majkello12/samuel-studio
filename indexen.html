@@ -6,32 +6,32 @@
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
   <title>Samuel Studio</title>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
+  <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background: #fff; 
+      color: #333; 
+      margin: 0; 
+      padding: 0; 
 
-
-
-body {
-  font-family: "Source Sans 3", sans-serif; 
-  letter-spacing: 0.4px;
+        letter-spacing: 0.4px;
   font-weight: 400;
   font-style: normal;
-  background: #fff;
   overflow-x: hidden;
-  margin: 0;
-  padding: 0;
   height: 100%;
-    user-select: none;
+
+      user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-}
+    }
 
 h3, .gallery-section h2, .section-header h2, 
 .text-section, .text-section0, .separator, .separator0, 
@@ -54,7 +54,6 @@ h3, .gallery-section h2, .section-header h2,
   }
 }
 
-
 header {
   background-color: #f0bb1c;
   min-height: 90px;
@@ -72,7 +71,6 @@ header.hidden {
   top: -100px;
   opacity: 0; 
 }
-
 
 .logo-container {
   display: flex;
@@ -95,9 +93,7 @@ header.hidden {
   .logo-container img {
     max-height: 40px;
      z-index: 9999;
-  }
-}
-
+  }}
     .center-links {
       flex: 1;
       display: flex;
@@ -163,7 +159,6 @@ header.hidden {
   transition: top 0.5s ease;
   z-index: 1050;
 }
-
 .mobile-menu a {
   font-size: 1.5rem;
   margin: 15px 0;
@@ -178,16 +173,13 @@ header.hidden {
       color: #ffffff;
     }
 
-
-
 @media (max-width: 768px) {
   .center-links {
     display: none;
   }
   .hamburger {
     display: flex;
-  }
-}
+  }}
 
 .break-desktop {
   display: none;
@@ -312,16 +304,16 @@ img {
 }
 
 .text-col h2 {
-  font-size: 2.5rem; /* domyślny rozmiar na większe ekrany */
-  line-height: 1.2;  /* lepsze odstępy między liniami */
+  font-size: 2.5rem; 
+  line-height: 1.2;  
 }
 
 @media (max-width: 768px) {
   .text-col h2 {
-    font-size: 2rem; /* mniejszy na telefonach/tabletach */
-    text-align: center; /* opcjonalnie wyśrodkowanie */
-    max-width: 90%; /* niech nie wychodzi poza ekran */
-    margin: 0 auto; /* wyśrodkowanie */
+    font-size: 2rem; 
+    text-align: center; 
+    max-width: 90%; 
+    margin: 0 auto; 
   }
 }
 
@@ -475,8 +467,6 @@ img {
   margin-bottom: 14%;
 }}
 
-
-
 .separator00 {
   width: 180px;
   height: 7px;
@@ -490,16 +480,12 @@ img {
 }
 
 @media (max-width: 768px) {
-
   .separator00 {
   margin-top: 4%;
   margin-bottom: 14%;
     margin-left: 2%;
 
 }}
-
-
-
 
 .para-top {
   margin-left: -38%;  
@@ -523,15 +509,12 @@ img {
   .para-bottom {
     margin-left: 6%;
         margin-top: 0%;
-
-  }
-}
-
+  }}
 
     .video-section {
       position: relative;
       width: 100%;
-   height: 115ch;
+   height: 95ch;
 
       overflow: hidden;
     }
@@ -547,7 +530,7 @@ img {
       position: relative;
       z-index: 1;
       text-align: center;
-      padding-top: 190px;
+      padding-top: 210px;
     }
     .video-overlay h1 {
       font-size: 49px;
@@ -588,16 +571,13 @@ img {
 
 
    .video-overlay .btn {
-  margin: 10 auto;
-   }}
+margin-left: 5%;   }}
         .video-overlay .btn:hover {
               font-family: 'Roboto', sans-serif;
                     background: #e2af16;
         transform: scale(1.1);
     }
     
-
-
 
 .video-overlay .separator {
     width: 150px;           
@@ -828,10 +808,10 @@ margin-left: -38%;           font-size: 31px;
 
   .yellow-section h2.yellow-h2 {
    margin-left: 295px;
-   margin-top: -68px;
+   margin-top: -117px;
       margin-bottom: 40px;
 
-  font-size: clamp(22px, 3vw, 28px); 
+  font-size: 2rem; 
 }
 
 
@@ -840,7 +820,7 @@ margin-left: -38%;           font-size: 31px;
    margin-top: 80px;
       margin-bottom: 40px;
 
-  font-size: clamp(22px, 3vw, 28px); 
+  font-size: 2rem; 
 }
 
 
@@ -849,21 +829,23 @@ margin-left: -38%;           font-size: 31px;
   .yellow-section h2.yellow-h2 {
    margin-bottom: 10px;
    margin-left: 45px;
-   margin-top: -160px;
-  font-size: clamp(22px, 3vw, 28px); 
+   margin-top: -180px;
+     font-size: 1.6rem; 
+
 }
 
   .yellow-section h2.yellow2-h2 {
    margin-bottom: 40px;
    margin-left: 45px;
    margin-top: 70px;
-  font-size: clamp(22px, 3vw, 28px); 
+        font-size: 1.6rem; 
+
 }
 }
 
     .ellipse-video {
       position: absolute;
-      top: 830px;
+      top: 770px;
       left: 50%;
       transform: translateX(-50%);
       width: 200px;
@@ -880,7 +862,7 @@ margin-left: -38%;           font-size: 31px;
 
     @media (max-width: 768px) {
         .ellipse-video {
-      top: 830px;
+      top: 760px;
     }}
 
 .grid-2x2 {
@@ -920,7 +902,6 @@ margin-left: -38%;           font-size: 31px;
   color: #000;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .grid-2x2 {
     display: grid;
@@ -1489,7 +1470,7 @@ border: 1px solid #000000;  background: #ffffff;
   margin-left: 2%;
   margin-top: 4%;
   margin-bottom: 4%;
-transform-origin: left;
+  transform-origin: left;
   animation: drawLine 4s ease-in-out infinite;
 }
 
@@ -1545,10 +1526,6 @@ transform-origin: left;
   margin-left: 11%;
 }}
 
-
-
-
-
     .gallery-section { 
       max-width: auto; 
       margin: auto; 
@@ -1592,7 +1569,8 @@ transform-origin: left;
 
 @media (max-width: 700px) {
     .gallery-section h2 {
-margin-left: 13px;}}
+margin-left: 13px;
+font-size: 1.7rem;}}
 
 
 .gallery-section1 p {
@@ -1862,7 +1840,6 @@ margin-left: 5%;
   display: block;
   object-fit: cover;
     border: 1px solid #000;   
-
 }
 
 .video-caption {
@@ -1889,14 +1866,12 @@ margin-left: 5%;
 
 @media (max-width: 768px) {
   .section-header h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .video-caption h3 {
     font-size: 1.2rem;
   }
-
-
 }}
 
 .video-overlay05 {
@@ -1929,7 +1904,7 @@ margin-left: 5%;
   }
 
   .video-overlay05 a {
-    font-size: 1.32rem;  
+    font-size: 1.4rem;  
       font-weight: 400;
 
     margin-top: 20px;
@@ -2043,8 +2018,6 @@ gap: 6rem;
     padding-top: 0px; 
   }
 }
-
-
 
 
 .text-section0 h2 {
@@ -2164,7 +2137,7 @@ gap: 6rem;
   .carousel-track0 {
     display: flex;
     justify-content: center;
-    gap: 80px; /* <-- TUTAJ MOŻESZ ZMIENIĆ ODSTĘP */
+    gap: 80px; 
     overflow: visible;
   }
 
@@ -2178,7 +2151,6 @@ gap: 6rem;
     max-width: 220px;
   }
 
-  /* Order section - flex układ */
   .order-section .order-content {
     display: flex;
     justify-content: space-between;
@@ -2202,8 +2174,9 @@ gap: 6rem;
 
    .text-section0 h2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin-bottom: 6%;
+  margin-left: 10%;
 }
 
 
@@ -2224,15 +2197,15 @@ gap: 6rem;
   flex: 0 0 100%;
   scroll-snap-align: center;
   text-align: center;
-  display: none; /* domyślnie ukryte */
+  display: none; 
 }
 
 .carousel-slide0.active {
-  display: block; /* pokazujemy tylko aktywny slajd */
+  display: block; 
 }
 
 .nav {
-  display: block; /* strzałki widoczne na mobile */
+  display: block; 
 }
 .slide-text {
   font-size: 1.4rem;
@@ -2257,7 +2230,7 @@ gap: 6rem;
   text-align: center;
   margin-left: 0%;
   margin-top: -50%;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .order-section .separator9 {
@@ -2268,7 +2241,7 @@ gap: 6rem;
 }
 
    .order-section .see-more-btn3 {
-  margin-left: 0%;
+  margin-left: -2%;
   margin-top: 5%;
 }
 
@@ -2279,7 +2252,7 @@ gap: 6rem;
 }
 
 .see-more-container1 .see-more-btn3 {
-    margin-left: -30%;
+    margin-left: -10%;
 }
 
   .carousel-track0 {
@@ -2326,6 +2299,23 @@ margin-top: 60%;}}
 
 .gallery-caption-offerta p {
   transition: opacity 0.6s ease-in-out;
+}
+
+
+.video-section:first-of-type h1 {
+  margin-top: 10px; 
+}
+
+.video-section:last-of-type h1 {
+  margin-top: -30px; 
+}
+
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
 }
 
 </style>
@@ -2489,37 +2479,73 @@ margin-top: 60%;}}
     <div class="video-overlay2">
       <h4>I offer creative solutions for your business needs.</h4>
       <div class="separator7"></div>
-      <ul>
+  <ul class="desktop-only">
         <li class="white">
-          • Make your brand memorable and stand out <a href="#">–&nbsp;Animated Logos</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Make your brand memorable&nbsp;and&nbsp;stand out 
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Animated Logos</a>
         </li>
         <li class="yellow">
-          • Simplify complex topics and engage your audience 
-          <a href="#">–&nbsp;Explainers</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Simplify complex topics and&nbsp;engage your audience 
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Explainers</a>
         </li>
         <li class="white">
-          • Tell your story with motion
-          <a href="#">–&nbsp;Storytelling</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Tell your story with motion
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Storytelling</a>
         </li>
         <li class="yellow">
-          • Enhance your video projects
-          <a href="#">–&nbsp;Animated elements for&nbsp;larger&nbsp;productions</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Enhance your video projects
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Animated elements for&nbsp;larger&nbsp;productions</a>
         </li>
         <li class="white">
-          • Perfect for digital branding and social media
-          <a href="#">–&nbsp;Animated GIFs</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Perfect for digital branding and&nbsp;social media
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Animated GIFs</a>
         </li>
         <li class="yellow">
-          • Grab attention and drive awareness
-          <a href="#">–&nbsp;Promotional Animations</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Grab attention and&nbsp;drive awareness
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Promotional Animations</a>
         </li>
         <li class="white">
-          • Eye-catching visual storytelling for your campaigns
-          <a href="#">–&nbsp;Animated Posters</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Eye-catching visual storytelling for your campaigns
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Animated Posters</a>
         </li>
         <li class="yellow">
-          • Subtle motion that adds depth
-          <a href="#">–&nbsp;Background Animations</a>
+          &nbsp;&nbsp;•&nbsp;&nbsp;Subtle motion that adds depth
+          <a href="#">&nbsp;&nbsp;–&nbsp;&nbsp;Background Animations</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-only">
+        <li class="white">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Make your brand &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memorable&nbsp;and&nbsp;stand out 
+          <a href="#">&nbsp;–&nbsp;&nbsp;Animated Logos</a>
+        </li>
+        <li class="yellow">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Simplify complex topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;engage your audience 
+          <a href="#">&nbsp;–&nbsp;&nbsp;Explainers</a>
+        </li>
+        <li class="white">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Tell your story with motion
+          <a href="#">&nbsp;–&nbsp;&nbsp;Storytelling</a>
+        </li>
+        <li class="yellow">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Enhance your video projects
+          <a href="#">&nbsp;–&nbsp;&nbsp;Animated elements &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;larger&nbsp;productions</a>
+        </li>
+        <li class="white">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Perfect for digital branding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;social media
+          <a href="#">&nbsp;–&nbsp;&nbsp;Animated GIFs</a>
+        </li>
+        <li class="yellow">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Grab attention and&nbsp;drive &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;awareness
+          <a href="#">&nbsp;–&nbsp;&nbsp;Promotional Animations</a>
+        </li>
+        <li class="white">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Eye-catching visual &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;storytelling for your &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;campaigns
+          <a href="#">&nbsp;–&nbsp;Animated Posters</a>
+        </li>
+        <li class="yellow">
+          &nbsp;•&nbsp;&nbsp;&nbsp;Subtle motion that &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adds&nbsp;depth
+          <a href="#">&nbsp;–&nbsp;&nbsp;Background Animations</a>
         </li>
       </ul>
     </div>
@@ -2575,7 +2601,7 @@ margin-top: 60%;}}
 
 <section class="yellow-section0">
   <div class="text-section0">
-    <h2>Simple, Clear, and Effective Process.</h2>
+    <h2>Simple, Clear, and&nbsp;Effective Process.</h2>
     <div class="separator9"></div>
   </div>
 
@@ -2589,12 +2615,12 @@ margin-top: 60%;}}
       </div>
 
       <div class="carousel-slide0" data-index="1">
-        <p class="slide-text">You get a finished film that works.</p>
+        <p class="slide-text">You get a&nbsp;finished film that works.</p>
         <img src="image2.png" alt="grafika 2" class="circle-img">
       </div>
 
       <div class="carousel-slide0" data-index="2">
-        <p class="slide-text">We define the story that you want to tell.</p>
+        <p class="slide-text">We define the story that you want to&nbsp;tell.</p>
         <img src="image3.png" alt="grafika 3" class="circle-img">
       </div>
     </div>
