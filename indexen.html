@@ -2325,7 +2325,7 @@ margin-top: 60%;}}
 
 
 .gallery-caption-offerta p {
-  transition: opacity 2ms ease;
+  transition: opacity 0.6s ease-in-out;
 }
 
 </style>
@@ -3071,6 +3071,9 @@ document.addEventListener('keydown', function(e) {
 });
 </script>
 
+
+
+
 <script>
 const futureTexts = [
   "You will have an animated logo that will make your brand stand out.",
@@ -3084,7 +3087,19 @@ document.querySelectorAll('.gallery-item-offerta').forEach((item, idx) => {
   if (!caption) return;
   const original = caption.textContent;
 
-  item.addEventListener('mouseenter', () => {
+
+
+  if (window.innerWidth > 768) {
+    item.addEventListener('mouseenter', () => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = futureTexts[idx] || original;
+        caption.style.opacity = '1';
+      }, 300);
+    });
+
+
+      item.addEventListener('mouseenter', () => {
     caption.style.opacity = '0';
     setTimeout(() => {
       caption.textContent = futureTexts[idx] || original;
@@ -3092,13 +3107,28 @@ document.querySelectorAll('.gallery-item-offerta').forEach((item, idx) => {
     }, 180);
   });
 
-  item.addEventListener('mouseleave', () => {
-    caption.style.opacity = '0';
-    setTimeout(() => {
-      caption.textContent = original;
-      caption.style.opacity = '1';
-    }, 180);
-  });
+
+    item.addEventListener('mouseleave', () => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = original;
+        caption.style.opacity = '1';
+      }, 180);
+    });
+  }
+
+  // --- 2. Automatyczna zmiana dla telefonów ---
+  if (window.innerWidth <= 768) {
+    let showingFuture = false;
+    setInterval(() => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = showingFuture ? original : futureTexts[idx] || original;
+        caption.style.opacity = '1';
+        showingFuture = !showingFuture;
+      }, 300);
+    }, 4000); // co 4 sekundy
+  }
 });
 </script>
 
