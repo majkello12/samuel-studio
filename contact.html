@@ -26,6 +26,11 @@
   font-style: normal;
   overflow-x: hidden;
   height: 100%;
+
+      user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
     }
 
 
@@ -200,7 +205,7 @@ header.hidden {
 .text-section p {
   text-align: left;
   max-width: 700px;
-  margin-bottom: 70px; 
+  margin-bottom: 40px; 
   color: #000000; 
  font-size: clamp(22px, 3vw, 28px);   line-height: 1.6;
 }
@@ -632,7 +637,7 @@ margin-left: 15%;
 
 
 .text-section a {
-  color: #eeb702; 
+  color: #000000; 
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -640,7 +645,6 @@ margin-left: 15%;
 
 }
 
-/* Animowane podkreślenie */
 .text-section a::after {
   content: "";
   position: absolute;
@@ -732,7 +736,7 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
   <div class="contact-container">
 
 
-    <form class="contact-form" action="mailto:your@email.com" method="POST">
+    <form class="contact-form" action="mailto:pawel@samuelstudio.pl" method="POST">
       
       <div class="form-group">
         <label for="firstName">First Name</label>
@@ -746,7 +750,7 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="email" placeholder="Write your e-mail adress" required>
       </div>
 
       <div class="form-group">
@@ -871,5 +875,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 </script>
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
+    e.preventDefault();
+  }
+});
+</script>
+
 </body>
 </html>
