@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
-  <title>Work</title>
+  <title>Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -735,8 +735,7 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
 <section class="contact-section">
   <div class="contact-container">
 
-
-    <form class="contact-form" action="mailto:pawel@samuelstudio.pl" method="POST">
+    <form class="contact-form" id="contactForm">
       
       <div class="form-group">
         <label for="firstName">First Name</label>
@@ -750,7 +749,7 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
 
       <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Write your e-mail adress" required>
+        <input type="email" id="email" name="email" placeholder="Write your e-mail address" required>
       </div>
 
       <div class="form-group">
@@ -760,15 +759,17 @@ You can contact me by e-mail. Provide a brief explanation of what animation you 
 
       <div class="form-checkbox">
         <input type="checkbox" id="privacy" required>
-        <label for="privacy">
-          I agree to the <a href="privacy.html" target="_blank">Privacy Policy</a>.
-        </label>
+        <label for="privacy">I agree to the Privacy Policy</label>
       </div>
 
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
+
+    <p id="formStatus" style="display:none; text-align:center; margin-top:1rem;"></p>
+
   </div>
 </section>
+
 
   
 
@@ -889,6 +890,47 @@ document.addEventListener('keydown', function(e) {
   }
 });
 </script>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // zatrzymaj domyślne przeładowanie
+
+  const form = e.target;
+  const status = document.getElementById("formStatus");
+
+  // przygotuj dane
+  const data = {
+    firstName: form.firstName.value,
+    lastName: form.lastName.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  // wyślij do FormSubmit (wstaw swój email)
+  fetch("https://formsubmit.co/ajax/pawel@samuelstudio.pl", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(() => {
+    status.style.display = "block";
+    status.style.color = "green";
+    status.textContent = "✅ Message sent successfully!";
+    form.reset();
+  })
+  .catch(() => {
+    status.style.display = "block";
+    status.style.color = "red";
+    status.textContent = "❌ Something went wrong. Try again.";
+  });
+});
+</script>
+
+
 
 </body>
 </html>
