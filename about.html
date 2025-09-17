@@ -1044,23 +1044,22 @@ margin-top: 4%;
 </footer>
 
 
-
 <script>
 
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeBtn");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  setTimeout(() => {
-    mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
-  }, 1); // 
+
+  mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
 });
 
-closeBtn.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  mobileMenu.style.top = "-100%"; 
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove("active");
+    mobileMenu.style.top = "-100%";
+  });
 });
 
 </script>

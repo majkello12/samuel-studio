@@ -169,6 +169,8 @@ header.hidden {
       transition: color 0.3s;
 }
 
+
+
     .mobile-menu a:hover {
       color: #ffffff;
     }
@@ -1963,31 +1965,7 @@ margin-left: 5%;
       font-weight: 400;
 
     margin-top: 20px;
-  }
-}
-
-.animated-text {
-  display: inline-block;
-  white-space: pre-wrap;
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.animated-text span {
-  display: inline-block;
-  opacity: 0;
-vertical-align: bottom;
-  transform: translateY(40px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  }}
 
 
 .gallery-grid-offerta {
@@ -2381,7 +2359,7 @@ margin-top: 60%;}}
 <header>
   <div class="logo-container">
     <a href="index.html">
-      <img src="logosamuelstudio2025.svg" alt="Logo" style="width:90px; height:90px;" />
+      <img src="logosamuelstudio2025 4.svg" alt="Logo" style="width:90px; height:90px;" />
     </a>
   </div>
 
@@ -2411,6 +2389,7 @@ margin-top: 60%;}}
       <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </div>
+  
 </header>
 
 <section class="video-section" id="video">
@@ -2887,13 +2866,24 @@ margin-top: 60%;}}
 
 
 <script>
-  const slider = document.getElementById('opinieSlider');
-  let index = 0;
+const slider = document.getElementById('opinieSlider');
+let index = 0;
 
-  setInterval(() => {
-    index = (index + 1) % slider.children.length;
-    slider.style.transform = `translateX(-${index * 100}%)`;
-  }, 4000);
+function showSlide(i) {
+  index = (i + slider.children.length) % slider.children.length;
+  slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(() => {
+  showSlide(index + 1);
+}, 4000);
+
+document.querySelector('.prev').addEventListener('click', () => {
+  showSlide(index - 1);
+});
+document.querySelector('.next').addEventListener('click', () => {
+  showSlide(index + 1);
+});
 </script>
 
   <script>
@@ -2908,22 +2898,7 @@ margin-top: 60%;}}
 
   </script>
     
-<script>
-  let lastScrollTop = 0;
-  const navMenu = document.querySelector('.nav.menu');
 
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      navMenu.style.top = "-100px";
-    } else if (scrollTop < lastScrollTop) {
-      navMenu.style.top = "0";
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  });
-</script>
 <script>
   const hoverVideos = document.querySelectorAll('video.hover-video');
 
@@ -2940,22 +2915,22 @@ margin-top: 60%;}}
 </script>
 
 
+<script>
 
-
-<script>const hamburger = document.getElementById("hamburger");
+const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeBtn");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  setTimeout(() => {
-    mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
-  }, 1); // 
+
+  mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
 });
 
-closeBtn.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  mobileMenu.style.top = "-100%"; 
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove("active");
+    mobileMenu.style.top = "-100%";
+  });
 });
 
 </script>
@@ -2966,7 +2941,7 @@ closeBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   let lastScroll = 0;
-  const threshold = 80; // od ilu px zaczyna się chowanie
+  const threshold = 80; 
 
   window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
@@ -3121,24 +3096,6 @@ if (window.innerWidth <= 768) {
 }
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const text = document.querySelector(".animated-text");
-    const words = text.innerHTML.split(" "); 
-    text.innerHTML = "";
-
-words.forEach((word, i) => {
-  const span = document.createElement("span");
-  span.textContent = word;
-  span.style.animationDelay = `${i * 0.13}s`;
-  text.appendChild(span);
-
-  if (i < words.length - 1) {
-    text.appendChild(document.createTextNode(" "));
-  }
-});
-  });
-</script>
 
 <script>
   document.addEventListener('contextmenu', function(e) {
@@ -3153,9 +3110,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 </script>
-
-
-
 
 <script>
 const futureTexts = [
@@ -3200,7 +3154,6 @@ document.querySelectorAll('.gallery-item-offerta').forEach((item, idx) => {
     });
   }
 
-  // --- 2. Automatyczna zmiana dla telefonów ---
   if (window.innerWidth <= 768) {
     let showingFuture = false;
     setInterval(() => {
@@ -3210,7 +3163,7 @@ document.querySelectorAll('.gallery-item-offerta').forEach((item, idx) => {
         caption.style.opacity = '1';
         showingFuture = !showingFuture;
       }, 300);
-    }, 4000); // co 4 sekundy
+    }, 4000); 
   }
 });
 </script>

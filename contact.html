@@ -674,7 +674,7 @@ header.hidden {
 <body>
 <header>
 <div class="logo-container">
-  <img src="logosamuelstudio2025.svg" alt="Logo" style="width:90px; height:90px;" />
+  <img src="logosamuelstudio2025 4.svg" alt="Logo" style="width:90px; height:90px;" />
 </div>
 
 
@@ -819,23 +819,22 @@ You can contact me by&nbsp;e&#8209;mail. Provide a&nbsp;brief explanation of&nbs
 </footer>
 
 
-
 <script>
 
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
-const closeBtn = document.getElementById("closeBtn");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
-  setTimeout(() => {
-    mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
-  }, 1); // 
+
+  mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
 });
 
-closeBtn.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  mobileMenu.style.top = "-100%"; 
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove("active");
+    mobileMenu.style.top = "-100%";
+  });
 });
 
 </script>
