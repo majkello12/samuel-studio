@@ -247,29 +247,31 @@ img {
 }
 
 
-
 .white-section .video-col video {
   width: 100%;
   height: auto;
+     position: relative;
+    z-index: 10;  
 }
 
 .video-col2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1000px;
-  overflow: hidden;
-  margin-top: -40px; 
-  margin-bottom: -130px;
-  margin: -40px auto -130px auto; 
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin-bottom: -130px;
+    margin-top: -11%;
+    margin-left: 10%;
+    z-index: 1; 
 }
 
 .video-col2 video {
   width: 100%;
-  margin-top: -10%;
   height: auto;
-  max-height: 80vh;
+  max-height: 70vh;
   object-fit: cover;
   border-radius: 8px;
 }
@@ -281,6 +283,11 @@ img {
     margin-left: 170px;
       font-size: 2rem; }
 
+.text-col22 {
+    order: 2;
+ margin-top: 0%;
+    text-align: left;
+      font-size: 2rem; }
 
 @media (max-width: 768px) {
 
@@ -303,10 +310,7 @@ img {
       font-size: clamp(22px, 3vw, 28px); }
 }
 
-.text-col h2 {
-  font-size: 2.5rem; 
-  line-height: 1.2;  
-}
+
 
 @media (max-width: 768px) {
   .text-col h2 {
@@ -488,15 +492,18 @@ img {
 }}
 
 .para-top {
-  margin-left: -38%;  
-    font-size: clamp(22px, 3vw, 28px); 
- 
+    position: relative; 
+    margin-left: -38%;  
+    font-size: clamp(22px, 3vw, 28px);
+    z-index: 10; 
 }
 
 .para-bottom {
+  position: absolute;
   margin-left: 14%;   
   margin-right: 10%;
     font-size: clamp(22px, 3vw, 28px); 
+        z-index: 11; 
 }
 
 @media (max-width: 768px) {
@@ -546,16 +553,15 @@ img {
     max-width: 350px;     
     min-width: 300px;    
     text-align: center;
-    
-      background: #f0bb1c;
-      color: rgb(29, 29, 29);
-      border-radius: 65px;
-      font-size: 25px;
-      font-weight: 500;
-      font-family: 'Roboto', sans-serif;
-      transition: transform 0.4s ease;
-      margin: 20px 15px 0 0;      
-      cursor: pointer;
+    background: #f0bb1c;
+    color: rgb(29, 29, 29);
+    border-radius: 65px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: transform 0.4s ease;
+    margin: 20px 15px 0 0;      
+    cursor: pointer;
     }
 
     @media (max-width: 768px) {
@@ -571,11 +577,11 @@ img {
 
 
    .video-overlay .btn {
-margin-left: 5%;   }}
-        .video-overlay .btn:hover {
-              font-family: 'Roboto', sans-serif;
-                    background: #e2af16;
-        transform: scale(1.1);
+    margin-left: 5%;   }}
+   .video-overlay .btn:hover {
+    font-family: 'Roboto', sans-serif;
+    background: #e2af16;
+    transform: scale(1.1);
     }
     
 
@@ -716,7 +722,6 @@ animation: drawLine 4s ease-in-out infinite;}
 }
 
 
-
 .nav.menu {
   position: fixed;
   top: 0;
@@ -755,8 +760,10 @@ animation: drawLine 4s ease-in-out infinite;}
       color: #050505;
        font-size: 33px;
       margin-bottom: 30px;
-        margin-top: -15px; 
+        margin-top: -80px; 
         margin-left: 14%;
+            position: absolute; 
+    z-index: 10; 
     }
 
     h4 {
@@ -767,12 +774,12 @@ animation: drawLine 4s ease-in-out infinite;}
 
       @media (max-width: 768px) {
       h6 {
-       font-size: 21px;
+       font-size: 1.7rem;
         font-weight: 600;
        color: rgb(0, 0, 0);
           margin-bottom: 4px;
           margin-left: 5%;
-       margin-top: -9px;
+       margin-top: -67px;
 }
 }
    
@@ -2372,9 +2379,11 @@ margin-top: 60%;}}
    
 
 <header>
-<div class="logo-container">
-  <img src="logosamuelstudio2025.svg" alt="Logo" style="width:90px; height:90px;" />
-</div>
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="logosamuelstudio2025.svg" alt="Logo" style="width:90px; height:90px;" />
+    </a>
+  </div>
 
 
   <nav class="center-links">
