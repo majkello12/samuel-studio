@@ -963,16 +963,86 @@ a {
 }
 
 
+.footer {
+  background: #eeb702;
+  color: #000000;
+  text-align: center;
+  padding: 50px 20px;
+}
 
+.footer-subscribe h3 {
+  margin-top: 0;       
+  margin-bottom: 40px; 
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* 🔹 Odległość między przyciskami */
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 🔹 Odległość ikony od tekstu */
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+   border: 1px solid #000;
+  border-radius: 120px;
+  transition: 0.3s;
+  }
+
+.subscribe-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.subscribe-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.footer-nav {
+    margin: 25px 0;
+  }
+
+.footer-nav a {
+  margin: 0 25px;
+  color: #000000;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  }
+
+   @media (max-width: 700px) {
 
 .footer {
-  background: #f0bb1c;
+  background: #eeb702;
   color: #000000;
   text-align: center;
   padding: 30px 20px;
-  margin-bottom: -150px;
 }
 
+.footer-subscribe h3 {
+  margin-top: 0;       
+  margin-bottom: 15px; 
+  font-size: 22px;
+  font-weight: bold;
+}
 
 .footer-buttons {
   display: flex;
@@ -987,56 +1057,33 @@ a {
   align-items: center;
   gap: 10px; 
   padding: 10px 25px;
-border: 1px solid #000000;  background: #ffffff;
+  background: #ffffff;
   color: #000000;
   font-weight: bold;
   text-decoration: none;
   border-radius: 120px;
   transition: 0.3s;
+  
 }
 
 .subscribe-btn img {
   width: 28px;
   height: 28px;
+  
 }
 
-.subscribe-btn:hover {
-  background: #000000;
-  color: #ffffff;
-  transform: scale(1.05);
-}
-
-.footer-nav {
-    margin: 15px 0;
-  }
-
-.footer-nav a {
-  margin: 0 15px;
-  color: #000000;
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-nav a:hover {
-  color: #fff;
-  }
-
-   @media (max-width: 700px) {
   .footer-nav {
-  margin: 5px 0;
+  margin: 15px 0;
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;  
+  flex-wrap: nowrap;   
 }
 
 .footer-nav a {
   margin: 0 10px;
   color: #000000;
   font-weight: bold;
-  font-size: clamp(16px, 4vw, 20px); 
+  font-size: clamp(12px, 4vw, 20px); 
   text-decoration: none;
   white-space: nowrap; 
 }}
@@ -1044,16 +1091,15 @@ border: 1px solid #000000;  background: #ffffff;
 .footer-socials {
   display: flex;             
   justify-content: center;
-  align-items: flex-end;  
-  
+  align-items: flex-end;   
   gap: 16px;
-  height: 40px;           
+  height: 40px;   
+  margin-bottom: 4%;        
 }
 
 .footer-socials a {
   display: flex;           
-  align-items: flex-end;  
-   
+  align-items: flex-end;   
   justify-content: center;
   height: 100%;            
 }
@@ -1075,13 +1121,14 @@ border: 1px solid #000000;  background: #ffffff;
  @media (max-width: 600px) {
   .footer-socials {
     gap: 3px;
+      margin-bottom: 0%;        
+
   }
   .footer-socials a img {
     width: 28px;
     height: 24px;
   }
 }
-
 
 .footer-bottom {
   border-top: 1px solid #000000;
@@ -1101,21 +1148,22 @@ border: 1px solid #000000;  background: #ffffff;
 
 .footer-bottom a:hover {
   color: #000000;
-}    
-
+}  
 .opinie-carousel {
   position: relative;
   max-width: 500px;
   margin: auto;
   overflow: hidden;
-  border-radius: 12px;
+  border: 1px solid #000; /* <-- to działa na div */
+  border-radius: 14px;
   background: #fff;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.opinie-carousel :hover {
+.opinie-carousel:hover {
   transform: scale(1.011);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); /* efekt uniesienia przy hover */
 }
 
 

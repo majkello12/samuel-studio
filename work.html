@@ -69,7 +69,6 @@ header.hidden {
 
 
 @media (max-width: 768px) {
-
   .logo-container img {
     max-height: 40px;
      z-index: 9999;
@@ -152,8 +151,6 @@ header.hidden {
     .mobile-menu a:hover {
       color: #ffffff;
     }
-
-
 
 @media (max-width: 768px) {
   .center-links {
@@ -247,7 +244,6 @@ header.hidden {
   font-weight: bold;
 }
 
-
     .gallery-section { 
       max-width: 1200px; 
       margin: auto; 
@@ -282,7 +278,6 @@ margin-bottom: -10%;
 .gallery-section .highlight {
   font-weight: bold;
 }
-
 
     .gallery-grid { 
       display: grid; 
@@ -366,40 +361,81 @@ margin-bottom: -10%;
 
     @media(max-width: 768px) {
   .gallery-item .gallery-media img {
-    display: none; /* ukryj obrazki */
+    display: none; 
   }
   .gallery-item .gallery-media video {
-    position: static; /* żeby film zajmował normalnie miejsce */
-    opacity: 1 !important; /* zawsze widoczny */
+    position: static; 
+    opacity: 1 !important; 
     pointer-events: auto;
-  }
+  }}
+
+.footer {
+  background: #eeb702;
+  color: #000000;
+  text-align: center;
+  padding: 50px 20px;
 }
-    /* LIGHTBOX */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
-    }
-    .lightbox.active { display: flex; }
-    .lightbox .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      color: #fff;
-      cursor: pointer;
-      user-select: none;
-    }
+
+.footer-subscribe h3 {
+  margin-top: 0;       
+  margin-bottom: 40px; 
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.subscribe-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+   border: 1px solid #000;
+  border-radius: 120px;
+  transition: 0.3s;
+  }
+
+
+.subscribe-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.subscribe-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.footer-nav {
+    margin: 25px 0;
+  }
+
+.footer-nav a {
+  margin: 0 25px;
+  color: #000000;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  }
+
+   @media (max-width: 700px) {
 
 .footer {
   background: #eeb702;
@@ -441,33 +477,6 @@ margin-bottom: -10%;
   height: 28px;
 }
 
-.subscribe-btn:hover {
-  background: #000000;
-  color: #ffffff;
-  transform: scale(1.05);
-}
-
-.footer-nav {
-    margin: 15px 0;
-  }
-
-.footer-nav a {
-  margin: 0 15px;
-  color: #000000;
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 20px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.footer-nav a:hover {
-  color: #fff;
-  }
-
-   @media (max-width: 700px) {
-
-
   .footer-nav {
   margin: 15px 0;
   display: flex;
@@ -489,14 +498,15 @@ margin-bottom: -10%;
   justify-content: center;
   align-items: flex-end;   
   gap: 16px;
-  height: 40px;           
+  height: 40px;   
+  margin-bottom: 4%;        
 }
 
 .footer-socials a {
-  display: flex;            
-  align-items: flex-end;    
+  display: flex;           
+  align-items: flex-end;   
   justify-content: center;
-  height: 100%;             
+  height: 100%;            
 }
 
 .footer-socials a img {
@@ -516,6 +526,8 @@ margin-bottom: -10%;
  @media (max-width: 600px) {
   .footer-socials {
     gap: 3px;
+      margin-bottom: 0%;        
+
   }
   .footer-socials a img {
     width: 28px;
@@ -541,7 +553,9 @@ margin-bottom: -10%;
 
 .footer-bottom a:hover {
   color: #000000;
-}  </style>
+}  
+
+</style>
   
 </head>
 <body>
@@ -688,7 +702,6 @@ margin-bottom: -10%;
         <a href="#">View of Chęciny</a>
       </div>
     </div>
-
   </div>
 </section>
 
