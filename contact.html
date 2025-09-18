@@ -735,8 +735,15 @@ You can contact me by&nbsp;e&#8209;mail. Provide a&nbsp;brief explanation of&nbs
 <section class="contact-section">
   <div class="contact-container">
 
-    <form class="contact-form" id="contactForm">
-      
+    <form class="contact-form" 
+          id="contactForm"
+          action="https://formsubmit.co/majkellomb@gmail.com" 
+          method="POST">
+
+      <input type="hidden" name="_subject" value="Nowa wiadomość z formularza!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
@@ -769,6 +776,7 @@ You can contact me by&nbsp;e&#8209;mail. Provide a&nbsp;brief explanation of&nbs
 
   </div>
 </section>
+
 
 
   
