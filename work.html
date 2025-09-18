@@ -181,16 +181,21 @@ header.hidden {
 
     .text-section { 
       max-width: 1200px; 
-      margin: auto; 
-      padding: 180px 20px; 
+      margin-top: 13%;
+      margin-bottom: 220px;
       margin-left: 19%;
     }
 
-    .text-section h2 {
+.text-section h2 {
   text-align: left;
   font-size: 2rem;
   margin-bottom: -9%;
   margin-top: 4%;
+  }
+
+  .text-section:last-of-type {
+  margin-top: 16%; 
+  margin-bottom: 20%; 
 }
 
 .text-section .separator {
@@ -208,11 +213,10 @@ header.hidden {
 
 @media (max-width: 768px) {
       .text-section { 
-      margin-left: 5%;
-      margin-top: 17%;
-      padding: 90px 20px; 
+      margin-left: 15%;
+      margin-top: 47%;
+      margin-right: 7%;
       margin-bottom: 21%;
-
 }    
 .text-section h2 {
     font-size: 1.7rem;
@@ -248,9 +252,8 @@ header.hidden {
 .text-section p {
   text-align: left;
   max-width: 700px;
-        margin-bottom: -12%; 
-      color: #000000; 
-
+  margin-bottom: -12%; 
+  color: #000000; 
   font-size: 1.1rem;
   line-height: 1.6;
 }
@@ -570,6 +573,32 @@ margin-bottom: -10%;
   color: #000000;
 }  
 
+@media (min-width: 768px) and (max-width: 1024px) {
+      .text-section { 
+      margin-left: 15%;
+      margin-top: 27%;
+      margin-right: 7%;
+      margin-bottom: 21%;
+}    
+.text-section h2 {
+  margin-bottom: -9%;
+  margin-top: 4%;
+}}
+
+
+@media (min-width: 2560px) {
+  .text-section { 
+    margin-left: 35%;
+    margin-top: 7%;
+    margin-right: 7%;
+    margin-bottom: 7%;
+}    
+.text-section h2 {
+  margin-bottom: 9%;
+  margin-top: 10%;
+}}
+
+
 </style>
   
 </head>
@@ -778,34 +807,6 @@ margin-bottom: -10%;
     <span>Copyright © 2025 | Useful Animated Movie</span>
   </div>
 </footer>
-
-  <div class="lightbox" id="lightbox">
-    <span class="close" id="lightboxClose">&times;</span>
-    <img id="lightboxImg" src="" alt="">
-  </div>
-
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-      img.addEventListener('click', () => {
-        lightboxImg.src = img.src;
-        lightbox.classList.add('active');
-      });
-    });
-
-    lightboxClose.addEventListener('click', () => {
-      lightbox.classList.remove('active');
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('active');
-      }
-    });
-  </script>
 
 
 
