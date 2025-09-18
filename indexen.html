@@ -91,9 +91,25 @@ header.hidden {
 @media (max-width: 768px) {
 
   .logo-container img {
-    max-height: 40px;
+    max-height: 80px;
      z-index: 9999;
-  }}
+  }
+.logo-container a {
+  display: inline-flex; /* lub block */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.logo-container img {
+  max-width: 90px;
+  max-height: 90px;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
+
+}
     .center-links {
       flex: 1;
       display: flex;
@@ -292,6 +308,15 @@ img {
       font-size: 2rem; }
 
 @media (max-width: 768px) {
+
+.white-section .video-col video {
+  width: 90%;
+   margin-top: -20%;
+
+  height: auto;
+     position: relative;
+    z-index: 1;  
+}
 
 .video-col2 video {
   margin-top: 400px; 
@@ -1258,15 +1283,16 @@ a {
 .logo-carousel {
   position: relative;
   width: auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: -20px;
   overflow: hidden;
 }
+
+
 
 .logo-track {
   display: flex;
   animation: slide 40s infinite; 
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 }
 
@@ -1283,7 +1309,7 @@ a {
 }
 
 .logo-track img {
-  max-height: 80px;
+  max-height: 280px;
   max-width: 100%;
   object-fit: contain;
   transition: transform 0.3s;
@@ -2434,7 +2460,7 @@ margin-top: 60%;}}
 
     <div class="gallery-item-offerta">
       <div class="gallery-media-offerta">
-        <img src="ANIMATED-ICON-LOGO1.gif.webp" alt="WORSHIP in the city center 2022 - cover image">
+        <img src="SQUARE 1.gif" alt="WORSHIP in the city center 2022 - cover image">
       </div>
       <div class="gallery-caption-offerta">
         <p>You don’t have an&nbsp;animated logo to make your brand stand out.</p>
@@ -2443,7 +2469,7 @@ margin-top: 60%;}}
 
     <div class="gallery-item-offerta">
       <div class="gallery-media-offerta">
-        <img src="Animated-Icon-Audience.gif.webp" alt="YAGOOSH - Puppeteer cover">
+        <img src="SQUARE 2.gif" alt="YAGOOSH - Puppeteer cover">
       </div>
       <div class="gallery-caption-offerta">
         <p>Your lectures don’t capture your audience's attention.</p>
@@ -2452,7 +2478,7 @@ margin-top: 60%;}}
 
     <div class="gallery-item-offerta">
       <div class="gallery-media-offerta">
-        <img src="Animated-Icon-Eye.gif.webp" alt="Bible Unbound - The Bible In a Sentence cover">
+        <img src="SQUARE 3.gif" alt="Bible Unbound - The Bible In a Sentence cover">
       </div>
       <div class="gallery-caption-offerta">
         <p>You find it hard to explain complex topics in an engaging way.</p>
@@ -2461,7 +2487,7 @@ margin-top: 60%;}}
 
     <div class="gallery-item-offerta">
       <div class="gallery-media-offerta">
-        <img src="Animated-Icon-Attendance.gif.webp" alt="Bible Unbound - The Bible In a Sentence cover">
+        <img src="SQUARE 4.gif" alt="Bible Unbound - The Bible In a Sentence cover">
       </div>
       <div class="gallery-caption-offerta">
         <p>Low attendance at your events makes you feel unappreciated.</p>
