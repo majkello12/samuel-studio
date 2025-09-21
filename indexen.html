@@ -597,12 +597,12 @@ font-size: 31px;
 
 @media (max-width: 768px) {
   .yellow-section h2.yellow-h2 {
-     font-size: 2rem; 
+     font-size: 1.7rem; 
        padding-top: 34%;
 }
 
   .yellow-section h2.yellow2-h2 {
-        font-size: 2rem; 
+        font-size: 1.7rem; 
                padding-top: 4%;
                padding-bottom: 6%;
 }
@@ -729,7 +729,7 @@ a {
   background: #eeb702;
   color: #000000;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
   
 }
 
@@ -1397,8 +1397,9 @@ font-size: 1.7rem;}}
 
 .see-more-btn3:hover {
   background: #000000;
+  color: #ffffff;
   transform: scale(1.1);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, color 0.5s ease;
 }
 
 @media (max-width: 768px) {
@@ -2554,8 +2555,9 @@ margin-top: 20%;}}
 
 <section class="video-section" id="video">
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
-    <div class="video-overlay">
-        <h1>Ready to create something extraordinary?</h1>
+<div class="video-overlay" style="padding-top: 130px;">
+
+          <h1>Ready to create something extraordinary?</h1>
         <h4>Let’s work together and bring your ideas to&nbsp;life. Contact me today.</h4>
 
         <div class="separator" style="background-color: #ffffff;"></div>
@@ -2568,7 +2570,8 @@ margin-top: 20%;}}
   Contact Me
   </button>
         </div>
-<div class="video-overlay05">
+<div class="video-overlay05" style="padding-bottom: -50px;">
+   
   <h4><a href="mailto:pawel@samuelstudio.com">pawel@samuelstudio.com</a></h4>
   <h4><a href="tel:+48693733366">+48 693 733 366</a></h4>
 </div>
@@ -2931,7 +2934,7 @@ const video = document.getElementById('myVideo');
 video.playbackRate = 1;
 
 video.addEventListener('timeupdate', () => {
-  if(video.currentTime >= 5 && video.currentTime < 8) {
+  if(video.currentTime >= 5 && video.currentTime < 9) {
     video.currentTime = 10;
   }
 
