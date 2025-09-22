@@ -71,10 +71,16 @@ header.hidden {
   transform: scale(1.05);   
 }
 
+
+
 @media (max-width: 768px) {
 
+header {
+  padding: 0 40px;
+}
+
   .logo-container img {
-    max-height: 80px;
+    max-height: 40px;
      z-index: 9999;
   }
 .logo-container a {
@@ -373,6 +379,11 @@ img {
 
    .video-overlay .btn {
     margin-left: 0;  
+        padding: 12px 20px;
+            max-width: 350px;    
+    min-width: 270px;    
+
+
    }}
 
    .video-overlay .btn:hover {
@@ -924,6 +935,7 @@ a {
 
 .opinie-track {
   display: flex;
+   transition: transform 0.6s ease-in-out; 
 }
 
 .opinia {
@@ -2060,10 +2072,11 @@ margin-top: 20%;}}
 
   .video-col2 {
     margin-bottom: 20px;
+
       }
       
       .video-col2 video {
-  width: 90%;
+  width: 110%;
 }
 
   .text-col22 h6 {
@@ -2207,7 +2220,7 @@ margin-top: 20%;}}
 </div>
   <button class="btn" 
           style="background:#fff; color:#000000;" 
-          onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">
+          onclick="document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' })">
     Explore Examples
   </button>
 </div>
@@ -2484,14 +2497,14 @@ margin-top: 20%;}}
   </div>
 
   <div class="see-more-container1">
-   <button class="see-more-btn3" onclick="window.location.href='twoj-link.html'">
+   <button class="see-more-btn3" onclick="window.location.href='https://www.google.com/maps/place/Samuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach/@46.423669,-84.4270629,3z/data=!4m18!1m9!3m8!1s0xac688efcb209881f:0x50fac03e7d6b27cb!2sSamuel+Studio+%E2%80%93+Filmy+Animowane+i+Animacje+2D,+3D+w+Kielcach!8m2!3d46.423669!4d-84.4270629!9m1!1b1!16s%2Fg%2F11lzkl8mz_!3m7!1s0xac688efcb209881f:0x50fac03e7d6b27cb!8m2!3d46.423669!4d-84.4270629!9m1!1b1!16s%2Fg%2F11lzkl8mz_?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D'">
     Write a review
 </div>
 </section>
 
 
 
-  <section class="gallery-section">
+  <section id="gallery" class="gallery-section">
         <h2>Recent Work</h2>
         <div class="separator0"></div>
 
@@ -2625,27 +2638,6 @@ margin-top: 20%;}}
 </footer>
 
 
-<script>
-const slider = document.getElementById('opinieSlider');
-let index = 0;
-
-function showSlide(i) {
-  index = (i + slider.children.length) % slider.children.length;
-  slider.style.transform = `translateX(-${index * 100}%)`;
-}
-
-setInterval(() => {
-  showSlide(index + 1);
-}, 4000);
-
-document.querySelector('.prev').addEventListener('click', () => {
-  showSlide(index - 1);
-});
-document.querySelector('.next').addEventListener('click', () => {
-  showSlide(index + 1);
-});
-</script>
-
   <script>
     function toggleMenu() {
       document.getElementById("menu").classList.toggle("show");
@@ -2751,7 +2743,7 @@ nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
 
 setInterval(() => {
   showSlide(currentIndex + 1);
-}, 5000);
+}, 4000);
 </script>
 
 <script>
