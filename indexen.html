@@ -3013,9 +3013,22 @@ video.addEventListener('timeupdate', () => {
 </script>
 
 <script>
-  document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => {
-      window.location.href = 'trileas.html'; 
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = [
+      'trileas.html',     
+      'gospel.html',      
+      'modern3d.html'      
+    ];
+
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach((item, index) => {
+      item.style.cursor = 'pointer'; 
+      item.addEventListener('click', () => {
+        if (links[index]) {
+          window.location.href = links[index];
+        }
+      });
     });
   });
 </script>
@@ -3026,7 +3039,6 @@ video.addEventListener('timeupdate', () => {
     if (pos) window.scrollTo(0, pos);
   });
 </script>
-
 
 </body>
 </html>
