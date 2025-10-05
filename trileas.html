@@ -308,7 +308,7 @@ margin-bottom: 20%;
 
     .gallery-item {
   width: 600px;
-  height: 600px;
+  height: 450px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -609,6 +609,10 @@ margin-bottom: 20%;
   transform: scale(1.05);
 }
 
+
+
+
+
 </style>
   
 </head>
@@ -833,6 +837,24 @@ document.addEventListener("keydown", (e) => {
     window.location.href = 'indexen.html#gallery';
   });
 </script>
+
+
+<script>
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 768) { 
+        const video = item.querySelector('video');
+        const img = item.querySelector('img');
+
+        img.style.opacity = '0';
+        video.style.opacity = '1';
+        video.style.pointerEvents = 'auto';
+        video.play();
+      }
+    });
+  });
+</script>
+
 
 </body>
 </html>
