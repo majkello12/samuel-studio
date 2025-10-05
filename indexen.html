@@ -2587,8 +2587,8 @@ margin-top: 36%;}}
 
 
   <div class="gallery-grid">
-
     <div class="gallery-item">
+      
       <div class="gallery-media">
         <img src="Logo-trileas-cover.png" alt="WORSHIP in the city center 2022 - cover image">
         <video src="Trileas-Animated-Cover.mp4" muted loop></video>
@@ -3010,6 +3010,21 @@ video.addEventListener('timeupdate', () => {
     video.currentTime = 3;
   }
 });
+</script>
+
+<script>
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      window.location.href = 'trileas.html'; 
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('load', () => {
+    const pos = sessionStorage.getItem('scrollPosition');
+    if (pos) window.scrollTo(0, pos);
+  });
 </script>
 
 
