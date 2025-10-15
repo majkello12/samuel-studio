@@ -1422,6 +1422,7 @@ font-size: 1.7rem;}}
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  text-decoration: none;
   white-space: nowrap;
   transition: transform 0.4s ease, background 0.3s ease;  
   display: inline-block; 
@@ -2251,6 +2252,20 @@ margin-top: 36%;}}
 }
 }
 
+.btn {
+  display: inline-block;
+  background: #ff4747;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none; 
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2020;
+  text-decoration: none; 
+}
 
 
 </style>
@@ -2292,7 +2307,7 @@ margin-top: 36%;}}
             <a href="https://blog.samuelstudio.pl/">Blog</a>
 
     <a href="indexpl.html" title="Polska wersja" class="lang-switch">
-      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
+      <img src="ukflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </div>
   
@@ -2525,7 +2540,7 @@ Zobacz, jak to działa
       <h2>Stwórzmy coś razem.</h2>
       <div class="separator9"></div>
     </div>
-      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com'">
+      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com/contact'">
         Zamów dziś
       </button>
     </div>
@@ -2625,7 +2640,7 @@ Zobacz, jak to działa
       </div>
       </div>
 <div class="see-more-container">
-  <button class="see-more-btn3">Zobacz więcej</button>
+  <a href="https://samuelstudio.com/work" class="see-more-btn3">Zobacz więcej</a>
 </div>
     </section>
 
@@ -2651,18 +2666,15 @@ Zobacz, jak to działa
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
 <div class="video-overlay" style="padding-top: 130px; padding-bottom: 1000px;">
 
-<h1>Gotowy, aby stworzyć coś wyjątkowego?</h1>
-<h4>Pracujmy razem a Ja ożywię Twoje pomysły.</h4>
+          <h1>Ready to create something extraordinary?</h1>
+        <h4>Let’s work together and bring your ideas to&nbsp;life. </h4>
 
         <div class="separator" style="background-color: #ffffff;"></div>
 
-        <div class="buttons">
-      <button class="btn" onclick="document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' })">Zamów konsultację</button>
-        <button class="btn" 
-          style="background:#fff; color:#000000;" 
-          onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">
-  Skontaktuj się dziś
-  </button>
+<div class="buttons">
+  <a href="contact.html" class="btn">Zamów konsultację</a>
+  <a href="contact.html" class="btn" style="background:#fff; color:#000;">Skontaktuj się teraz</a>
+</div>
 <button class="btn" 
   style="background:#fff; color:#000000;" 
   onclick="window.location.href='tel:+48693733366'">
@@ -2706,8 +2718,8 @@ Zobacz, jak to działa
     <a href="https://www.instagram.com" target="_blank">
       <img src="insta icon.svg" alt="Instagram">
     </a>
-    <a href="indexpl.html" title="English version" class="lang-switch">
-      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;">
+    <a href="indexen.html" title="English version" class="lang-switch">
+      <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;">
     </a>
   </div>
 
