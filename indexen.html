@@ -2251,6 +2251,20 @@ margin-top: 36%;}}
 }
 }
 
+.btn {
+  display: inline-block;
+  background: #ff4747;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none; 
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2020;
+  text-decoration: none; 
+}
 
 
 </style>
@@ -2525,7 +2539,7 @@ margin-top: 36%;}}
       <h2>Let’s create together.</h2>
       <div class="separator9"></div>
     </div>
-      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com'">
+      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com/contact'">
         Order today
       </button>
     </div>
@@ -2625,7 +2639,7 @@ margin-top: 36%;}}
       </div>
       </div>
 <div class="see-more-container">
-  <button class="see-more-btn3">See More</button>
+  <a href="https://samuelstudio.com/work" class="see-more-btn3">See More</a>
 </div>
     </section>
 
@@ -2656,13 +2670,10 @@ margin-top: 36%;}}
 
         <div class="separator" style="background-color: #ffffff;"></div>
 
-        <div class="buttons">
-      <button class="btn" onclick="document.getElementById('order-section').scrollIntoView({ behavior: 'smooth' })">Get a Free Consultation</button>
-        <button class="btn" 
-          style="background:#fff; color:#000000;" 
-          onclick="document.getElementById('kontakt').scrollIntoView({ behavior: 'smooth' })">
-  Contact Me Today
-  </button>
+<div class="buttons">
+  <a href="contact.html" class="btn">Get a Free Consultation</a>
+  <a href="contact.html" class="btn" style="background:#fff; color:#000;">Contact Me Today</a>
+</div>
 <button class="btn" 
   style="background:#fff; color:#000000;" 
   onclick="window.location.href='tel:+48693733366'">
