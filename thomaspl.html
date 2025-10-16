@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
-  <title>Trileas</title>
+  <title>Modern 3D animation</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -308,7 +308,7 @@ margin-bottom: 20%;
 
     .gallery-item {
   width: 600px;
-  height: 550px;
+  height: 450px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -615,8 +615,29 @@ margin-bottom: 20%;
   height: 100%;
   border-radius: 27px;      
 }
+.why-list {
+  list-style-type: disc;
+  padding: 20px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.4rem;
+  animation: fadeIn 1s ease forwards;
+}
 
+.why-list li {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.why-list li:hover {
+  transform: translateX(5px);
+  color: #c00; /* zmień na kolor akcentu strony */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 </style>
   
@@ -664,44 +685,36 @@ margin-bottom: 20%;
 </header>
 
 <section class="text-section">
-  <h2>NIKIFOR – Animacja i promocja wystawy w&nbsp;Muzeum Narodowym w&nbsp;Kielcach
-
-</h2>
+  <h2>Historia św. Tomasza – Apostoła Wiary</h2>
   <div class="separator"></div>
   <p>
-       Nikifor Lemko, mimo biedy i braku wykształcenia, zachował twórczą wolność, 
-      <span class="highlight">tworząc niezwykłe obrazy, rysunki i akwarele z prostych materiałów, takich jak papier, karton czy kredki. 
-
-    </span>
- Jego prace do&nbsp;dziś inspirują artystów na całym świecie.
- <br><br>
+Praca nad krótkimi animacjami w stylu Vox poświęconymi św. Tomaszowi Apostołowi była 
+niezwykle inspirująca. Prosty, przejrzysty styl pozwolił oddać emocje, wątpliwości 
+i&nbsp;wiarę w&nbsp;sposób prawdziwy i&nbsp;poruszający. <br>Każda 10 - sekundowa scena ukazuje kluczowy moment 
+duchowej drogi Tomasza, łącząc prostotę z&nbsp;głębią przekazu.
+ 
 <img 
-    src="Architectural-fantasy-with-a-tower.jpg.webp" 
+    src="Thomas-the-Apostle-cover.png" 
     alt="Nikifor – Motion Design"
     style="width:100%; max-width:900px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:cover;">
   </img>
+W projekcie Bible Unbound animacje stały się czymś więcej niż tylko 
+wizualnym dodatkiem – stały się przestrzenią do refleksji. Dzięki nim widz może 
+na nowo odkryć historię Apostoła i własną drogę wiary.
 
-  Dla Muzeum Narodowego w&nbsp;Kielcach przygotowałem animowany materiał promujący wystawę Nikifora 
-  w&nbsp;oddziale Muzeum Dialogu Kultur. Stworzyłem prostą animację postaci opartą na autoportrecie artysty, 
-  wykorzystując elementy jego dzieł oraz plansze przypominające karton. Efekt finalny podkreśla 
-  unikatowy charakter twórczości Nikifora i&nbsp;wzmacnia identyfikację wizualną wydarzenia. 
-  Film&nbsp;pozwala widzom poznać historię artysty, jego region oraz rozwój jego malarstwa w atrakcyjnej formie.
 
-</span>
+<img 
+    src="Thomas.png" 
+    alt="Nikifor – Motion Design"
+    style="width:100%; max-width:900px; border-radius:16px; object-fit:cover;">
+  </img>
+</section>
 
-<video 
-    src="Nikifor-character-rigging.mp4" 
-    autoplay
-    muted
-    loop
-    playsinline
-    style="width:100%; max-width:900px">
-  </video>
 
-<br><br><span class="highlight">Zakres prac: 2D, character rigging, motion design, animacja promocyjna, VOX style video.
-   </span>
-  </p>
+
   <a href="indexen.html#gallery" class="back-button">← Powrót</a>
+
+
 
 <section id="video" style="text-align:center; padding:40px 0; background:#ffffff;">
 
@@ -715,7 +728,7 @@ margin-bottom: 20%;
   ">
     <iframe 
       class="video-frame"
-      src="https://www.youtube-nocookie.com/embed/AonRa5Qe84U?rel=0&modestbranding=1&controls=1&showinfo=0"
+      src="https://www.youtube-nocookie.com/embed/ZeLpBjlH4Sc?rel=0&modestbranding=1&controls=1&showinfo=0"
       title="Film promocyjny 1"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -724,44 +737,23 @@ margin-bottom: 20%;
     </iframe>
   </div>
 
-  <div style="
-    position:relative;
-    width:calc(100% - 80px);   
-    max-width:900px;          
-    margin:40px auto 0;      
-    aspect-ratio:16/9;        
-    overflow:hidden;
-  ">
-    <iframe 
-      class="video-frame"
-      src="https://www.youtube-nocookie.com/embed/CApKBfGXlPM?rel=0&modestbranding=1&controls=1&showinfo=0"
-      title="Film promocyjny 2"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      style="width:100%; height:100%;">
-    </iframe>
-  </div>
-
 </section>
 
-</section>
-
-</section>
+  <a href="indexen.html#gallery" class="back-button">← Powrót</a>
 
 
-<footer class="footer">
+
+  <footer class="footer">
   <div class="footer-subscribe">
     <h3>SUBSKRYBUJ</h3>
     <div class="footer-buttons">
-      <a href="#" class="subscribe-btn">
+      <a href="https://www.youtube.com/@samuelstudio_" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
         YT Samuel Studio
       </a>
-      <a href="#" class="subscribe-btn">
+      <a href="https://www.youtube.com/@explainersinanimation" class="subscribe-btn">
         <img src="explainers icon.svg" alt="Animator 2"> 
-        YT Explainers in Animation
-      </a>
+        YT Explainers in Animation</a>
     </div>
   </div>
 
@@ -785,16 +777,13 @@ margin-bottom: 20%;
     <a href="https://www.instagram.com/pawel_samuel_studio/" target="_blank">
       <img src="insta icon.svg" alt="Instagram">
     </a>
-    <a href="indexpl.html" title="English version" class="lang-switch">
-      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;">
-    </a>
-        <a href="indexen.html" title="English version" class="lang-switch">
+    <a href="indexen.html" title="English version" class="lang-switch">
       <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;">
     </a>
   </div>
 
   <div class="footer-bottom">
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="privacy.html">Polityka Prywatności</a>
     <span>Copyright by <p></p>Michal Baran Grafik & Pawel Pauksztello 2025</span>
   </div>
 </footer>

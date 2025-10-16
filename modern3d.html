@@ -610,8 +610,34 @@ margin-bottom: 20%;
 }
 
 
+.video-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;      
+}
+.why-list {
+  list-style-type: disc;
+  padding: 20px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.4rem;
+  animation: fadeIn 1s ease forwards;
+}
 
+.why-list li {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.why-list li:hover {
+  transform: translateX(5px);
+  color: #c00; /* zmień na kolor akcentu strony */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 </style>
   
@@ -631,6 +657,8 @@ margin-bottom: 20%;
     <a href="https://samuelstudio.com/work">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+            <a href="https://blog.samuelstudio.com/">Blog</a>
+
     <a href="indexpl.html" title="Polska wersja" class="lang-switch">
       <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
@@ -647,58 +675,84 @@ margin-bottom: 20%;
     <a href="https://samuelstudio.com/work">Work</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+            <a href="https://blog.samuelstudio.com/">Blog</a>
+
     <a href="indexpl.html" title="Polska wersja" class="lang-switch">
       <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </div>
+  
 </header>
 
 <section class="text-section">
-  <h2>Modern 3D Animation</h2>
+  <h2>3D Animation for Marketing – Modern and Effective
+</h2>
   <div class="separator"></div>
   <p>
-Modern 3D animation is no longer just about aesthetics, it&nbsp;has become an effective tool 
-for marketing and brand communication. In my latest project, motion, storytelling, 
-and branding come together to create an engaging visual narrative. The centerpiece is 
-a stylish 3D speaker, whose movements are synchronized with key terms, simplifying complex 
-concepts. The animation boosts brand recognition, engages the audience, and makes complicated 
-ideas easy to understand. It concludes with an animated logo, leaving a&nbsp;lasting impression 
-and emphasizing a professional, modern brand image.
-  </p>
+Modern 3D animation is more than visuals – it’s&nbsp;a&nbsp;powerful marketing tool. 
+In my&nbsp;latest project, a&nbsp;stylish 3D speaker synced with rhythm highlights key terms, 
+turning complex ideas into a&nbsp;clear, engaging story. The animation ends with a&nbsp;dynamic logo, 
+boosting brand recognition.
+<br><br>
 
+  <span class="highlight">Why it works:</span>
+</p>
+
+<ul class="why-list">
+  <li>Strengthens brand image</li>
+  <li>Captivates audience with motion and music</li>
+  <li>Simplifies complex concepts</li>
+  <li>Perfect for online campaigns and social media</li>
+</ul>
 
 </section>
-  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
-<section class="gallery-section">
-  <div class="gallery-grid">
 
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="cover-of-3d-modern-animation_00099.jpg" alt="National Museum in Kielce - View of Chęciny cover">
-        <video src="animated-cover-of-modern-3d-animation.mp4" muted loop></video>
-      </div>
-    </div>
+</section>
+
+  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
+
+
+
+<section id="video" style="text-align:center; padding:40px 0; background:#ffffff;">
+
+  <div style="
+    position:relative;
+    width:calc(100% - 80px);   
+    max-width:900px;          
+    margin:auto;
+    aspect-ratio:16/9;        
+    overflow:hidden;
+
+  ">
+    <iframe 
+    class="video-frame"
+src="https://www.youtube-nocookie.com/embed/TvfG6yByGdc?rel=0&modestbranding=1&controls=1&showinfo=0"
+      title="Film promocyjny"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      style="width:100%; height:100%">
+    </iframe>
   </div>
-  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
 </section>
 
 
+  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
 
 
 
 
-<footer class="footer">
+  <footer class="footer">
   <div class="footer-subscribe">
     <h3>CLICK TO SUBSCRIBE</h3>
     <div class="footer-buttons">
-      <a href="#" class="subscribe-btn">
+      <a href="https://www.youtube.com/@samuelstudio_" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
         YT Samuel Studio
       </a>
-      <a href="#" class="subscribe-btn">
+      <a href="https://www.youtube.com/@explainersinanimation" class="subscribe-btn">
         <img src="explainers icon.svg" alt="Animator 2"> 
-        YT Explainers in Animation
-      </a>
+        YT Explainers in Animation</a>
     </div>
   </div>
 
@@ -706,20 +760,22 @@ and emphasizing a professional, modern brand image.
     <a href="https://samuelstudio.com">Home</a>
     <a href="https://samuelstudio.com/work">Work</a>
     <a href="about.html">About</a>
+                <a href="https://blog.samuelstudio.com/">Blog</a>
+
     <a href="contact.html">Contact</a>
   </nav>
 
   <div class="footer-socials">
-    <a href="https://www.linkedin.com" target="">
+    <a href="https://www.linkedin.com/in/pawel-pauksztello-samuel-studio/" target="_blank">
       <img src="linked icon.svg" alt="LinkedIn">
     </a>
-    <a href="https://www.youtube.com" target="">
+    <a href="https://www.youtube.com/@SamuelStudio_" target="_blank">
       <img src="yt icon.svg" alt="YouTube">
     </a>
-    <a href="https://www.facebook.com" target="">
+    <a href="https://www.facebook.com/pawelpauksztello" target="_blank">
       <img src="fb icon.svg" alt="Facebook">
     </a>
-    <a href="https://www.instagram.com" target="">
+    <a href="https://www.instagram.com/pawel_samuel_studio/" target="_blank">
       <img src="insta icon.svg" alt="Instagram">
     </a>
     <a href="indexpl.html" title="English version" class="lang-switch">
@@ -729,7 +785,7 @@ and emphasizing a professional, modern brand image.
 
   <div class="footer-bottom">
     <a href="privacy.html">Privacy Policy</a>
-    <span>Copyright © 2025 | Useful Animated Movie</span>
+    <span>Copyright by <p></p>Michal Baran Grafik & Pawel Pauksztello 2025</span>
   </div>
 </footer>
 
