@@ -921,5 +921,33 @@ document.addEventListener("keydown", (e) => {
   }
 });
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = [
+      'worship.html',     
+      'puppeter.html',      
+      'thomas.html',
+      'church.html',     
+      'nikifor.html',      
+      'kosmos.html',
+      '4eco.html',     
+      'wyd.html',      
+      'checiny.html'          
+        
+    ];
+
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach((item, index) => {
+      item.style.cursor = 'pointer'; 
+      item.addEventListener('click', () => {
+        if (links[index]) {
+          window.location.href = links[index];
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>

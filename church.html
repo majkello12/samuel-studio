@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
-  <title>Work</title>
+  <title>Church of the Holy Spirit</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -260,22 +260,21 @@ header.hidden {
 }
 
     .gallery-section { 
-      max-width: 1200px; 
+      max-width: 2500px; 
       margin: auto; 
       padding: 0px 20px; 
+      margin-bottom: 8%;
     }
 
 
 @media (max-width: 768px) {
         .gallery-section { 
 margin-top: 10%;
-margin-bottom: 10%;
+margin-bottom: 20%;
     }
     .text-section p {
     font-size: 1.4rem;     
-  }
-  
-  }
+  }}
 
 
     .gallery-section h2 {
@@ -287,7 +286,7 @@ margin-bottom: 10%;
 .gallery-section p {
   text-align: center;
   max-width: 700px;
-  margin-bottom: 40px; 
+  margin-bottom: 20px; 
   color: #000000; 
   font-size: 1.1rem;
   line-height: 1.6;
@@ -296,22 +295,8 @@ margin-bottom: 10%;
 .gallery-section .highlight {
   font-weight: bold;
 }
-
-    .gallery-grid { 
-      display: grid; 
-      grid-template-columns: repeat(3, 1fr); 
-      gap: 20px; 
-    }
-    .gallery-item { 
-      background: #fff; 
-      border-radius: 15px; 
-      overflow: hidden; 
-      border: 1px solid #000000; 
-      text-align: center; 
-      transition: transform 0.4s ease; 
-    }
-    .gallery-item:hover { 
-      transform: scale(1.05); 
+     .gallery-item:hover { 
+      transform: scale(1.01); 
     }
     .gallery-item img { 
       width: 100%; 
@@ -320,24 +305,24 @@ margin-bottom: 10%;
       display: block; 
       transition: transform 0.4s ease; 
     }
-    .gallery-item img:hover { 
-      transform: scale(1.1); 
-    }
-    .gallery-caption { 
-      padding: 15px; 
-    }
-    .gallery-caption p { 
-      margin: 6px 0; 
-    }
-    .gallery-caption a { 
-      color: #000000; 
-      text-decoration: none; 
-      font-weight: bold; 
-    }
-    .gallery-caption a:hover { 
-      color: #f0bb1c;
-    }
 
+    .gallery-item {
+  width: 600px;
+  height: 550px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 .gallery-media {
   position: relative;
@@ -369,15 +354,7 @@ margin-bottom: 10%;
   opacity: 1;
 }
 
-    @media(max-width: 900px) { 
-      .gallery-grid { grid-template-columns: 1fr 1fr; } 
-    }
-    @media(max-width: 600px) { 
-      .gallery-grid { grid-template-columns: 1fr; } 
-    }
-
-
-    @media(max-width: 768px) {
+  @media(max-width: 768px) {
   .gallery-item .gallery-media img {
     display: none; 
   }
@@ -386,6 +363,7 @@ margin-bottom: 10%;
     opacity: 1 !important; 
     pointer-events: auto;
   }}
+
 
 .footer {
   background: #f0bb1c;
@@ -598,8 +576,6 @@ margin-bottom: 10%;
   margin-top: 10%;
 }}
 
-
-
 @media (min-width: 768px) and (max-width: 1366px) {
 
     .text-section { 
@@ -612,8 +588,34 @@ margin-bottom: 10%;
 .text-section .separator {
     margin-bottom: 8%;
       margin-top: 15%;
+}}
+
+
+.back-button {
+  display: block;
+  width: fit-content;
+  margin: 50px auto; 
+  padding: 12px 25px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 38px;
+  transition: all 0.3s ease;
 }
+
+.back-button:hover {
+  background-color: #f0bb1c; 
+  color: #000;
+  transform: scale(1.05);
 }
+
+
+.video-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;      
+}
+
 
 
 </style>
@@ -630,12 +632,14 @@ margin-bottom: 10%;
 
 
   <nav class="center-links">
-    <a href="indexpl.html">Strona Główna</a>
-    <a href="https://samuelstudio.com/workpl">Realizacje</a>
-    <a href="aboutpl.html">O mnie</a>
-    <a href="contactpl.html">Kontakt</a>
-    <a href="indexen.html" title="Angielska wersja" class="lang-switch">
-      <img src="ukflag.svg" alt="Angielska wersja" style="width:35px; vertical-align:middle;">
+    <a href="https://samuelstudio.com">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+            <a href="https://blog.samuelstudio.com/">Blog</a>
+
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </nav>
 
@@ -646,143 +650,74 @@ margin-bottom: 10%;
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="indexpl.html">Strona Główna</a>
-    <a href="https://samuelstudio.com/workpl">Realizacje</a>
-    <a href="aboutpl.html">O mnie</a>
-    <a href="contactpl.html">Kontakt</a>
-    <a href="indexen.html" title="Angielska wersja" class="lang-switch">
-      <img src="ukflag.svg" alt="Angielska wersja" style="width:35px; vertical-align:middle;">
+    <a href="https://samuelstudio.com">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+            <a href="https://blog.samuelstudio.com/">Blog</a>
+
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </div>
+  
 </header>
-
 <section class="text-section">
-  <h2>Zobacz moje realizacje w&nbsp;akcji</h2>
+  <h2>Consecration Church of the Holy Spirit</h2>
   <div class="separator"></div>
   <p>
-    Poniżej znajdziesz przykłady, jak animacja pomaga firmom, organizacjom i&nbsp;twórcom 
-    <span class="highlight">opowiadać ich historie, wyjaśniać pomysły i&nbsp;nawiązywać kontakt z&nbsp;odbiorcami.</span>
-  </p>
-</section>
+      2D, 3D, element_S, EVENT PROMOTION / ANIMATION
+      <span class="highlight">
 
-<section class="gallery-section">
-  <div class="gallery-grid">
+ <br><br>
 
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="COVER-SPOT_00139_00139.png" alt="WORSHIP in the city center 2022 - cover image">
-        <video src="Worship-in-the-city-center-2022-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>UWIELBIENIE w centrum miasta 2022</p>
-        <a href="worshippl.html">Spot Promocyjny</a>
-      </div>
-    </div>
+<section id="video" style="text-align:center; padding:40px 0; background:#ffffff;">
 
-    
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="PUPPETEER-cover.jpg" alt="YAGOOSH - Puppeteer cover">
-        <video src="Puppeteer-animated-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>YAGOOSH</p>
-        <a href="puppeterpl.html">Puppeteer</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="Thomas-the-Apostle-cover.png" alt="Bible Unbound - The Bible In a Sentence cover">
-        <video src="St-Thomas-Apostol-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>BIBLE UNBOUND</p>
-        <a href="thomaspl.html">Historia Tomasza – apostoła wiary</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="Stained-Glass-of-the-Holy-Spirit-cover.jpg" alt="Church of the Holy Spirit - promotional cover">
-        <video src="Consecration-Church-of-the-Holy-Spirit-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Kościół Ducha Świętego</p>
-        <a href="#">Spot Promocyjny</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="Nikifor-Cover.jpg" alt="Museum of Dialogue and Cultures - Nikifor cover">
-        <video src="Nikifor-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Muzeum Dialogu Kultur</p>
-        <a href="nikiforpl.html">Nikifor</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="006.jpeg" alt="Samuel Studio - Kosmos cover">
-        <video src="KOSMOS-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Samuel Studio</p>
-        <a href="#">Kosmos</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="007.jpeg" alt="4 ECO - Promotional spot cover">
-        <video src="4-ECO-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>4 ECO</p>
-        <a href="#">Spot promocyjny</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="008.jpeg" alt="WYD Panama in Kielce - promotional spot cover">
-        <video src="Panama-in-Kielce-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>WYD Panama in Kielce</p>
-        <a href="#">Spot promocyjny</a>
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <div class="gallery-media">
-        <img src="Cover-Jozef-Szermentowski-WIDOK-CHECIN.jpg" alt="National Museum in Kielce - View of Chęciny cover">
-        <video src="View-of-Checiny-animated-cover.mp4" muted loop></video>
-      </div>
-      <div class="gallery-caption">
-        <p>Muzuem Narodowe w Kielcach</p>
-        <a href="#">Widok na Chęciny</a>
-      </div>
-    </div>
+  <div style="
+    position:relative;
+    max-width:900px;          
+    margin:auto;
+    aspect-ratio:16/9;        
+    overflow:hidden;
+  ">
+    <iframe 
+      class="video-frame"
+      src="https://www.youtube-nocookie.com/embed/ksBpeoHqVTg?rel=0&modestbranding=1&controls=1&showinfo=0"
+      title="Film promocyjny 1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      style="width:100%; height:100%;">
+    </iframe>
   </div>
+
+  <div style="
+    position:relative;
+    max-width:900px;          
+    margin:40px auto 0;      
+    aspect-ratio:16/9;        
+    overflow:hidden;
+  ">
+     <a href="indexen.html#gallery" class="back-button">← Back to home</a>
+
+  </div>
+
 </section>
 
 
-<section class="text-section">
-  <h2>Potrzebujesz czegoś w tym stylu? Porozmawiajmy!</h2>
-  <div class="separator"></div>
-  <p>
-    Chciałbyś oryginalą unikalną animację? Pomogę zrealizować
-    <span class="highlight">Twoją wizję.</span>
-  </p>
-  </section>
+  
+
+
+</section>
+
+</section>
+
+
+
 
 <footer class="footer">
   <div class="footer-subscribe">
-    <h3>SUBSKRYBUJ</h3>
+    <h3>CLICK TO SUBSCRIBE</h3>
     <div class="footer-buttons">
       <a href="#" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
@@ -796,10 +731,10 @@ margin-bottom: 10%;
   </div>
 
   <nav class="footer-nav">
-    <a href="indexpl.html">Strona Główna</a>
-    <a href="https://samuelstudio.com/workpl">Realizacje</a>
-    <a href="aboutpl.html">O mnie</a>
-    <a href="contactpl.html">Kontakt</a>
+    <a href="indexen.html">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
 
   <div class="footer-socials">
@@ -824,11 +759,10 @@ margin-bottom: 10%;
   </div>
 
   <div class="footer-bottom">
-    <a href="privacy.html">Polityka prywatności</a>
+    <a href="privacy.html">Privacy Policy</a>
     <span>Copyright by <p></p>Michal Baran Grafik & Pawel Pauksztello 2025</span>
   </div>
 </footer>
-
 
 
 <script>
@@ -926,32 +860,30 @@ document.addEventListener("keydown", (e) => {
 </script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const links = [
-      'worshippl.html',     
-      'puppeterpl.html',      
-      'thomaspl.html',
-      'churchpl.html',     
-      'nikiforpl.html',      
-      'kosmospl.html',
-      '4ecopl.html',     
-      'wydpl.html',      
-      'checinypl.html'          
-        
-    ];
+  document.querySelector('.back-button').addEventListener('click', (e) => {
+    e.preventDefault();
+    sessionStorage.setItem('scrollTarget', '#gallery');
+    window.location.href = 'indexen.html#gallery';
+  });
+</script>
 
-    const galleryItems = document.querySelectorAll('.gallery-item');
 
-    galleryItems.forEach((item, index) => {
-      item.style.cursor = 'pointer'; 
-      item.addEventListener('click', () => {
-        if (links[index]) {
-          window.location.href = links[index];
-        }
-      });
+<script>
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+      if (window.innerWidth <= 768) { 
+        const video = item.querySelector('video');
+        const img = item.querySelector('img');
+
+        img.style.opacity = '0';
+        video.style.opacity = '1';
+        video.style.pointerEvents = 'auto';
+        video.play();
+      }
     });
   });
 </script>
+
 
 </body>
 </html>
