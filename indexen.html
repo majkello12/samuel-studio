@@ -1033,12 +1033,10 @@ a {
 
 .logo-track {
   display: flex;
-  animation: slide 40s infinite; 
+  animation: slide 60s infinite; 
 }
 
-.logo-track.animate {
-  animation: slide-desktop 40s infinite;
-}
+
 
 .logo-track a {
  flex: 0 0 calc(100% / 4);  
@@ -1064,17 +1062,21 @@ a {
 }
 
 @keyframes slide {
-  0%, 5%   { transform: translateX(0); }
-  10%, 15% { transform: translateX(-25%); }
-  20%, 25% { transform: translateX(-50%); }
-  30%, 35% { transform: translateX(-75%); }
-  40%, 45% { transform: translateX(-100%); }
-  50%, 55% { transform: translateX(-125%); }
-  60%, 65% { transform: translateX(-150%); }
-  70%, 75% { transform: translateX(-175%); }
-  80%, 85% { transform: translateX(-200%); }
-  90%, 95% { transform: translateX(-225%); }
-  100%     { transform: translateX(-250%); }
+  0%, 3%    { transform: translateX(0); }
+  6%, 10%    { transform: translateX(-25%); }
+  13%, 16%  { transform: translateX(-50%); }
+  19%, 23%  { transform: translateX(-75%); }
+  26%, 29%  { transform: translateX(-100%); }
+  32%, 35%  { transform: translateX(-125%); }
+  39%, 43%  { transform: translateX(-150%); }
+  46%, 49%  { transform: translateX(-175%); }
+  53%, 57%  { transform: translateX(-200%); }
+  61%, 65%  { transform: translateX(-225%); }
+  69%, 73%  { transform: translateX(-250%); }
+  77%, 81%  { transform: translateX(-275%); }
+  85%, 89%  { transform: translateX(-300%); }
+  93%, 97%  { transform: translateX(-325%); }
+  100%, 100%  { transform: translateX(-350%); } 
 }
 
 
