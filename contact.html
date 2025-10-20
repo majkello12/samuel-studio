@@ -107,23 +107,24 @@ header.hidden {
       transform: scale(1.05);
     }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 1100;
-}
+    .hamburger {
+      width: 35px;
+      height: 23px;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+        z-index: 1100;
+    }
 
-.hamburger span {
-  display: block;
-  height: 3px;
-  background: #000;
-  border-radius: 2px;
-  transition: all 0.4s ease;
-}
+    .hamburger span {
+      display: block;
+      height: 3px;
+      background: rgb(0, 0, 0);
+      border-radius: 50px; 
+      transition: 0.3s;
+    }
 
 .hamburger.active span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
