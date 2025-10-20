@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <link rel="logoicon" type="image/png" sizes="32x32" href="logoicon32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logoicon16x16.png">
-  <title>Puppeter</title>
+  <title>Thomas the Apostle</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -308,7 +308,7 @@ margin-bottom: 20%;
 
     .gallery-item {
   width: 600px;
-  height: 600px;
+  height: 450px;
   background: #fff;
   border-radius: 15px;
   overflow: hidden;
@@ -610,8 +610,34 @@ margin-bottom: 20%;
 }
 
 
+.video-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;      
+}
+.why-list {
+  list-style-type: disc;
+  padding: 20px;
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.4rem;
+  animation: fadeIn 1s ease forwards;
+}
 
+.why-list li {
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.why-list li:hover {
+  transform: translateX(5px);
+  color: #c00; /* zmień na kolor akcentu strony */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 </style>
   
@@ -627,13 +653,14 @@ margin-bottom: 20%;
 
 
   <nav class="center-links">
-    <a href="indexpl.html">Strona Główna</a>
-    <a href="workpl.html">Realizacje</a>
-    <a href="aboutpl.html">O mnie</a>
-    <a href="contactpl.html">Kontakt</a>
-    <a href="https://blog.samuelstudio.pl/">Blog</a>
-    <a href="indexen.html" title="Angielska wersja" class="lang-switch">
-      <img src="ukflag.svg" alt="English Version" style="width:35px; vertical-align:middle;">
+    <a href="https://samuelstudio.com">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://blog.samuelstudio.com/">Blog</a>
+
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </nav>
 
@@ -644,41 +671,49 @@ margin-bottom: 20%;
   </div>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="indexpl.html">Strona Główna</a>
-    <a href="workpl.html">Realizacje</a>
-    <a href="aboutpl.html">O mnie</a>
-    <a href="contactpl.html">Kontakt</a>
-    <a href="https://blog.samuelstudio.pl/">Blog</a>
+    <a href="https://samuelstudio.com">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://blog.samuelstudio.com/">Blog</a>
 
-    <a href="indexen.html" title="Polska wersja" class="lang-switch">
-      <img src="ukflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
+    <a href="indexpl.html" title="Polska wersja" class="lang-switch">
+      <img src="plflag.svg" alt="Polska wersja" style="width:35px; vertical-align:middle;">
     </a>
   </div>
   
 </header>
+
 <section class="text-section">
-  <h2>Puppeteer – Teledysk animowany 2D/3D</h2>
+  <h2>The Story of Thomas – The Apostle of Belief
+
+
+</h2>
   <div class="separator"></div>
   <p>
-<strong>O projekcie:</strong> </p>
-<p>„Puppeteer” to teledysk animowany stworzony na prośbę Agnieszki Majcher z&nbsp;zespołu YAGOOSH. Projekt 
-  łączy animację 2D i&nbsp;animację 3D, tworząc poetycką opowieść o&nbsp;emocjach, relacjach i&nbsp;ludzkiej kruchości.
+Creating short Vox-style animations for the story of Saint Thomas the Apostle was a&nbsp;fascinating experience. 
+The clean, minimalist form allowed me to capture his emotions, doubts, and faith in a&nbsp;way that feels authentic 
+and deeply human. Each 10-second clip reflects a&nbsp;key moment of his spiritual journey, turning simplicity into depth.
+ 
+<img 
+    src="Thomas-the-Apostle-cover.png" 
+    alt="Thomas-the-Apostle"
+    style="width:100%; max-width:900px; border-radius:16px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:cover;">
+  </img>
+For the Bible Unbound project, these animations became more than visuals—they became a&nbsp;bridge between story 
+and reflection. Through them, viewers can rediscover the Apostle’s path and be inspired to&nbsp;explore their own journey of belief.
 
-Inspiracją były fotografie Magdaleny Szczykutowicz, które ożywiłem poprzez subtelną animację 2D i&nbsp;wzbogaciłem 
-elementami 3D, nadając im nowy, symboliczny wymiar. Postacie poruszają się niczym marionetki kierowane 
-niewidzialnymi siłami – metafora zależności i&nbsp;wewnętrznego poszukiwania.
 
-Dodatkowe efekty – unoszące się chmury, migoczące światła i&nbsp;abstrakcyjne kształty – tworzą atmosferę 
-nostalgii i&nbsp;refleksji, współgrając z&nbsp;emocjonalnym tonem muzyki zespołu YAGOOSH.
-
-„Puppeteer” to nie tylko animowany teledysk, ale również wizualna podróż po świecie uczuć i&nbsp;myśli, 
-która zachęca do refleksji nad relacjami i&nbsp;ludzką naturą.
- <br>
-</p>
-
+<img 
+    src="Sant-Thomas.webp" 
+    alt="Thomas-the-Apostle"
+    style="width:100%; max-width:900px; border-radius:16px">
+  </img>
 </section>
 
-  <a href="indexen.html#gallery" class="back-button">← Powrót</a>
+
+
+  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
 
 
 
@@ -691,47 +726,27 @@ która zachęca do refleksji nad relacjami i&nbsp;ludzką naturą.
     margin:auto;
     aspect-ratio:16/9;        
     overflow:hidden;
-    border-radius:20px;
-    box-shadow:0 6px 24px rgba(0,0,0,0.2);
   ">
     <iframe 
- src="https://www.youtube-nocookie.com/embed/00trGdrx74A?rel=0&modestbranding=1&controls=1&showinfo=0"      
- title="Film promocyjny"
+      class="video-frame"
+      src="https://www.youtube-nocookie.com/embed/ZeLpBjlH4Sc?rel=0&modestbranding=1&controls=1&showinfo=0"
+      title="Film promocyjny 1"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
-      style="width:100%; height:100%; border:0;">
+      style="width:100%; height:100%;">
     </iframe>
   </div>
 
- <p style="
-    margin-top:4%;        
-    margin-left: 6%;
-        margin-right: 6%;
-
-    font-size:18px;         
-    font-weight:500;        
-    color:#333333;          
-    line-height:1.6;       
-  ">
-Zespół YAGOOSH:
-Agnieszka Majcher – wokal, tekst
-Ala Zawisza – gitary
-Damian Szydłowski – instrumenty klawiszowe
-Wiktor Michalczyk – perkusja
-Muzyka: YAGOOSH
-Scenariusz video: Agnieszka Majcher
-Realizacja video: Paweł Pauksztełło
-Fotografie: Magdalena Szczykutowicz  </p>
 </section>
 
+  <a href="indexen.html#gallery" class="back-button">← Back to home</a>
 
-  <a href="indexen.html#gallery" class="back-button">← Powrót</a>
 
 
   <footer class="footer">
   <div class="footer-subscribe">
-    <h3>SUBSKRYBUJ</h3>
+    <h3>CLICK TO SUBSCRIBE</h3>
     <div class="footer-buttons">
       <a href="https://www.youtube.com/@samuelstudio_" class="subscribe-btn">
         <img src="samuelstudio icon.svg" alt="Animator 1"> 
@@ -744,11 +759,11 @@ Fotografie: Magdalena Szczykutowicz  </p>
   </div>
 
   <nav class="footer-nav">
-  <a href="indexpl.html">Strona główna</a>
-  <a href="https://samuelstudio.com/workpl">Realizacje</a>
-  <a href="aboutpl.html">O mnie</a>
-  <a href="contactpl.html">Kontakt</a>
-    <a href="https://blog.samuelstudio.pl/">Blog</a>
+    <a href="https://samuelstudio.com">Home</a>
+    <a href="https://samuelstudio.com/work">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://blog.samuelstudio.com/">Blog</a>
 
   </nav>
 
@@ -765,13 +780,13 @@ Fotografie: Magdalena Szczykutowicz  </p>
     <a href="https://www.instagram.com/pawel_samuel_studio/" target="_blank">
       <img src="insta icon.svg" alt="Instagram">
     </a>
-    <a href="indexen.html" title="English version" class="lang-switch">
-      <img src="ukflag.svg" alt="English" style="width:35px; vertical-align:middle;">
+    <a href="indexpl.html" title="English version" class="lang-switch">
+      <img src="plflag.svg" alt="English" style="width:35px; vertical-align:middle;">
     </a>
   </div>
 
   <div class="footer-bottom">
-    <a href="privacy.html">Polityka Prywatności</a>
+    <a href="privacy.html">Privacy Policy</a>
     <span>Copyright by <p></p>Michal Baran Grafik & Pawel Pauksztello 2025</span>
   </div>
 </footer>
