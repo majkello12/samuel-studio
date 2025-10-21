@@ -2860,10 +2860,10 @@ video.addEventListener('timeupdate', () => {
 
 <script>
   // Wczytanie headera z zewnętrznego pliku
-  fetch('header.html')
+  fetch('header2.html')
     .then(response => response.text())
     .then(data => {
-      document.getElementById('header').innerHTML = data;
+      document.getElementById('header2').innerHTML = data;
     })
     .catch(error => console.error('Błąd ładowania headera:', error));
   </script>
