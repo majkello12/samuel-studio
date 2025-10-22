@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,6 @@
       margin: 0;
     }
 
-    /* ===== Nagłówek ===== */
     header {
       position: fixed;
             font-family: 'Roboto', sans-serif; 
@@ -68,7 +67,7 @@ nav a:hover {
       justify-content: space-between;
       width: 33px;
       height: 22px;
-      margin-right: 10%;
+      margin-right: 15%;
       cursor: pointer;
 z-index: 2100; 
       position: relative;
@@ -189,24 +188,21 @@ z-index: 2100;
     const mobileMenu = document.getElementById("mobileMenu");
     let lastScroll = 0;
 
-    // ======= Pokazywanie / ukrywanie headera przy scrollu =======
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScroll > lastScroll && currentScroll > 60) {
-        header.style.top = "-100px"; // ukryj przy przewijaniu w dół
+        header.style.top = "-100px"; 
       } else {
-        header.style.top = "0"; // pokaż przy przewijaniu w górę
+        header.style.top = "0"; 
       }
       lastScroll = currentScroll;
     });
 
-    // ======= Kliknięcie hamburgera =======
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       mobileMenu.classList.toggle("active");
     });
 
-    // ======= Kliknięcie linku w menu =======
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove("active");
