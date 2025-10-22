@@ -2379,26 +2379,6 @@ margin-top: 36%;}}
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  let lastScroll = 0;
-  const threshold = 80; 
-
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > lastScroll && currentScroll > threshold) {
-      header.classList.add("hidden");
-    } else {
-      header.classList.remove("hidden");
-    }
-
-    lastScroll = currentScroll;
-  });
-});
-</script>
-
 
 <script>
 document.addEventListener("contextmenu", (e) => {
