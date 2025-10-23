@@ -17,19 +17,22 @@
     }
 
     header {
-      position: fixed;
-      font-family: 'Roboto', sans-serif; 
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #f0bb1c;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 30px 28px;
-      transition: transform 0.4s ease;      
-      z-index: 2150;
-    }
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 28px;
+  background: #f0bb1c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2000;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.21),  
+    inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
+
+  transition: all 0.4s ease;    }
 
 
 @media (max-width: 768px) {
