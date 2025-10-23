@@ -499,40 +499,44 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 });
 </script>
 
-  <script>
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(html => {
+      const placeholder = document.getElementById("header-placeholder");
+      const shadowRoot = placeholder.attachShadow({ mode: "open" });
+      shadowRoot.innerHTML = html;
 
-        const header = document.getElementById("mainHeader");
-        const hamburger = document.getElementById("hamburger");
-        const mobileMenu = document.getElementById("mobileMenu");
-        let lastScroll = 0;
+      const header = shadowRoot.getElementById("mainHeader");
+      const hamburger = shadowRoot.getElementById("hamburger");
+      const mobileMenu = shadowRoot.getElementById("mobileMenu");
 
-        window.addEventListener("scroll", () => {
-          const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-          if (currentScroll > lastScroll && currentScroll > 60) {
-            header.style.top = "-200px";
-          } else {
-            header.style.top = "0";
-          }
-          lastScroll = currentScroll;
-        });
+      let lastScroll = 0;
+      const headerHeight = header.offsetHeight;
 
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          mobileMenu.classList.toggle("active");
-        });
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScroll && currentScroll > headerHeight) {
+          header.style.top = `-${headerHeight}px`;
+        } else if (currentScroll < lastScroll) {
+          header.style.top = "0";
+        }
+        lastScroll = currentScroll;
+      });
 
-        document.querySelectorAll(".mobile-menu a").forEach(link => {
-          link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            mobileMenu.classList.remove("active");
-          });
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("active");
         });
       });
-  </script>
+    });
+</script>
 
 
 <script>
