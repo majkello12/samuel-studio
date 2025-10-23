@@ -17,7 +17,7 @@
     }
 
     header {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -31,7 +31,6 @@
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.21),  
     inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
-
   transition: all 0.4s ease;    }
 
 
@@ -39,8 +38,7 @@
   header {
     padding-top: 15px;
     padding-bottom: 15px;
-  }
-}
+  }}
 
     nav a {
   color: white;
@@ -59,6 +57,7 @@ nav a:hover {
 
     .center-links {
       flex: 1;
+      font-family: 'Roboto', sans-serif;
       display: flex;
       justify-content: center;
       gap: 40px;
@@ -205,15 +204,18 @@ z-index: 2100;
     const mobileMenu = document.getElementById("mobileMenu");
     let lastScroll = 0;
 
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScroll && currentScroll > 60) {
-        header.style.top = "-100px"; 
-      } else {
-        header.style.top = "0"; 
-      }
-      lastScroll = currentScroll;
-    });
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  const headerHeight = header.offsetHeight; 
+
+  if (currentScroll > lastScroll && currentScroll > 60) {
+    header.style.transform = `translateY(-${headerHeight + 5}px)`;
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScroll = currentScroll;
+});
 
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
