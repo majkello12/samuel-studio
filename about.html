@@ -296,127 +296,7 @@ margin-top: 6%;
 }
 
 
-.about-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  padding: 0px;
-  flex-wrap: wrap; 
-}
 
-.about-text {
-  flex: 1 1 60%;
-   order: 1;
-}
-
-.about-image {
-  flex: 1 1 35%;
-  display: flex;
-  justify-content: center;
-  align-self: flex-start; 
-  margin-top: 200px; 
-   order: 2;
-}
-
-.about-image img {
-  max-width: 1000%;
-  height: auto;
-  border-radius: 20px;
-  transition: transform 0.4s ease;
-}
-
-.about-image img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-text {
-    order: 1;
-  }
-
-  .about-image {
-    order: 2;
-    margin-top: 20px;
-      display: none;
-  }
-  
-  .see-more-container {
-    order: 3; 
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-  }
-
-.see-more-btn3 {
-  padding: 14px 79px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}}
-
-
-.inline-image {
-  display: none;
-
-}
-
-@media (max-width: 768px) {
-  .inline-image {
-    display: block;      
-    margin: 20px auto;  
-    margin-bottom: 70px;  
-    width: 80%;           
-    max-width: 300px;     
-  }
-
-  .inline-image img {
-    width: 100%;          
-    height: auto;         
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    display: block;      
-  }
-}
-
-
-@media (min-width: 768px) and (max-width: 1024px) {
-      .text-section { 
-      margin-left: 15%;
-      margin-top: 27%;
-      margin-right: 7%;
-      margin-bottom: 21%;
-}    
-.text-section h2 {
-  margin-top: 4%;
-}}
-
-
-@media (min-width: 2560px) {
-  .text-section { 
-    margin-left: 30%;
-    margin-top: 7%;
-    margin-right: 7%;
-    margin-bottom: 7%;
-}    
-.text-section h2 {
-  margin-bottom: 9%;
-  margin-top: 10%;
-}
-.section-header9 h2 {
-
-    margin-left: 30%;
-}
-
-.review-btn {
-}}
 
 
     header,
@@ -435,7 +315,59 @@ header *,
   <div id="header-placeholder"></div>
 
 
+<section class="text-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Hello and welcome</h2>
+      <div class="separator"></div>
 
+      <p>
+        My name&nbsp;is <strong>Paweł Pauksztełło</strong>, and&nbsp;I’m&nbsp;a&nbsp;motion designer from&nbsp;Poland. 
+        I&nbsp;create animations that help businesses, organizations, and&nbsp;individuals communicate their messages clearly and&nbsp;effectively. 
+        Whether you&nbsp;need to&nbsp;explain a&nbsp;concept, promote an&nbsp;event, or&nbsp;tell a&nbsp;story, 
+        I&nbsp;deliver high-quality animations that engage and&nbsp;inform.
+      </p>
+
+      <p>
+        Many people struggle to&nbsp;present their ideas in&nbsp;a&nbsp;way that captures attention and&nbsp;makes an&nbsp;impact. 
+        Animation solves this problem by&nbsp;turning information into a&nbsp;visual experience that is&nbsp;easy to&nbsp;understand and&nbsp;remember. 
+        I&nbsp;focus on&nbsp;creating animations that support my&nbsp;clients’ goals—whether in&nbsp;education, marketing, or&nbsp;storytelling. 
+        See examples of&nbsp;my&nbsp;work: 
+        <a href="work.html" class="highlight-link">Portfolio</a>
+      </p>
+
+      <p>
+        I&nbsp;also specialize in&nbsp;visualizing Christian themes, helping churches and&nbsp;faith-based organizations 
+        share their messages in&nbsp;a&nbsp;meaningful way. 
+        <a href="christian-animations.html" class="highlight-link">Christian Animation</a>
+      </p>
+
+
+          <img src="fotopawla.jpg" alt="Paweł Pauksztełło - Motion Designer" class="inline-image">
+
+      <p>
+        Outside of&nbsp;work, I&nbsp;spend time with&nbsp;my&nbsp;wife and&nbsp;three sons. 
+        I’m also involved in&nbsp;my&nbsp;parish as&nbsp;a&nbsp;lector and&nbsp;help organize Worship events in&nbsp;my&nbsp;city.
+      </p>
+
+      <p>
+        If you need an animation that makes your message clear and&nbsp;engaging, let’s&nbsp;work together!
+      </p>
+
+      <div class="review-container">
+      <button class="review-btn" onclick="window.location.href='contact.html'">
+          Contact Me
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="about-image">
+      <img src="fotopawla.jpg" alt="Paweł Pauksztełło - Motion Designer">
+    </div>
+  </div>
+</section>
 
 
 
