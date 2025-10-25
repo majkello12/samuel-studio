@@ -96,7 +96,6 @@
 @media (max-width: 768px) {
   .text-section {
     text-align: left;
-      width: 90%; 
       margin-top: 35%;
   margin-left: 14%;
   margin-right: 10%;
@@ -201,26 +200,7 @@ margin-top: 6%;
 .next { right: 10px; }
 
 
-.see-more-btn3 {
-  font-size: 24px;
-  padding: 14px 36px;
-  background: #000;
-  color: #f0bb1c;
-  border: none;
-  border-radius: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.4s ease, background 0.3s ease;  
-  display: inline-block; 
-}
 
-.see-more-btn3:hover {
-  background: #000000;
-  transform: scale(1.1);
-  transition: transform 0.4s ease;
-}
 
 
 .text-section a {
@@ -294,6 +274,44 @@ margin-top: 6%;
 }
 
 
+.review-btn2 {
+  font-size: 24px;
+  padding: 14px 36px;
+  background: #000;
+  color: #f0bb1c;
+  border: none;
+  border-radius: 30px;
+  margin-left: 12%;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.4s ease, background 0.3s ease;  
+  display: inline-block; 
+}
+
+@media (max-width: 768px) {
+  .review-btn2 {
+    display: block;   
+    align-items: center;
+    align-content: center;
+    align-content: center;
+margin-top: 20px;
+margin-bottom: 20px;
+  }
+}
+
+
+.review-btn2:hover {
+  background: #000000;
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+.review-btn2:active {
+  transform: scale(0.97);
+  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
+}
+
+
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -352,12 +370,7 @@ margin-top: 6%;
     width: 100%;
     text-align: center;
   }
-
-.see-more-btn3 {
-  padding: 14px 79px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}}
+}
 
 
 .inline-image {
@@ -470,8 +483,8 @@ header *,
         If you need an animation that makes your message clear and&nbsp;engaging, let’s&nbsp;work together!
       </p>
 
-      <div class="review-container">
-      <button class="review-btn" onclick="window.location.href='contact.html'">
+      <div class="review-container2">
+      <button class="review-btn2" onclick="window.location.href='contact.html'">
           Contact Me
         </button>
       </div>
