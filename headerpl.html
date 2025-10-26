@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagłówek</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
       :host {
     all: initial; 
@@ -30,8 +35,6 @@
   -ms-user-select: none;
     }
 
-
-
 img {
   -webkit-user-drag: none;
   -webkit-user-select: none;
@@ -46,9 +49,7 @@ img {
 @media (max-width: 768px) {
   .line-break-sm {
     display: inline;
-  }
-
-}
+  }}
 
     header {
   position: fixed;
@@ -61,10 +62,10 @@ img {
   align-items: center;
   justify-content: space-between;
   z-index: 2000;
- padding-top: env(safe-area-inset-top);
+  padding-top: env(safe-area-inset-top);
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.21),  
-    inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
+  0 6px 20px rgba(0, 0, 0, 0.21),  
+  inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
   transition: all 0.4s ease;    }
 
 
