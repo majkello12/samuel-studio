@@ -27,7 +27,8 @@
   align-items: center;
   justify-content: space-between;
   z-index: 2000;
- padding-top: env(safe-area-inset-top);
+  padding-top: constant(safe-area-inset-top, 0); 
+  padding-top: env(safe-area-inset-top, 0);    
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.21),  
     inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
