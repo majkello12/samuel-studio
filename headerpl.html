@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagłówek</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+ 
 
       :host {
     all: initial; 
@@ -17,39 +13,11 @@
     display: block;
   }
   
-
-    body { 
-      font-family: 'Roboto', sans-serif; 
-      background: #fff; 
-      color: #333; 
-      margin: 0; 
-      padding: 0; 
-        letter-spacing: 0.4px;
-  font-weight: 400;
-  font-style: normal;
-  overflow-x: hidden;
-  height: 100%;
-      user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-    }
-
-img {
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  user-select: none;
-  pointer-events: none; 
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
 }
-
-    .line-break-sm {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .line-break-sm {
-    display: inline;
-  }}
 
     header {
   position: fixed;
@@ -62,10 +30,9 @@ img {
   align-items: center;
   justify-content: space-between;
   z-index: 2000;
-  padding-top: env(safe-area-inset-top);
   box-shadow:
-  0 6px 20px rgba(0, 0, 0, 0.21),  
-  inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
+    0 6px 20px rgba(0, 0, 0, 0.21),  
+    inset 0 -3px 6px rgba(0, 0, 0, 0.11); 
   transition: all 0.4s ease;    }
 
 
