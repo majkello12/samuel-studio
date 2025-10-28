@@ -2344,6 +2344,333 @@ window.addEventListener("scroll", () => {
   });
 </script>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("show");
+    }
+    document.querySelectorAll('nav.menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById("menu").classList.remove("show");
+      });
+    });
+
+  </script>
+    
+
+<script>
+  const hoverVideos = document.querySelectorAll('video.hover-video');
+
+  hoverVideos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  });
+</script>
+
+
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+
+  mobileMenu.style.top = mobileMenu.style.top === "0%" ? "-100%" : "0%";
+});
+
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove("active");
+    mobileMenu.style.top = "-100%";
+  });
+});
+
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  let lastScroll = 0;
+  const threshold = 80; 
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      header.classList.add("hidden");
+    } else {
+      header.classList.remove("hidden");
+    }
+
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (
+    (e.ctrlKey && (e.key === "s" || e.key === "u")) ||
+    (e.ctrlKey && e.shiftKey && e.key === "I")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
+<script>
+const track = document.querySelector('.opinie-track');
+const slides = document.querySelectorAll('.opinia');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+let currentIndex = 0;
+
+function showSlide(index) {
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+  currentIndex = index;
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+prevBtn.addEventListener('click', () => showSlide(currentIndex - 1));
+nextBtn.addEventListener('click', () => showSlide(currentIndex + 1));
+
+setInterval(() => {
+  showSlide(currentIndex + 1);
+}, 4000);
+</script>
+
+<script>
+window.onpageshow = function(event) {
+  if (event.persisted) { 
+    window.location.reload();
+  }
+};
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = Array.from(document.querySelectorAll('.carousel-slide0'));
+  if (!slides.length) return;
+
+  let current = 0;
+  let autoplayInterval = null;
+  const INTERVAL_MS = 4000;
+
+  const prevBtn = document.querySelector('.nav.prev');
+  const nextBtn = document.querySelector('.nav.next');
+  const container = document.querySelector('.carousel-container0');
+
+  function showSlide(index) {
+    index = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    current = index;
+  }
+
+  function startAutoplay(){
+    stopAutoplay();
+    autoplayInterval = setInterval(() => showSlide(current + 1), INTERVAL_MS);
+  }
+
+  function stopAutoplay(){
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(current - 1);
+    startAutoplay(); 
+  });
+  nextBtn.addEventListener('click', () => {
+    showSlide(current + 1);
+    startAutoplay(); 
+  });
+
+  container.addEventListener('mouseenter', stopAutoplay);
+  container.addEventListener('mouseleave', startAutoplay);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { showSlide(current - 1); startAutoplay(); }
+    if (e.key === 'ArrowRight') { showSlide(current + 1); startAutoplay(); }
+  });
+
+  showSlide(0);
+  startAutoplay();
+});
+</script>
+
+<script>
+document.querySelectorAll('.gallery-item').forEach(item => {
+  const video = item.querySelector('video');
+
+  item.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 768) {
+      video.play();
+    }
+  });
+
+  item.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 768) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  });
+});
+
+if (window.innerWidth <= 768) {
+  const videos = document.querySelectorAll(".gallery-item video");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(err => {
+          console.log("Autoplay blocked:", err);
+        });
+      } else {
+        entry.target.pause();
+        entry.target.currentTime = 0;
+      }
+    });
+  }, { threshold: 0.5 }); 
+  videos.forEach(video => {
+    video.muted = true; 
+    video.setAttribute("playsinline", "true"); 
+    video.setAttribute("autoplay", "true"); // 
+    observer.observe(video);
+  });
+}
+</script>
+
+
+<script>
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+</script>
+
+<script>
+document.addEventListener('keydown', function(e) {
+  if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) {
+    e.preventDefault();
+  }
+});
+</script>
+
+<script>
+const futureTexts = [
+  "Będziesz mieć animowane logo, Twoja marka się wyróżni.",
+  "Twoje wykłady przyciągną uwagę słuchaczy.",
+  "Wytłumaczysz złożone tematy w angażujący sposób.",
+  "Twoje wydarzenia będą cieszyć się dużą frekwencją, poczujesz się doceniony"
+];
+
+document.querySelectorAll('.gallery-item-offerta').forEach((item, idx) => {
+  const caption = item.querySelector('.gallery-caption-offerta p');
+  if (!caption) return;
+  const original = caption.textContent;
+
+
+
+  if (window.innerWidth > 768) {
+    item.addEventListener('mouseenter', () => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = futureTexts[idx] || original;
+        caption.style.opacity = '1';
+      }, 300);
+    });
+
+
+      item.addEventListener('mouseenter', () => {
+    caption.style.opacity = '0';
+    setTimeout(() => {
+      caption.textContent = futureTexts[idx] || original;
+      caption.style.opacity = '1';
+    }, 180);
+  });
+
+
+    item.addEventListener('mouseleave', () => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = original;
+        caption.style.opacity = '1';
+      }, 180);
+    });
+  }
+
+  if (window.innerWidth <= 768) {
+    let showingFuture = false;
+    setInterval(() => {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = showingFuture ? original : futureTexts[idx] || original;
+        caption.style.opacity = '1';
+        showingFuture = !showingFuture;
+      }, 300);
+    }, 4000); 
+  }
+});
+</script>
+
+<script>
+const video = document.getElementById('myVideo');
+
+video.playbackRate = 1;
+
+video.addEventListener('timeupdate', () => {
+  if(video.currentTime >= 5 && video.currentTime < 9) {
+    video.currentTime = 10;
+  }
+
+  if(video.currentTime >= 14) {
+    video.currentTime = 3;
+  }
+});
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const links = [
+      'trileaspl.html',     
+      'gospelpl.html',      
+      'modern3dpl.html'      
+    ];
+
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    galleryItems.forEach((item, index) => {
+      item.style.cursor = 'pointer'; 
+      item.addEventListener('click', () => {
+        if (links[index]) {
+          window.location.href = links[index];
+        }
+      });
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener('load', () => {
+    const pos = sessionStorage.getItem('scrollPosition');
+    if (pos) window.scrollTo(0, pos);
+  });
+</script>
+
+
 
 </body>
 </html>
