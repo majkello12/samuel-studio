@@ -246,6 +246,20 @@ window.addEventListener("scroll", () => {
   });
 </script>
 
+<script>
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    header.classList.add("hidden");
+  } else {
+    header.classList.remove("hidden");
+  }
+  lastScroll = currentScroll;
+});
+</script>
+
 
 </body>
 </html>
