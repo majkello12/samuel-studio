@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">  
   <title>Header</title>
   <style>
+ 
 
       :host {
     all: initial; 
@@ -12,7 +13,6 @@
     display: block;
   }
   
-
 html, body {
   margin: 0;
   padding: 0;
@@ -24,6 +24,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  padding: 15px 28px;
   background: #f0bb1c;
   display: flex;
   align-items: center;
@@ -37,6 +38,8 @@ html, body {
 
 @media (max-width: 768px) {
   header {
+    position: absolute; 
+    top: 0;    
     padding-top: 15px;
     padding-bottom: 15px;
   }}
@@ -75,7 +78,7 @@ nav a:hover {
     }
     .center-links a:hover {
       color: #ffffff;
-        transform: scale(1.05);
+      transform: scale(1.05);
     }
 
     .hamburger {
@@ -86,7 +89,7 @@ nav a:hover {
       height: 22px;
       margin-right: 13%;
       cursor: pointer;
-z-index: 2100; 
+      z-index: 2100; 
       position: relative;
     }
 
@@ -129,11 +132,9 @@ z-index: 2100;
   z-index: 1050;
 
 }
-
 .mobile-menu.active {
   top: 0;
 }
-
 
 .mobile-menu a {
   font-size: 1.5rem;
@@ -156,8 +157,6 @@ z-index: 2100;
         display: none;
       }
     }
-
-
     
   </style>
 </head>
@@ -189,7 +188,7 @@ z-index: 2100;
   </header>
 
   <div class="mobile-menu" id="mobileMenu">
-    <a href="https://samuelstudio.com/indexen">Home</a>
+    <a href="https://samuelstudio.com/indexen">Hoooome</a>
     <a href="https://samuelstudio.com/work">Work</a>
     <a href="https://samuelstudio.com/about">About</a>
     <a href="https://samuelstudio.com/contact">Contact</a>
