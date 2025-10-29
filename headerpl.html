@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nagłówek</title>
   <style>
- 
 
       :host {
     all: initial; 
@@ -38,17 +37,9 @@ html, body {
 
 @media (max-width: 768px) {
   header {
-    position: static;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    overflow: hidden; 
-  }
-
-  .hamburger {
-    margin-right: 0;
-  }
-}
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }}
 
     nav a {
   color: white;
@@ -165,7 +156,26 @@ z-index: 2100;
         display: none;
       }
     }
-    
+
+@media (max-width: 768px) {
+  header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+  }
+
+  .hamburger {
+    margin-right: 0; 
+  }
+
+  .logo-container img {
+    width: 65px; 
+  }
+}
+
   </style>
 </head>
 <body>
@@ -177,7 +187,7 @@ z-index: 2100;
     </div>
 
   <nav class="center-links">
-    <a href="https://samuelstudio.com/indexpl">Strona głównaaaa</a>
+    <a href="https://samuelstudio.com/indexpl">Strona główna</a>
     <a href="https://samuelstudio.com/realizacje">Realizacje</a>
     <a href="https://samuelstudio.com/omnie">O mnie</a>
     <a href="https://samuelstudio.com/kontakt">Kontakt</a>
