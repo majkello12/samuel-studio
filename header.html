@@ -13,8 +13,6 @@
   }
   
 
-
-
 html, body {
   margin: 0;
   padding: 0;
@@ -26,7 +24,6 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 28px;
   background: #f0bb1c;
   display: flex;
   align-items: center;
@@ -161,17 +158,8 @@ z-index: 2100;
     }
 
 
-@media (max-width: 900px) {
-  header {
-    transition: transform 0.3s ease;
-  }
-
-  header.hidden {
-    transform: translateY(-100%);
-  }
-}
-
-</style>
+    
+  </style>
 </head>
 <body>
   <header id="mainHeader">
@@ -244,20 +232,6 @@ window.addEventListener("scroll", () => {
       });
     });
   });
-</script>
-
-<script>
-let lastScroll = 0;
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  const currentScroll = window.pageYOffset;
-  if (currentScroll > lastScroll && currentScroll > 100) {
-    header.classList.add("hidden");
-  } else {
-    header.classList.remove("hidden");
-  }
-  lastScroll = currentScroll;
-});
 </script>
 
 
