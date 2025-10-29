@@ -12,6 +12,9 @@
     display: block;
   }
   
+
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -156,7 +159,19 @@ z-index: 2100;
         display: none;
       }
     }
-  </style>
+
+
+@media (max-width: 900px) {
+  header {
+    transition: transform 0.3s ease;
+  }
+
+  header.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+</style>
 </head>
 <body>
   <header id="mainHeader">
