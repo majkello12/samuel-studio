@@ -116,7 +116,7 @@ margin-bottom: 10%;
     text-align: left;
     margin-left: 0%;
     margin-right: 13%;
-    font-size: 1.4rem;     
+    font-size: 1.1rem;     
     max-width: 100%;
   }
 
@@ -177,139 +177,7 @@ margin-top: 6%;
 }
 
 
-.review-container {
-  margin-top: 100px;
-  margin-bottom: 120px;
-  
-}
 
-.review-btn {
-  font-size: 24px;
-  padding: 14px 36px;
-  background: #000;
-  color: #f0bb1c;
-  border: none;
-  border-radius: 30px;
-  margin-left: 12%;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.4s ease, background 0.3s ease;  
-  display: inline-block; 
-}
-
-@media (max-width: 768px) {
-  .review-btn {
-    display: block;   
-    margin: 20px auto; 
-  }
-}
-
-
-.review-btn:hover {
-  background: #000000;
-  transform: scale(1.1);
-  transition: transform 0.4s ease;
-}
-
-.review-btn:active {
-  transform: scale(0.97);
-  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
-}
-
-
-
-
-.about-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  padding: 0px;
-  flex-wrap: wrap; 
-}
-
-.about-text {
-  flex: 1 1 60%;
-   order: 1;
-}
-
-.about-image {
-  flex: 1 1 35%;
-  display: flex;
-  justify-content: center;
-  align-self: flex-start; 
-  margin-top: 200px; 
-   order: 2;
-}
-
-.about-image img {
-  max-width: 1000%;
-  height: auto;
-  border-radius: 20px;
-  transition: transform 0.4s ease;
-}
-
-.about-image img:hover {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    display: ;
-  }
-
-  .about-text {
-    order: 1;
-  }
-
-  .about-image {
-    order: 2;
-    margin-top: 20px;
-      display: none;
-  }
-  
-  .see-more-container {
-    order: 3; 
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-  }
-
-.see-more-btn3 {
-  padding: 14px 79px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: -15%;
-}}
-
-
-.inline-image {
-  display: none;
-
-}
-
-@media (max-width: 768px) {
-  .inline-image {
-    display: block;      
-    margin: 20px auto;  
-    margin-bottom: 70px;  
-    width: 80%;           
-    max-width: 300px;     
-  }
-
-  .inline-image img {
-    width: 100%;          
-    height: auto;         
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    display: block;      
-  }
-}
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -344,6 +212,20 @@ margin-top: 6%;
 .review-btn {
 }}
 
+
+.mojalista {
+  list-style-type: disc;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 600px) {
+  .mojalista {
+    font-size: 1.1rem; 
+  }
+}
 
 
 </style>
@@ -388,8 +270,7 @@ Personal data is collected <strong>only if you choose to contact me directly</st
         Your personal data is processed exclusively to:
 
 
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
   <li>respond to your messages or project inquiries,</li>
   <li>maintain necessary correspondence.</li>
 </ul>
@@ -417,8 +298,8 @@ Your personal data will <strong>not</strong> be shared, sold, or transferred to 
         <strong>6. Your Rights</strong><br><br>
 According to the General Data Protection Regulation (GDPR), you have the right to:
 
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
+
   <li>access your data,</li>
   <li>correct or delete it,</li>
   <li>restrict processing,</li>
