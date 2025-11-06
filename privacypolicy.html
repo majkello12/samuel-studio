@@ -382,6 +382,23 @@ This Privacy Policy may be updated from time to time to reflect legal or technic
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const regex = /\b([aiouwzAIUOWZ]|[A-Z]{2})\s+(?=\S)/g;
+
+  function fixOrphans(node) {
+    node.childNodes.forEach(child => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        child.textContent = child.textContent.replace(regex, "$1\u00A0");
+      } else {
+        fixOrphans(child);
+      }
+    });
+  }
+
+  fixOrphans(document.body);
+});
+</script>
 
 
 </body>

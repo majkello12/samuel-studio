@@ -116,7 +116,7 @@ margin-bottom: 10%;
     text-align: left;
     margin-left: 0%;
     margin-right: 13%;
-    font-size: 1.4rem;     
+    font-size: 1.1rem;     
     max-width: 100%;
   }
 
@@ -142,6 +142,7 @@ margin-top: 6%;
   margin-left: 12%;
   margin-bottom: 25%;
 }}
+
 
 
 
@@ -176,86 +177,7 @@ margin-top: 6%;
 }
 
 
-.review-container {
-  margin-top: 100px;
-  margin-bottom: 120px;
-  
-}
 
-.review-btn {
-  font-size: 24px;
-  padding: 14px 36px;
-  background: #000;
-  color: #f0bb1c;
-  border: none;
-  border-radius: 30px;
-  margin-left: 12%;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.4s ease, background 0.3s ease;  
-  display: inline-block; 
-}
-
-@media (max-width: 768px) {
-  .review-btn {
-    display: block;   
-    margin: 20px auto; 
-  }
-}
-
-
-.review-btn:hover {
-  background: #000000;
-  transform: scale(1.1);
-  transition: transform 0.4s ease;
-}
-
-.review-btn:active {
-  transform: scale(0.97);
-  box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
-}
-
-
-
-  
-  .see-more-container {
-    order: 3; 
-    margin-top: 15px;
-    width: 100%;
-    text-align: center;
-  }
-
-.see-more-btn3 {
-  padding: 14px 79px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: -15%;
-}}
-
-
-.inline-image {
-  display: none;
-
-}
-
-@media (max-width: 768px) {
-  .inline-image {
-    display: block;      
-    margin: 20px auto;  
-    margin-bottom: 70px;  
-    width: 80%;           
-    max-width: 300px;     
-  }
-
-  .inline-image img {
-    width: 100%;          
-    height: auto;         
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    display: block;      
-  }
-}
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -291,9 +213,20 @@ margin-top: 6%;
 }}
 
 
+.mojalista {
+  list-style-type: disc;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 20px;
+  font-size: 1.4rem;
+}
 
+@media (max-width: 600px) {
+  .mojalista {
+    font-size: 1.1rem; 
+  }}
 </style>
-  
+
 </head>
 <body>
 
@@ -323,8 +256,7 @@ Administratorem danych osobowych jest <strong>Paweł Pauksztełło</strong>.
   Strona samuelstudio.com ma charakter informacyjny i&nbsp;prezentuje ofertę usług animacji i&nbsp;motion designu.
  Dane osobowe mogą być przetwarzane wyłącznie w&nbsp;następujących celach:
  
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
   <li>nawiązania kontaktu z&nbsp;Użytkownikiem <br>(np. poprzez wiadomość e-mail),</li>
   <li>przygotowania oferty lub odpowiedzi na zapytanie,</li>
   <li>realizacji ewentualnej współpracy,</li>
@@ -340,8 +272,7 @@ Administratorem danych osobowych jest <strong>Paweł Pauksztełło</strong>.
 
         Dane przetwarzane są zgodnie z art. 6 ust. 1 RODO:
 
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
   <li>lit. a — na podstawie zgody Użytkownika,</li>
   <li>lit. b — w celu podjęcia działań przed zawarciem umowy lub jej realizacji,</li>
   <li>lit. c — w celu wypełnienia obowiązków prawnych ciążących na Administratorze.</li>
@@ -355,8 +286,7 @@ Administratorem danych osobowych jest <strong>Paweł Pauksztełło</strong>.
 <br><br>
  Administrator dba o bezpieczeństwo danych poprzez:
 
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
   <li>korzystanie z połączenia szyfrowanego SSL,</li>
   <li>aktualizowanie oprogramowania,</li>
   <li>stosowanie silnych haseł i zabezpieczeń dostępu.</li>
@@ -391,8 +321,7 @@ przez czas wymagany przepisami prawa (np. podatkowymi).
 
         Użytkownik ma prawo do:
 
-<ul style="list-style-type: disc; font-weight: 400;
-  font-style: normal; margin-left: 20px;   font-size: 1.4rem;">
+<ul class="mojalista"> 
   <li>dostępu do swoich danych,</li>
   <li>ich sprostowania lub usunięcia,</li>
   <li>ograniczenia przetwarzania,</li>
@@ -468,6 +397,23 @@ Aktualna wersja dokumentu jest zawsze dostępna na stronie <strong>samuelstudio.
     });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const regex = /\b([aiouwzAIUOWZ]|[A-Za-zĄĆĘŁŃÓŚŹŻąćęłńóśźż]{2})\s+(?=\S)/g;
+
+  function fixOrphans(node) {
+    node.childNodes.forEach(child => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        child.textContent = child.textContent.replace(regex, "$1\u00A0");
+      } else {
+        fixOrphans(child);
+      }
+    });
+  }
+
+  fixOrphans(document.body);
+});
+</script>
 
 
 </body>
