@@ -423,6 +423,41 @@ margin-top: 6%;
 }}
 
 
+.tooltip-trigger {
+  position: relative;
+  cursor: pointer; 
+  color: #000000; 
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%; 
+  left: 165%;
+  transform: translateX(-50%) translateY(10px);
+  
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+  padding: 30px 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: 19px;
+  color: #222;
+  line-height: 1.4;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 10;
+}
+
+.tooltip-trigger:hover .tooltip-text {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
 
 </style>
   
@@ -439,11 +474,28 @@ margin-top: 6%;
       <div class="separator"></div>
 
       <p>
-        Nazywam się <strong>Paweł Pauksztełło</strong> i&nbsp;jestem motion designerem z&nbsp;Polski.  
+        Nazywam się <strong class="tooltip-trigger">
+    Paweł Pauksztełło
+    <span class="tooltip-text">
+      Motion designer z&nbsp;Polski – tworzę animacje pomagające firmom opowiadać historie i&nbsp;wyjaśniać pomysły.
+    </span>
+  </strong>  i&nbsp;jestem motion designerem z&nbsp;Polski.  
   Tworzę animacje, które pomagają firmom, organizacjom i&nbsp;osobom prywatnym komunikować swoje przekazy w&nbsp;sposób jasny i&nbsp;skuteczny.  
   Niezależnie od&nbsp;tego, czy&nbsp;potrzebujesz wyjaśnić jakiś koncept, promować wydarzenie czy&nbsp;opowiedzieć historię,  
   dostarczam wysokiej jakości animacje, które angażują i&nbsp;informują.
 </p>
+
+<p>
+  Nazywam się 
+  <strong class="tooltip-trigger">
+    Paweł Pauksztełło
+    <span class="tooltip-text">
+      Motion designer z&nbsp;Polski – tworzę animacje pomagające firmom opowiadać historie i&nbsp;wyjaśniać pomysły.
+    </span>
+  </strong> 
+  i jestem motion designerem z&nbsp;Polski. Tworzę animacje, które pomagają firmom.
+</p>
+
 
 <p>
   Wiele osób ma trudność z&nbsp;przedstawieniem swoich pomysłów w&nbsp;sposób, który przyciąga uwagę i&nbsp;robi wrażenie.  
