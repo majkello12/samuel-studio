@@ -2087,7 +2087,7 @@ Zobacz, jak to działa
 
 
 <section class="video-text-section"> <div class="video-col2"> 
-  <video src="yourstory.mp4" autoplay muted loop playsinline></video> 
+  <video src="czy-to-twoja-historia-animowany-text.mp4" autoplay muted loop playsinline></video> 
 </div> <div class="text-col22"> 
   <h6>Nikt nie chce być ignorowany.</h6> 
   
@@ -2721,7 +2721,6 @@ video.addEventListener('timeupdate', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const banner = document.getElementById("cookie-banner");
 
-    // Jeśli zgoda już zapisana — nie pokazuj
     if (!localStorage.getItem("cookiesDecision")) {
         banner.classList.add("show");
     }
