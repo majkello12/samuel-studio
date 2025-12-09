@@ -8,18 +8,12 @@
   <title>Work</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    header,
-header *,
-.hamburger,
-.hamburger * {
-  box-sizing: content-box !important;
-}
     body { 
       font-family: 'Roboto', sans-serif; 
       background: #fff; 
@@ -38,7 +32,6 @@ header *,
   -moz-user-select: none;
   -ms-user-select: none;
     }
-
 
 
     .text-section { 
@@ -276,6 +269,85 @@ margin-bottom: 10%;
 }}
 
 
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Obrazek */
+.img-wrapper img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Tooltip nowoczesny po prawej stronie */
+.tooltip-modern {
+  position: absolute;
+  top: 50%;
+  left: 105%; /* po prawej */
+  transform: translateY(-50%) translateX(10px);
+  
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #222;
+  line-height: 1.4;
+  max-width: 280px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  white-space: normal;
+  z-index: 10;
+}
+
+.tooltip-modern::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent rgba(255,255,255,0.95) transparent transparent;
+}
+
+.img-wrapper:hover .tooltip-modern {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.tooltip {
+  display: none; 
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 300px;
+  text-align: center;
+  z-index: 100;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease;
+}
+
+.gallery-item:hover .tooltip {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); 
+}
+
+
 .button-section {
     margin-top: 90px;     
     margin-bottom: 10px;   
@@ -297,9 +369,7 @@ margin-bottom: 10%;
     opacity: 0.85;
     background: #f0bb1c;
     color: #ffffff;
-}
-
-</style>
+}</style>
   
 </head>
 <body>
@@ -542,20 +612,7 @@ document.addEventListener("keydown", (e) => {
       const hamburger = shadowRoot.getElementById("hamburger");
       const mobileMenu = shadowRoot.getElementById("mobileMenu");
 
-      let lastScroll = 0;
-      const headerHeight = header.offsetHeight;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScroll && currentScroll > 60) {
-    header.style.transform = `translateY(-${header.offsetHeight + 20}px)`;
-  } else {
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScroll = currentScroll;
-});
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         mobileMenu.classList.toggle("active");

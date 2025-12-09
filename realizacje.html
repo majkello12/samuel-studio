@@ -653,32 +653,25 @@ document.addEventListener("keydown", (e) => {
 
 <script>
 
-// Wybieramy wszystkie elementy galerii
 const galleryItems = document.querySelectorAll('.gallery-item');
 
-// Iterujemy przez każdy element galerii
 galleryItems.forEach(item => {
-  // Pobieramy tekst tooltipa z atrybutu 'data-tooltip'
   const tooltipText = item.getAttribute('data-tooltip');
   
-  // Tworzymy tooltip dla każdego elementu
   const tooltip = document.createElement('div');
   tooltip.classList.add('tooltip');
   tooltip.textContent = tooltipText;
 
-  // Dodajemy tooltip do elementu galerii, ale na razie ukryty
   item.appendChild(tooltip);
   
-  // Obsługuje pojawianie się tooltipa po najechaniu
   item.addEventListener('mouseenter', () => {
-    tooltip.style.display = 'block';  // Pokazujemy tooltip
-    setTimeout(() => tooltip.style.opacity = '1', 10);  // Płynne pojawienie się
+    tooltip.style.display = 'block';  
+    setTimeout(() => tooltip.style.opacity = '1', 10);  
   });
   
-  // Obsługuje ukrywanie tooltipa po opuszczeniu elementu
   item.addEventListener('mouseleave', () => {
-    tooltip.style.opacity = '0';  // Płynne znikanie
-    setTimeout(() => tooltip.style.display = 'none', 300);  // Po zakończeniu animacji usuwamy z DOM
+    tooltip.style.opacity = '0';  
+    setTimeout(() => tooltip.style.display = 'none', 300);  
   });
 });
 </script>
