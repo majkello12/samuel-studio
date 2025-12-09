@@ -614,20 +614,7 @@ setInterval(() => {
       const hamburger = shadowRoot.getElementById("hamburger");
       const mobileMenu = shadowRoot.getElementById("mobileMenu");
 
-      let lastScroll = 0;
-      const headerHeight = header.offsetHeight;
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (currentScroll > lastScroll && currentScroll > 60) {
-    header.style.transform = `translateY(-${header.offsetHeight + 20}px)`;
-  } else {
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScroll = currentScroll;
-});
       hamburger.addEventListener("click", () => {
         hamburger.classList.toggle("active");
         mobileMenu.classList.toggle("active");
