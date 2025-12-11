@@ -1985,6 +1985,82 @@ header *,
 }
 
 
+
+
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.preview-video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(0, 0, 0);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s;
+  font-size: 16px;
+}
+
+.video-wrapper:hover .tooltip {
+  opacity: 1;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  padding: 0;
+  border-radius: 12px;
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.popup-video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.popup-video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+
+
 </style>
 </head>
 
@@ -2086,14 +2162,36 @@ Zobacz, jak to działa
 </section>
 
 
-<section class="video-text-section"> <div class="video-col2"> 
-  <video src="czy-to-twoja-historia-animowany-text.mp4" autoplay muted loop playsinline></video> 
-</div> <div class="text-col22"> 
+
+
+<section class="video-text-section">
+  <div class="video-col2">
+    <div class="video-wrapper">
+      <video class="preview-video" src="czy-to-twoja-historia-animowany-text.mp4" autoplay muted loop playsinline></video>
+      <div class="tooltip">Obejrzyj wideo</div>
+    </div>
+    </div> <div class="text-col22"> 
   <h6>Nikt nie chce być ignorowany.</h6> 
   
 <p class="para-bottom"> Dobrze zaprojektowana animacja przyciąga uwagę, angażuje odbiorców i&nbsp;sprawia, że&nbsp;Twój przekaz staje się&nbsp;niezapomniany.
-  </p> </div> </section>
+  </p> </div> 
+  </div>
+</section>
 
+<div id="video-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-popup">&times;</span>
+
+    <div class="popup-video-container">
+      <iframe id="popup-iframe"
+        src=""
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
 
 
 <section class="video-section2">
@@ -2734,6 +2832,32 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("cookiesDecision", "declined");
         banner.classList.remove("show");
     });
+});
+</script>
+
+
+
+<script>
+const videoWrapper = document.querySelector('.video-wrapper');
+const popup = document.getElementById('video-popup');
+const iframe = document.getElementById('popup-iframe');
+const closePopup = document.querySelector('.close-popup');
+
+const ytLink = "https://www.youtube-nocookie.com/embed/HAcDaivwgs4?rel=0&modestbranding=1&controls=1&autoplay=1";
+
+videoWrapper.addEventListener('click', () => {
+  iframe.src = ytLink;
+  popup.style.display = 'flex';
+});
+
+function closeVideoPopup() {
+  popup.style.display = 'none';
+  iframe.src = ""; 
+}
+
+closePopup.addEventListener('click', closeVideoPopup);
+popup.addEventListener('click', (e) => {
+  if (e.target === popup) closeVideoPopup();
 });
 </script>
 
