@@ -664,7 +664,7 @@ margin-bottom: 20%;
   
 </header>
 <section class="text-section">
-  <h2>Animacja „Widok Chęcin” – łączymy sztukę i technologię</h2>
+  <h2>Animacja „Widok Chęcin” – łączymy sztukę i&nbsp;technologię</h2>
   <div class="separator"></div>
   <p>
       „Widok Chęcin” Józefa Szermentowskiego zyskał nowe życie dzięki animacji cyfrowej, która przenosi 
@@ -834,21 +834,6 @@ mobileMenu.querySelectorAll('a').forEach(link => {
 
 </script>
 
-<script>let lastScroll = 0;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-
-  if (currentScroll > lastScroll && currentScroll > 40) {
-    header.classList.add("hidden");
-  } else {
-    header.classList.remove("hidden");
-  }
-
-  lastScroll = currentScroll;
-});
-</script>
 
 <script>
 document.addEventListener("contextmenu", (e) => {
