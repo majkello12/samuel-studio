@@ -36,10 +36,16 @@
 
     .text-section { 
       max-width: 1200px; 
-      margin-top: 13%;
-      margin-bottom: 80px;
+      margin-top: 18%;
+      margin-bottom: 8%;
       margin-left: 12%;
     }
+
+    .text-section--special {
+      margin-top: 8%;
+      margin-bottom: 6%;
+      margin-left: 12%;
+}
 
 .text-section h2 {
   text-align: left;
@@ -274,85 +280,20 @@ margin-bottom: 10%;
   display: inline-block;
 }
 
-/* Obrazek */
 .img-wrapper img {
   display: block;
   max-width: 100%;
   border-radius: 10px;
 }
 
-/* Tooltip nowoczesny po prawej stronie */
-.tooltip-modern {
-  position: absolute;
-  top: 50%;
-  left: 105%; /* po prawej */
-  transform: translateY(-50%) translateX(10px);
-  
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
-  padding: 14px 18px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.1);
-  font-size: 14px;
-  color: #222;
-  line-height: 1.4;
-  max-width: 280px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
-
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  white-space: normal;
-  z-index: 10;
-}
-
-.tooltip-modern::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border-width: 7px;
-  border-style: solid;
-  border-color: transparent rgba(255,255,255,0.95) transparent transparent;
-}
-
-.img-wrapper:hover .tooltip-modern {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
-
-.tooltip {
-  display: none; 
-  position: absolute;
-  top: 50%;
-  left: 110%;
-  transform: translate(-50%, -50%);
-  padding: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  border-radius: 10px;
-  font-size: 14px;
-  max-width: 300px;
-  text-align: center;
-  z-index: 100;
-  opacity: 0; 
-  pointer-events: none; 
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease;
-}
-
-.gallery-item:hover .tooltip {
-  display: block;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1); 
-}
 
 
 .button-section {
-    margin-top: 90px;     
-    margin-bottom: 10px;   
+    margin-top: 100px;     
+    margin-bottom: 0px;   
     text-align: center;   
 }
+
 
 .button-section .subscribe-btn {
     display: inline-block;
@@ -366,6 +307,30 @@ margin-bottom: 10%;
 }
 
 .button-section .subscribe-btn:hover {
+    opacity: 0.85;
+    background: #f0bb1c;
+    color: #ffffff;
+}
+
+
+.button-section2 {
+    margin-top: 50px;     
+    margin-bottom: 100px;   
+    text-align: center;   
+}
+
+.button-section2 .subscribe-btn {
+    display: inline-block;
+    padding: 12px 34px;
+    background: #f0bb1c;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 28px;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.button-section2 .subscribe-btn:hover {
     opacity: 0.85;
     background: #f0bb1c;
     color: #ffffff;
@@ -393,7 +358,7 @@ margin-bottom: 10%;
   <div class="gallery-grid">
 
 
-    <div class="gallery-item" data-tooltip="Drugi opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <div class="img-wrapper">
           <img src="COVER-SPOT_00139_00139.png" alt="WORSHIP in the city center 2022">
@@ -406,7 +371,7 @@ margin-bottom: 10%;
       </div>
     </div>
     
-    <div class="gallery-item" data-tooltip="Trzeci opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="PUPPETEER-cover.jpg" alt="YAGOOSH - Puppeteer cover">
         <video src="Puppeteer-animated-animated-cover.mp4" muted loop></video>
@@ -417,7 +382,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Czwarty opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="Thomas-the-Apostle-cover.png" alt="Bible Unbound - The Bible In a Sentence cover">
         <video src="St-Thomas-Apostol-animated-cover.mp4" muted loop></video>
@@ -428,7 +393,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Piąty opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="Stained-Glass-of-the-Holy-Spirit-cover.jpg" alt="Church of the Holy Spirit - promotional cover">
         <video src="Consecration-Church-of-the-Holy-Spirit-animated-cover.mp4" muted loop></video>
@@ -439,7 +404,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Szosty opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="Nikifor-Cover.jpg" alt="Museum of Dialogue and Cultures - Nikifor cover">
         <video src="Nikifor-animated-cover.mp4" muted loop></video>
@@ -450,7 +415,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Siodmy opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="006.jpeg" alt="Samuel Studio - Kosmos cover">
         <video src="KOSMOS-animated-cover.mp4" muted loop></video>
@@ -461,7 +426,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="osmy opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="007.jpeg" alt="4 ECO - Promotional spot cover">
         <video src="4-ECO-animated-cover.mp4" muted loop></video>
@@ -472,7 +437,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Dziewiaty opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="008.jpeg" alt="WYD Panama in Kielce - promotional spot cover">
         <video src="Panama-in-Kielce-animated-cover.mp4" muted loop></video>
@@ -483,7 +448,7 @@ margin-bottom: 10%;
       </div>
     </div>
 
-    <div class="gallery-item" data-tooltip="Dziesiaty opis dla innej animacji, opisujący różne wydarzenie.">
+    <div class="gallery-item">
       <div class="gallery-media">
         <img src="Cover-Jozef-Szermentowski-WIDOK-CHECIN.jpg" alt="National Museum in Kielce - View of Chęciny cover">
         <video src="View-of-Checiny-animated-cover.mp4" muted loop></video>
@@ -499,19 +464,26 @@ margin-bottom: 10%;
 <section class="button-section">
     <div class="new-buttons">
       <a href="https://blog.samuelstudio.pl/" class="subscribe-btn">
-        Zobacz więcej na moim blogu
+        Zobacz więcej na&nbsp;moim blogu
       </a>
     </section>
 
 
-<section class="text-section">
-  <h2>Potrzebujesz czegoś w tym stylu? Porozmawiajmy!</h2>
+<section class="text-section text-section--special">
+  <h2>Potrzebujesz czegoś w&nbsp;tym stylu? Porozmawiajmy!</h2>
   <div class="separator"></div>
   <p>
     Chciałbyś oryginalą unikalną animację? Pomogę zrealizować
     <span class="highlight">Twoją wizję.</span>
   </p>
   </section>
+
+  <section class="button-section2">
+    <div class="new-buttons">
+      <a href="https://blog.samuelstudio.pl/" class="subscribe-btn">
+        Zobacz więcej na moim blogu
+      </a>
+    </section>
 
   <div id="footerpl-placeholder"></div>
 
