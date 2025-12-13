@@ -2905,11 +2905,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!switched) {
       video.src = "video2.mp4";
       video.loop = false;
-      video.muted = false;
-      video.volume = 1;
+      video.muted = true;
+      video.volume = 0;
       video.currentTime = 0;
 
-      video.classList.add("with-border"); 
 
       video.load();
       video.play().catch(err => console.log(err));
