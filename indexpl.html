@@ -2104,6 +2104,18 @@ header *,
   pointer-events: none;
 }
 
+.video-text-section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .video-text-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
 </style>
 </head>
 
@@ -2891,33 +2903,46 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
 <script>
   let switched = false;
+  let paused = false;
 
   function changeVideo() {
     const video = document.getElementById("mainVideo");
     const btn = document.querySelector(".video-btn");
 
+    if (switched) {
+      if (video.paused) {
+        video.play();
+        paused = false;
+        btn.textContent = "⏸ Pauza";
+      } else {
+        video.pause();
+        paused = true;
+        btn.textContent = "▶ Odtwórz";
+      }
+      return;
+    }
+
     video.pause();
     video.removeAttribute("autoplay");
 
-    if (!switched) {
-      video.src = "video2.mp4";
-      video.loop = false;
-      video.muted = true;
-      video.volume = 0;
-      video.currentTime = 0;
+    video.src = "video2.mp4";
+    video.loop = false;
+    video.muted = false;
+    video.volume = 0.6;
+    video.currentTime = 0;
 
+    video.load();
+    video.play().catch(err => console.log(err));
 
-      video.load();
-      video.play().catch(err => console.log(err));
-
-      btn.classList.add("hidden");
-      switched = true;
-    }
+    btn.textContent = "⏸ Pauza";
+    switched = true;
   }
 </script>
+
+
+
 
 
 </body>
