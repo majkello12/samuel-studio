@@ -286,11 +286,15 @@
 
   <div class="footer-bottom">
     <a href="politykaprywatnosci.html">Polityka Prywatności</a>
-    <span>2025 Paweł Pauksztełło | Projekt strony Michał Baran Grafik</span>
+    <span><span id="year"></span> Paweł Pauksztełło | Projekt strony Michał Baran Grafik</span>
   </div>
 </footer>
 
+<script>
+  const currentYear = new Date().getFullYear();
 
+  document.getElementById('year').textContent = currentYear;
+</script>
 
 
 </body>
