@@ -2752,8 +2752,14 @@ video.addEventListener('timeupdate', () => {
     .then(response => response.text())
     .then(data => {
       document.getElementById("footerpl-placeholder").innerHTML = data;
+
+      const currentYear = new Date().getFullYear();
+      document.getElementById('year').textContent = currentYear;
     });
 </script>
+
+
+
 
 
 
