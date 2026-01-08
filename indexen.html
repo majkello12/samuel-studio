@@ -1483,9 +1483,7 @@ gap: 6rem;
     padding-bottom: 3%;
   }
 
- 
-
-.see-more-container {
+ .see-more-container {
   text-align: center;
 }
 
@@ -1513,16 +1511,12 @@ margin-bottom: 50px;
     max-width: 220px;
   }
 
-
 @media (max-width: 768px) {
 
-
   .slide-text {
-
   margin-top: 9px;
   margin-bottom: 30px;
 }
-
 
   .see-more-container {
   text-align: left;
@@ -1563,7 +1557,6 @@ margin-bottom: 50px;
 .circle-img {
       margin-left: 0;
       margin-bottom: -40px;
-
 }
 
 .order-section .order-content {
@@ -1587,7 +1580,6 @@ margin-bottom: 50px;
 
    .order-section .see-more-btn3 {
 }
-
 
   .carousel-track0 {
     overflow: visible;
@@ -1788,7 +1780,6 @@ margin-top: 36%;}}
   line-height: 1.6;
   margin-top: 5%;
   margin-left: 14%;
-
 }
 
 
@@ -1813,9 +1804,7 @@ margin-top: 36%;}}
         margin-bottom: 15%;
               margin-left: 3%;
 
-    }
-}
-
+    }}
 
 
 
@@ -1940,13 +1929,68 @@ header *,
 }
 
 
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+    border-radius: 16px;
+  display: block;
+  margin-bottom: 5%;
+}
+
+.preview-video {
+  width: 100%;
+  height: 100%;
+  border:#000;
+  object-fit: cover;   
+    display: block;
+      margin-bottom: 5%;
+
+}
+
+.video-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 999px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.video-btn:hover {
+  background: rgba(0,0,0,0.85);
+  transform: scale(1.05);
+}
+
+.video-btn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-text-section {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+  .video-text-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }}
+
+
 </style>
 </head>
 <body>
    
 <div id="header-placeholder"></div>
-
-
 
 <section class="video-section" id="video">
     <video src="animated-diagonal-light-rays-background-samuel-studio.mp4" autoplay muted loop></video>
@@ -2025,28 +2069,50 @@ header *,
 <section class="white-section">
   <div class="top-row">
     <div class="text-col-left-margin">
-      <h2>I’m Paweł Pauksztełło,<br>founder of Samuel Studio.</h2>
+      <h2>I help you communicate your message clearly and effectively.</h2>
       <div class="separator00"></div>
       <p class="para-top">
-        I help you communicate your message clearly and effectively.
-        Check out <a href="work.html" class="highlight-link">my portfolio</a> and see how my animations work in practice.
+        <strong>Paweł Pauksztełło - Samuel Studio</strong>
+        I&nbsp;help projects, events, and institutions tell important stories in a clear and engaging way.
+ Check out
+
+        <a href="realizacje.html" class="highlight-link">my portfolio.</a>
       </p>
     </div>
     <div class="video-col">
-      <video id="myVideo" src="Pawel-Pauksztello-Samuel-Studio-Owner-Founder.mp4" autoplay muted loop playsinline></video>
+      <video id="myVideo" src="Film ang Pawel.mp4" autoplay muted loop playsinline></video>
     </div>
   </div> 
 </section>
 
 
-<section class="video-text-section"> <div class="video-col2"> 
-  <video src="yourstory.mp4" autoplay muted loop playsinline></video> 
-</div> <div class="text-col22"> 
+
+
+<section class="video-text-section">
+  <div class="video-col2">
+    <div class="video-wrapper">
+
+      <video
+        id="mainVideo"
+        class="preview-video"
+        src="Is-This-Your-Story 2.mp4"
+        autoplay
+        muted
+        loop
+        playsinline></video>
+
+      <button class="video-btn" onclick="changeVideo()">
+        ▶
+      </button>
+
+    </div>
+    </div> <div class="text-col22"> 
   <h6>No one wants to be ignored.</h6> 
   
-<p class="para-bottom"> Good animation helps your event stand out, capture attention, and make sure your message truly reaches people. 
-  </p> </div> </section>
-
+<p class="para-bottom"> Good animation helps your event stand out, capture attention, and make sure your message truly reaches people.</p> 
+</div> 
+  </div>
+</section>
 
 
 <section class="video-section2">
@@ -2093,6 +2159,51 @@ header *,
 </section>
 
   
+<section class="yellow-section0">
+  <div class="text-section0">
+    <h2>How it works in practice</h2>
+    <div class="separator9"></div>
+  </div>
+
+  <div class="carousel-container0" aria-roledescription="carousel">
+    <button class="nav prev" aria-label="Poprzedni slajd">‹</button>
+
+    <div class="carousel-track0">
+      <div class="carousel-slide0 active" data-index="0">
+        <p class="slide-text">You share your story.</p>
+        <img src="image1.png" alt="grafika 1" class="circle-img">
+      </div>
+
+      <div class="carousel-slide0" data-index="1">
+        <p class="slide-text">I create an animation tailored to your message.</p>
+        <img src="image2.png" alt="grafika 2" class="circle-img">
+      </div>
+
+      <div class="carousel-slide0" data-index="2">
+        <p class="slide-text">You use the finished material.</p>
+        <img src="image3.png" alt="grafika 3" class="circle-img">
+      </div>
+    </div>
+
+    <button class="nav next" aria-label="Następny slajd">›</button>
+  </div>
+</section>
+
+
+
+<section class="order-section">
+  <div class="order-content">
+    <div class="text-section0">
+      <h2>Tell me about your project</h2>
+      <div class="separator9"></div>
+    </div>
+      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com/contact'">
+        See examples
+      </button>
+    </div>
+  </div>
+</section>
+
 
 <section style="padding: 60px 0 0 0px; background: #ffffff;">
 
@@ -2127,55 +2238,6 @@ header *,
     </div>
   </div>
 </section>
-
-
-
-<section class="yellow-section0">
-  <div class="text-section0">
-    <h2>How it works in practice</h2>
-    <div class="separator9"></div>
-  </div>
-
-  <div class="carousel-container0" aria-roledescription="carousel">
-    <button class="nav prev" aria-label="Poprzedni slajd">‹</button>
-
-    <div class="carousel-track0">
-      <div class="carousel-slide0 active" data-index="0">
-        <p class="slide-text">You share your story. </p>
-        <img src="image1.png" alt="grafika 1" class="circle-img">
-      </div>
-
-      <div class="carousel-slide0" data-index="1">
-        <p class="slide-text">I create an animation tailored to your message.</p>
-        <img src="image2.png" alt="grafika 2" class="circle-img">
-      </div>
-
-      <div class="carousel-slide0" data-index="2">
-        <p class="slide-text">You use the finished material.</p>
-        <img src="image3.png" alt="grafika 3" class="circle-img">
-      </div>
-    </div>
-
-    <button class="nav next" aria-label="Następny slajd">›</button>
-  </div>
-</section>
-
-<section class="order-section">
-  <div class="order-content">
-    <div class="text-section0">
-      <h2>Tell me about your project</h2>
-      <div class="separator9"></div>
-    </div>
-      <button class="see-more-btn4" onclick="window.location.href='https://samuelstudio.com/contact'">
-        See examples
-      </button>
-    </div>
-  </div>
-</section>
-
-
-
-  </section>
 
 <section style="padding: 20px 0 0 0px; background: #ffffff;">
 
@@ -2474,7 +2536,7 @@ if (window.innerWidth <= 768) {
   videos.forEach(video => {
     video.muted = true; 
     video.setAttribute("playsinline", "true"); 
-    video.setAttribute("autoplay", "true"); // 
+    video.setAttribute("autoplay", "true"); 
     observer.observe(video);
   });
 }
@@ -2594,9 +2656,6 @@ video.addEventListener('timeupdate', () => {
 </script>
 
 
-
-
-
 <script>
   fetch("header.html")
     .then(response => response.text())
@@ -2634,6 +2693,44 @@ video.addEventListener('timeupdate', () => {
       const currentYear = new Date().getFullYear();
       document.getElementById('year').textContent = currentYear;
     });
+</script>
+
+<script>
+  let switched = false;
+  let paused = false;
+
+  function changeVideo() {
+    const video = document.getElementById("mainVideo");
+    const btn = document.querySelector(".video-btn");
+
+    if (switched) {
+      if (video.paused) {
+        video.play();
+        paused = false;
+        btn.textContent = "⏸ Pause";
+      } else {
+        video.pause();
+        paused = true;
+        btn.textContent = "▶ Play";
+      }
+      return;
+    }
+
+    video.pause();
+    video.removeAttribute("autoplay");
+
+    video.src = "video2.mp4";
+    video.loop = false;
+    video.muted = false;
+    video.volume = 0.6;
+    video.currentTime = 0;
+
+    video.load();
+    video.play().catch(err => console.log(err));
+
+    btn.textContent = "⏸ Pause";
+    switched = true;
+  }
 </script>
 
 
