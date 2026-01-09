@@ -229,6 +229,17 @@
   color: #000000;
 }  
 
+.author-break {
+  display: inline;
+}
+
+@media (max-width: 600px) {
+  .author-break {
+    display: block; 
+    margin-top: 5px; 
+  }
+}
+
 </style>
 </head>
 <body>
@@ -276,7 +287,7 @@
 
   <div class="footer-bottom">
     <a href="politykaprywatnosci.html">Polityka Prywatności</a>
-        <span>©<span id="year"></span> Paweł Pauksztełło | Projekt strony Michał Baran Grafik</span>
+        <span>©<span id="year"></span> Paweł Pauksztełło | Projekt strony <span class="author-break">Michał Baran Grafik</span></span>
   </div>
 </footer>
 
