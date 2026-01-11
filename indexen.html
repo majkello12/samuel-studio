@@ -2095,7 +2095,7 @@ header *,
       <video
         id="mainVideo"
         class="preview-video"
-        src="Is This Your Story.mp4"
+        src="is this your story text animated.mp4"
         autoplay
         muted
         loop
@@ -2681,6 +2681,40 @@ video.addEventListener('timeupdate', () => {
     switched = true;
   }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = Array.from(document.querySelectorAll('.carousel-slide0'));
+  if (!slides.length) return;
+
+  let current = 0;
+
+  const prevBtn = document.querySelector('.nav.prev');
+  const nextBtn = document.querySelector('.nav.next');
+
+  function showSlide(index) {
+    index = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    current = index;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(current - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showSlide(current + 1);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') showSlide(current - 1);
+    if (e.key === 'ArrowRight') showSlide(current + 1);
+  });
+
+  showSlide(0);
+});
+</script>
+
 
 
 </body>
